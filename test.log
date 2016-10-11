@@ -1,1 +1,23 @@
-"METODO NO SOPORTADO"
+select distinct `i`.`id_expediente` as 'id_expediente',
+    	 `i`.`id_cliente` as 'id_cliente',
+    	 `i`.`tipoobjeto` as 'tipoobjeto',
+    	 `a`.`tipotransaccion` as 'tipovr'
+         from `inms` as `i`
+  left join `anuncios` as `a` on (`a`.`idinmueble`= `i`.`id_expediente` and `a`.`tipoinmueble`= `i`.`tipoobjeto` and `a`.`user`=`i`.`id_cliente` )
+  
+where DATE_ADD(`a`.`fecvennormal`, INTERVAL 3 YEAR)>=now()
+    and ((
+            `a`.`vendido`=1
+            and now()< date_add(`a`.`vendido_date`, interval +1 DAY )
+            )
+          or
+            (
+            `a`.`vendido`=0
+            )
+        )
+    and `a`.`idinmueble`= `i`.`id_expediente` and `a`.`tipoinmueble`= `i`.`tipoobjeto` and `a`.`user`=`i`.`id_cliente`
+ and  (`i`.`coordenaday`<='19.312899698975052'
+				and `i`.`coordenaday`>='19.299817563237287'
+				and `i`.`coordenadax`<='-98.86001455856933'
+				and `i`.`coordenadax`>='-98.90275824143066') and (`a`.`tipotransaccion`='tipovrventa' and `i`.`precio`<='928217247.39032'  and `i`.`habitaciones`<='10'  and `i`.`banos`<='10'  and `i`.`estacionamientos`<='10'  and `i`.`estacionamientos2`<='10'  and `i`.`tipoobjeto`='1')
+order by  `i`.`fecvenpremium` DESC,`i`.`fecha_alta` DESC limit 0,50
