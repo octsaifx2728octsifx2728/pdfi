@@ -1,0 +1,100 @@
+.promocion {
+	width:755px;
+	margin:0 auto;
+	height:675px;
+	font-family: sans-serif;
+}
+.promocion h1{
+	color: #D18481;
+	font-size: 45px;
+	margin: 0;
+}
+
+.promocion b {	
+	color: #FA8480;	
+	text-shadow:0px 0px 10px white;
+	font-size:30px;
+}
+
+.promocion .bloque {	
+background: #FFC07C;
+padding: 10px;
+color: #ffffff;
+border-radius: 15px;
+box-shadow: 5px 5px 20px #666;
+letter-spacing: -1px
+}
+
+.promocion .cintillo {	
+	font-size: 24px;
+	margin: 20px 0;	
+}
+
+.promocion .left{
+height: 493px;	
+	float: left;
+	width: 345px;
+	font-size: 20px;
+	margin: 0;
+	font-weight: normal;	
+}
+
+.promocion .left p{	
+	margin:18px 0;
+}
+.promocion .right{
+height: 480px;	
+	float: right;
+	width: 345px;
+	font-size: 18px;
+	margin: 0;
+	font-weight: bold;	
+	line-height: 37px;
+padding: 22px 10px 10px;	
+}
+.promocion .right .botones{	
+	margin:10px 0;
+}
+.promocion .right .botones img{	
+	width:150px;		
+}
+
+.promocion .left ul {
+text-align: left;
+margin: 0 0 0 45px;
+}
+
+.promocion .left ul li span{
+	width:10px;	
+}
+.promocion .left .nota {
+font-size: 14px;
+margin: 15px 0;
+}
+.promocion .registerForm {	
+	width: 350px;	
+	line-height: 30px;
+}
+.promocion .registerForm label{	
+	font-size:13px;
+	display:inline;
+	width: 156px;
+}
+.promocion .registerForm .field {	
+	margin:0;
+}
+.promocion .registerForm .field input{	
+	border: 2px solid #ccc;
+	border-radius: 5px;	
+	height:13px;
+}
+.promocion .registerForm .field input:focus{
+	box-shadow:0px 0px 10px #50adf1;	
+}
+.promocion .registerForm .field_type_checkbox {
+	padding:0;
+}
+.promocion .registerForm .controles {
+	float:none;
+	margin:25px 0;
+}

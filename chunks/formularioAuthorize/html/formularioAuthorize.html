@@ -1,0 +1,150 @@
+
+<div class="formulario" id="_formulario">
+<!--form action="https://test.authorize.net/gateway/transact.dll" method="POST"-->
+<form action="#PROCESSURL#" method="POST">
+    <input type="hidden" name="amount" value="#TOTAL#">
+    <input type="hidden" name="description" value="Sample Transaction">
+
+    <input type="hidden" name="login" value="#LOGINID#">
+    <input type="hidden" name="TranKey" value="#TRANKEY#">
+    <input type="hidden" name="Version" value="#VERSION#">
+    <input type="hidden" name="DelimData" value="#DELIMDATA#">
+    <input type="hidden" name="DelimChar" value="#DELIMCHAR#">
+    <input type="hidden" name="RelayResponse" value="#RELAYRESPONSE#">
+    <input type="hidden" name="Type" value="#TYPE#">
+    <input type="hidden" name="Method" value="#METHOD#">
+
+    <!--input type='hidden' name='test_request' value='true' /-->
+    <!--input type='hidden' name='invoice_num' value='#FACTURA#' /-->
+
+    <!--input type="hidden" name="ForwardPath" value="#ForwardPath#"-->
+    <!--input type="hidden" name="Cert3D" value="#Cert3D#"-->
+
+    <input type="hidden" name="Token" value="#Token#">
+    <!--input type="hidden" name="debug" value="0"-->
+	<!--input type="hidden" id="_factura" value="#FACTURA#"-->
+	<div class="section totales">
+		<h2>$$Detalles_de_la_compra$$</h2>
+		<table>
+			<thead>
+				<tr>
+					<th class="id">
+						$$ID$$
+					</th>
+					<th class="nombre">
+						$$nombre$$
+					</th>
+					<th class="cantitad">
+						$$cantidad$$
+					</th>
+					<th class="monto">
+						$$monto$$
+					</th>
+			</thead>
+			<tbody>
+				#PRODUCTOS#
+			</tbody>
+			<tfoot>
+				<tr>
+					<td colspan="3" class="total">
+						$$total$$
+					</td>
+					<td>
+						#TOTAL#
+					</td>
+				</tr>
+			</tfoot>
+		</table>
+	</div>
+	
+	<div class="section personal">
+		<h2>
+			$$datos_personales$$
+		</h2>
+            <div class="instructions">$$banorteform_sect1Description$$</div>
+		<div class="field fieldType_text fieldMin_3 fieldMax_30 clearOnFocus fieldRequired_1 text nombre">
+			<label for="_nombre">
+				<b>*</b>$$nombre$$:
+			</label>
+			<input type="text" id="_nombre" value="#NOMBRE#" name="first_name" title="$$nombre$$">
+                        <div class="hint">$$nombre_hint$$</div>
+		</div>
+		<div class="field fieldType_text fieldMin_3 fieldMax_30 clearOnFocus fieldRequired_1 text apellidos">
+			<label for="_apellidos">
+				<b>*</b>$$apellidos$$:
+			</label>
+			<input type="text" id="_apellidos" value="#APELLIDOS#" name="last_name" title="$$apellidos$$">
+                        <div class="hint">$$apellidos_hint$$</div>
+		</div>
+        <div class="field fieldType_text fieldMin_3 fieldMax_30 clearOnFocus fieldRequired_1 text nombre">
+            <label for="_nombre">
+                <b>*</b>Address:
+            </label>
+            <input type="text" id="x_address" value="" name="address" title="">
+            <div class="hint">$$nombre_hint$$</div>
+        </div>
+        <div class="field fieldType_text fieldMin_3 fieldMax_30 clearOnFocus fieldRequired_1 text nombre">
+            <label for="_nombre">
+                <b>*</b>State:
+            </label>
+            <input type="text" id="x_state" value="" name="state" title="">
+            <div class="hint">$$nombre_hint$$</div>
+        </div>
+        <div class="field fieldType_text fieldMin_3 fieldMax_30 clearOnFocus fieldRequired_1 text nombre">
+            <label for="_nombre">
+                <b>*</b>Zip:
+            </label>
+            <input type="text" id="x_zip" value="" name="zip" title="">
+            <div class="hint">$$nombre_hint$$</div>
+        </div>
+	</div>
+	<div class="section datos_tarjeta">
+		<h2>$$tarjeta_de_credito$$</h2>
+		<div class="field fieldType_creditcard fieldRequired_1 number tarjeta">
+			<label for="_numTarjeta"><b>*</b>$$numero_de_tarjeta$$</label>
+			<input type="number" id="_numTarjeta" name="card_num"  autocomplete="off">
+		</div>
+		<!--div class="field fieldType_text  fieldRequired_1 number ccv">
+			<label for="_ccv"><b>*</b>$$ccv$$</label>
+			<input type="number" id="_ccv" name="Cvv2Val"  autocomplete="off">
+		</div-->
+        <div class="field fieldRequired_1 text">
+		<!--div class="field fieldType_monthyear fieldRequired_1 text expire"-->
+			<label for="_expire"><b>*</b>$$expiracion$$</label>
+			<input type="text" id="_expire" name="exp_date"  autocomplete="off">wa
+		</div>
+		<!--div class="field number tarjeta">
+			<label for="_CardType"><b>*</b>$$tipo_de_tarjeta$$</label>
+			<select id="_CardType"  name="CardType">
+			  <option value="MC">MasterCard</option>
+			  <option value="VISA">Visa</option>
+			</select>
+		</div-->
+	</div>
+	
+	
+	<!--div class="section comentarios">
+		<div class="field textarea comentarios">
+			<label for="_comentarios">
+				$$comentarios$$:
+			</label>
+			<textarea id="_comentarios" name="comentarios"></textarea>
+		</div>
+	</div-->
+	<div class="alertForm">
+		$$campos_requeridos$$
+	</div>
+	<div class="control">
+		<input type="button" class="cancel button" value="$$cancelar$$">
+		<input type="reset" class="reset button" value="$$limpiar$$">
+		<input type="button" class="submit button" value="$$pagar$$">
+	</div>
+</form>
+</div>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$( "#_nacimiento" ).datepicker();
+		$( "#_nacimiento" ).datepicker($.datepicker.regional["#LANG#"]);
+                $("#_formulario").formularioPago({});
+	});
+</script>

@@ -1,0 +1,277 @@
+<head>
+    
+    <style>
+.dropbtn {
+    background-color: #FF9966;
+    color: white;
+    padding:0px;
+    font-size: 11px;
+    font-family:  'Avenir-Book', serif;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    width: 100px;
+    height: 23px;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #FFCC99;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    width: 100px;
+    height: 23px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #FF9966;
+    min-width: 100px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    font-size: 11px;
+    font-family:  'Avenir-Book', serif;
+    font-weight: bold;
+}
+
+.dropdown-content a {
+    color: #fff;
+    padding: 12px 16px;
+    
+    display: block;
+    font-size: 11px;
+}
+
+.dropdown a:hover {background-color: #FFCC99}
+
+.show {display:block;}
+</style>
+
+
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction(container) {
+    //document.getElementById("myDropdown").classList.toggle("show");
+     
+    var allTags = $(container)[0].childNodes;
+    
+    console.log(allTags);
+    
+    var array = Array.prototype.slice.call(allTags);
+    
+    array.forEach(function(item){
+        
+         if(item.id == "myDropdown"){
+             item.classList.toggle("show");
+         }
+    // allTags[i].id is the id of the element (if there is one)
+    });
+
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+
+    
+</head>
+
+
+
+
+<div class="header-premium_#PREMIUM#" style="display:none;">
+    <div class="header-premium-title">PREMIUM</div>
+</div>
+<div class="header-oferta_#OFERTA#" style="display:none;">
+    <div class="header-oferta-title">OFERTA</div>
+</div>
+<div  itemscope itemtype="http://data-vocabulary.org/Product" class="item itemTipo_#TIPOOBJETO# item_#ID# item_#ID#_#CASA# itemBound_#BOUND# duplex_#DUPLEX# #VENCIDO# #VENCIDOPremium# activo_#ACTIVO# premium_#PREMIUM# oferta_#OFERTA# vendido_#VENDIDO# metrica_#METRICA2#">
+    <div class="item-wrapper">
+        <div class="tipoobjeto tipoobjeto_#TIPOOBJETO#" title="#TIPONOMBRE#"></div>
+        <div class="bound bound_#BOUND#"></div>
+        <!--div class="adminControl  #OWNER#"-->
+        <div class="id">
+            #ID#-#CASA#
+        </div>
+        <div class="overlay"></div>
+       
+        <div class="imagen">
+            <div class="overlayvendido" style="background: url('/img/lang/$$_languajeKey$$/stamps/vendido250.png') center center no-repeat;  background-size: 200px 200px;" onclick="javascript:inmueble_manager.showFotoWindow('#ID#','#CASA#')"></div>
+            <img src="cache/$$_languajeKey$$/250/190/#IMAGEN#" onclick="javascript:inmueble_manager.showFotoWindow('#ID#','#CASA#')">
+            <input type="button" class="button gray-dark" value="$$editarmapa$$" onclick="javascript:inmueble_manager.editmapa('#ID#',$(this.parentNode).find('.posicion').val(),'#CASA#',$(this.parentNode).find('.posicion'))">
+            <input type="button" class="button gray-dark" value="$$editardireccion$$" onclick="javascript:inmueble_manager.editDireccion('#ID#')">
+            <input type="hidden" class="posicion" value="#LAT#_#LON#">
+        </div>
+        <div class="top_top">
+            <div class="amueblamiento">
+                <div class="field amueblado_#AMUEBLADO#">
+                    <input name="furnonfur" #AMUEBLADO_CHECKED# type="checkbox" value="#AMUEBLADO#" id="atributo_amueblado_#ID#" onchange="javascript:inmueble_manager.update('#ID#','amueblado',(this.checked?1:0),'#CASA#')">
+                    <label for="atributo_amueblado_#ID#">#AMUEBLADO_TITLE#</label>
+                </div>
+                <div class="field noamueblado_#NOAMUEBLADO#">
+                    <input name="furnonfur" #NOAMUEBLADO_CHECKED# type="checkbox" value="#NOAMUEBLADO#" id="atributo_noamueblado_#ID#" onchange="javascript:inmueble_manager.update('#ID#','noamueblado',(this.checked?1:0),'#CASA#')">
+                    <label for="atributo_noamueblado_#ID#">#NOAMUEBLADO_TITLE#</label>
+                </div>
+            </div>
+            <div class="caracteristicas">
+                <span class="caract casa_#SUBTIPO#" title="#CASA_TITLE#">
+                    <input type="hidden" value="#CASA#" id="atributo_casa_#ID#">
+                </span>
+            </div>
+            <div class="tipovr tipovr_#TIPOVR#">
+                #VR#
+            </div>
+            <div class="precio data" title="$$precio$$">
+                <!--div class="icon"></div-->
+                <span class="precio_simbolo"></span>
+                <span class="precio_data">
+                    <span class="precio_divisa converDivisa">
+                        [[monedalist?moneda=`#MONEDAORIG#`&idinmueble=`#ID#`&tipoinmueble=`#CASA#`]]
+                    </span>
+                    <input type="text" class="premium_#PREMIUM#" name="precio" value="#PRECIOORIG#" onchange="javascript:inmueble_manager.update('#ID#','precio',this.value,'#CASA#')">
+                </span>
+            </div>
+        </div>
+        <h1 class="title" style = "position: relative; margin: 3px 0px 0px 56px;">
+            <input type="text" name="title" value="#TITLE#" onchange="javascript:inmueble_manager.update('#ID#','titulo',this.value,'#CASA#')" style = "background:0;">
+        </h1>
+        <div class="description">
+            <textarea  onchange="javascript:inmueble_manager.update('#ID#','descripcion',this.value,'#CASA#')" style = "background:0;" >#DESCRIPCION#</textarea>
+        </div>
+        <div class="info premium_#PREMIUM#">
+            <div class="preciom2 data" title="$$precio_#METRICA2#2$$">
+                <div class="icon"></div>
+                <input type="text" name="title" value="#PRECIOM2ORIG#" disabled>
+            </div>
+            #ADICIONAL#
+        </div>
+        <div class="items">
+            #ITEMS#
+        </div>
+        <!--div class="description"-->
+        <div style="display:none">
+            <div id="editarMapa_#ID#" class="adminform freemiumform mapa">
+                <div class="autocomplete">
+                    <label>$$ubicacion$$</label>
+                    <input type="text" class="inputtext" >
+                </div>
+                <div class="mapa">
+                    <div id="editarMapa_#ID#_container" class="mapa"> </div>
+                </div>
+            </div>
+            <div id="editarDireccion_#ID#" class="adminform freemiumform mapa">
+                <div class="field fieldType_textarea field_direccion">
+                    <label>$$direccion$$:</label>
+                    <textarea onchange="javascript:inmueble_manager.update('#ID#','direccion',this.value,'#CASA#')">
+                        #DIRECCION#
+                    </textarea>
+                </div>
+            </div>
+            <div id="_editarFotos_#ID#_#CASA#" class="adminform freemiumform mediaform editarfotos">
+                <h2>$$contenido_multimedia$$</h2>
+                <div class="section fotos">
+                    <h3>$$fotos_del_inmueble$$</h3>
+                    <div class="instrucciones">
+                        $$instrucciones_upload_images$$
+                    </div>
+                    <div class="fotosContainer">
+                        <div class="field imagen new">
+                            <div class="uploadOverlay uploadOverlay1">
+                                <input class="uploadbutton" type="button" value="$$seleccione_archivo$$">
+                            </div>
+                            <iframe class="uploadFrame" id="_uploadFotoFrame"></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="section fotos360">
+                    <h3>$$imagenes360_del_inmueble$$</h3>
+                    <div class="instrucciones">
+                        $$instrucciones_upload_images360$$
+                    </div>
+                    <div class="fotos360Container">
+                        <div class="field imagen new">
+                            <div class="uploadOverlay uploadOverlay2">
+                                <input class="uploadbutton" type="button" value="$$seleccione_archivo$$">
+                            </div>
+                            <iframe class="uploadFrame" id="_uploadFoto360Frame">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="section videos" >
+                    <h3>$$videos_del_inmueble$$</h3>
+                    <div class="module3 videos_container">
+                        <div class="wrap">
+                            <div class="instrucciones">$$instrucciones_videos$$</div>
+                            <div class="field video video_0">
+                                <input type="text" onchange="freemium.addVideo(this.value,0,'#_editarFotos_#ID#_#CASA#','#ID#','#CASA#')"  value="$$youtube_url$$" onfocus="javascript:this.value=''">
+                                <div class="video_overlay">$$sube_mas_videos_contratando$$</div>
+                                <div class="videoContainer"> </div>
+                            </div>
+                            <div class="field video video_1 #PROHIBIDO1#">
+                                <input type="text" onchange="freemium.addVideo(this.value,1,'#_editarFotos_#ID#_#CASA#','#ID#','#CASA#')" value="$$youtube_url$$" onfocus="javascript:this.value=''">
+                                <div class="video_overlay">$$sube_mas_videos_contratando$$</div>
+                                <div class="videoContainer"> </div>
+                            </div>
+                            <div class="field video video_2  #PROHIBIDO2#">
+                                <input type="text" onchange="freemium.addVideo(this.value,2,'#_editarFotos_#ID#_#CASA#','#ID#','#CASA#')" value="$$youtube_url$$" onfocus="javascript:this.value=''">
+                                <div class="video_overlay">$$sube_mas_videos_contratando$$</div>
+                                <div class="videoContainer"> </div>
+                            </div>
+                            <div class="field video video_3  #PROHIBIDO3#">
+                                <input type="text" onchange="freemium.addVideo(this.value,3,'#_editarFotos_#ID#_#CASA#','#ID#','#CASA#')" value="$$youtube_url$$" onfocus="javascript:this.value=''">
+                                <div class="video_overlay">$$sube_mas_videos_contratando$$</div>
+                                <div class="videoContainer"> </div>
+                            </div>
+                            <div class="field video video_4  #PROHIBIDO4#">
+                                <input type="text" onchange="freemium.addVideo(this.value,4,'#_editarFotos_#ID#_#CASA#','#ID#','#CASA#')" value="$$youtube_url$$" onfocus="javascript:this.value=''">
+                                <div class="video_overlay">$$sube_mas_videos_contratando$$</div>
+                                <div class="videoContainer"> </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <div class="adminControl  #OWNER#">
+            
+            <div class="botonera">
+                <input type="button" class="button green premiumbutton premium_#PREMIUM#" value="$$premium$$" onclick="javascript:inmueble_manager.attachProduct('#ID#','#CASA#',5);">
+                
+                <div class="dropdown">
+                <button onclick="myFunction(this.parentElement);" class="dropbtn">$$oferta$$</button>
+                  <div id="myDropdown" class="dropdown-content">
+                    <a href="javascript:inmueble_manager.attachProduct('#ID#','#CASA#',15);">$$oferta$$ 10%</a>
+                    <a href="javascript:inmueble_manager.attachProduct('#ID#','#CASA#',16);">$$oferta$$ 20%</a>
+                    <a href="javascript:inmueble_manager.attachProduct('#ID#','#CASA#',17);">$$oferta$$ 30%</a>
+                  </div>
+                </div>
+                <input type="button" class="button red vendidobutton" value="$$tratoCerrado$$" onclick="javascript:inmueble_manager.attachProduct('#ID#','#CASA#',14);">
+                <input type="button" class="button gray-dark activado activar" value="$$activar$$" onclick="javascript:inmueble_manager.update('#ID#','activo',1,'#CASA#');$(this).parents('.item').removeClass('activo_0');$(this).parents('.item').addClass('activo_1')">
+                <input type="button" class="button gray-dark activado desactivar" value="$$desactivar$$" onclick="javascript:inmueble_manager.update('#ID#','activo',0,'#CASA#');$(this).parents('.item').removeClass('activo_1');$(this).parents('.item').addClass('activo_0')">
+                <input type="button" class="button gray-dark" value="$$ver$$" onclick="javascript:location.href='#URL#'">
+                <input type="button" class="button gray-dark button_borrar borrarid_#ID#-#CASA#" value="$$borrar$$">
+            </div>
+        </div>
+    </div>
+</div>

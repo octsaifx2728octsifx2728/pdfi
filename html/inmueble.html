@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+
+
+<html prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# com_e-spacios: http://ogp.me/ns/fb/com_e-spacios#">
+    <head>
+        <base href="#BASE#">
+        [[metas]]
+
+        #ESTILOS#
+
+        [[enviroment]]
+
+        #SCRIPTS#
+
+        [[analitics]]
+
+        <script type="text/javascript">
+            var resultados = [],
+                searcher   = new searcher_class(1),
+                mapa       = null;
+
+            function addMapMarkers(){
+                mapa.clear();
+
+                for(var x = 0; x < resultados.length; x++){
+                    var zoom = mapa.map.getZoom();
+                    var z="25";
+
+                    if(zoom >= 19){
+                        z = "65";
+
+                    }else if(zoom >= 17){
+                        z = "45";
+
+                    }else if(zoom >= 15){
+                        z = "25";
+
+                    }else if(zoom >= 13){
+                        z = "25";
+
+                    }else if(zoom >= 11){
+                        z = "25";
+
+                    }else if(zoom >= 9){
+                        z = "15";
+
+                    }else if(zoom >= 7){
+                        z = "15";
+
+                    }else if(zoom >= 5){
+                        z = "15";
+
+                    }else if(zoom >= 3){
+                        z = "15";
+
+                    }else{
+                        z = "15";
+                    }
+
+                    var tipo=resultados[x].destacado?"V":"";
+                    var tipo=resultados[x].vendido?"R":tipo;
+                    var icono="img/casa"+tipo+".gif";
+
+                    mapa.addMarker({
+                        position:new google.maps.LatLng(resultados[x].coordenaday, resultados[x].coordenadax),
+                        animation:google.maps.Animation.DROP,
+                        clickable:true,
+                        draggable:false,
+                        title:resultados[x].title,
+                        visible:true,
+                        icon:icono,
+                        infowindow:true,
+                        infodata:'<div class="infowindowdata"><div class="title">'+resultados[x].title+'</div><div class="foto"><a href="'+resultados[x].url+'"><img src="cache/50/38/'+resultados[x].imagen+'"></a></div><div class="descripcion"><a href="'+resultados[x].url+'">'+resultados[x].descripcion+'</a></div></div>'
+                    });
+                }
+
+                mapa.centerOnMarkers();
+                mapa.mapa.setZoom(1);
+            }
+
+            var ajaxsearchTimeout = false;
+            function search(e,box){
+              if(e.keyCode==13){
+                var query=box.value;
+                location.href="http://#BASE#/app/search/"+encodeURI(query);
+              }
+              else {
+                if(ajaxsearchTimeout){
+                  clearTimeout(ajaxsearchTimeout);
+                }
+                ajaxsearchTimeout=setTimeout(function(){searcher.search(box.value)},1000);
+              }
+            }
+
+            function searchplaces(e,box){
+              if(e.keyCode==13){
+                var query=box.value;
+                location.href="http://#BASE#/app/searchplaces/"+encodeURI(query);
+              }
+              else {
+                if(ajaxsearchTimeout){
+                  clearTimeout(ajaxsearchTimeout);
+                }
+
+                ajaxsearchTimeout=setTimeout(function(){
+                  searcher.searchplaces(box.value,mapa,dfg)
+                  },1000);
+              }
+            }
+
+            function searchBounds(bounds){
+                if(ajaxsearchTimeout){
+                  clearTimeout(ajaxsearchTimeout);
+                }
+                ajaxsearchTimeout=setTimeout(function(){searcher.searchBounds(bounds)},1000);
+            }
+
+            var inmueble=[[inmuebleJson]];
+
+            $(document).ready(function(){
+                
+                
+                if($('#tituloSfx_').height() > 29){
+                    
+                    
+
+                    $('#tituloSfx_').css("padding","0px 0px 0px 0px");
+                    
+                    $('.wraptitulo').css("padding","0px 0 0 10px");
+                
+                }
+                
+                searcher.resultbox=document.getElementById("resultsContainer");
+                searcher.resultTemplate=document.getElementById("_resultTemplate");
+                searcher.resultContainer=resultados;
+                searcher.lastSearch="#QUERY#";
+                searcher.lastSearchType="#SEARCHTYPE#";
+
+                mapa = new paymapa({
+                    id:1,
+                    contenedor:"searchmap",
+                    init:true,
+                    geoloc:false,
+                    center:[inmueble.coordenaday, inmueble.coordenadax]
+                });
+
+                var zoom = mapa.map.getZoom();
+                var z="25";
+
+                if(zoom>=19){
+                    z="65";
+                }else if(zoom>=17){
+                    z="45";
+                }else if(zoom>=15){
+                    z="25";
+                }else if(zoom>=13){
+                    z="25";
+                }else if(zoom>=11){
+                    z="25";
+                }else if(zoom>=9){
+                    z="15";
+                }else if(zoom>=7){
+                    z="15";
+                }else if(zoom>=5){
+                    z="15";
+                }else if(zoom>=3){
+                    z="15";
+                }else{
+                    z="15";
+                }
+
+                var tipo=inmueble.destacado?"V":"";
+                var tipo=inmueble.vendido?"R":tipo;
+                var icono="img/casa"+tipo+".gif";
+
+                //console.log(inmueble);
+
+                mapa.addMarker({
+                    position:new google.maps.LatLng(inmueble.coordenaday, inmueble.coordenadax),
+                    animation:google.maps.Animation.DROP,
+                    clickable:true,
+                    draggable:false,
+                    title:inmueble.title,
+                    visible:true,
+                    optimized:false,
+                    icon:icono,
+                    infowindow:true,
+                    infodata:'<div class="infowindowdata"><div class="title">'+inmueble.title+'</div><div class="foto"><a href="'+inmueble.url+'"><img src="cache/50/38/'+inmueble.imagen.path+'"></a></div><div class="descripcion"><a href="'+inmueble.url+'">'+inmueble.descripcion+'</a></div></div>'
+                });
+
+                //mapa.centerOnMarkers();
+
+                mapa.mapa.setZoom(15);
+                
+
+            });
+            
+            
+             
+        </script>
+    </head>
+    <body>
+        [[facebooksdk]]
+
+        <div class="alertas">
+            #ALERTAS#
+        </div>
+
+        <div id="_page" class="detalles_inmueble" >
+            <div class="mainwrap lilbig">
+                <header>
+                    [[header]]
+                </header>
+
+                [[socialblock]]
+
+                <article class="result oferta_#OFERTA# ofertaporc_#OFERTAPORC# premium_#PREMIUM# vendido_#VENDIDO# tipoobjeto_#TIPOOBJETO#" itemscope itemtype="http://data-vocabulary.org/Product" style="height: 1100px;">
+                    
+                    <div class='wrapperinfo' style="float:left;">
+                        <div class='wraptitulo'>
+                            
+                                <h1 id = "tituloSfx_" class='titleinmueble'>
+                                    [[inmuebleData?name=`titulo`]]
+                                </h1>
+                            
+                            
+                            [[favorito_button?plantilla=`1`]]
+                        </div>
+                        <div class='inmuebledesc'>
+                            <div class="title">
+                                <div class="info">
+                                    [[inmuebleInfo]]
+                                </div>
+                            </div>
+                            <div class="module3 images" style>
+                                <div class="wrap">
+                                    <div class="premiumoverlay">Premium</div>
+                                    <div class="ofertaoverlay" style="display:none;">Oferta</div>
+                                    [[inmuebleImages]]
+                                </div>
+                            </div>
+                            <div class="module3 mapa">
+                                <div class="wrap">
+                                    [[searchmap]]
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="right" style = "height: 100%;">
+                        <div class="module3 servicios_title userdata" itemscope itemtype="http://data-vocabulary.org/Person" style="height:82%;">
+                            <div class="wrap">
+                                <div class="avatar">
+                                    <a href="[[userData?name=`URL`]]">
+                                        [[userAvatar]]
+                                    </a>
+                                </div>
+                                <div class="nombre" itemprop="name">
+                                    [[userData?name=`nombre_pant`]]
+                                </div>
+                                <div class="contacto">
+                                    [[contact]]
+                                </div>
+                            </div>
+                            <div class="wrap2">
+                                <h2>$$caracteristicas_del_inmueble$$</h2>
+                                <div class=" servicios">
+                                    [[inmuebleServicios]]
+                                </div>
+
+                                <h2>$$detalles$$</h2>
+                                <div class="caracteristicas">
+                                    <ul>
+                                        <li>
+                                            <!--<img src="img/icons/tipo.png" alt="$$tipo$$" title="$$tipo$$">-->
+                                            <span class="details-marquer"></span>
+                                            [[inmuebleData?name=`tipoobjetonombre`]]
+                                        </li>
+                                        <li itemprop="category">
+                                            <!--<img src="img/icons/categoria.png" alt="$$tipo$$" title="$$categoria$$">-->
+                                            <span class="details-marquer"></span>
+                                            [[inmuebleData?name=`subtiponombre`]]
+                                        </li>
+                                        <li>
+                                            <!--<img src="img/icons/transaccion.png" alt="$$tipo$$" title="$$transaccion$$">-->
+                                            <span class="details-marquer"></span>
+                                            [[inmuebleData?name=`tipovrnombre`]]
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class=" descripcion" itemprop="description" style="height:430px;">
+                                    [[inmuebleData?name=`descripcion`]]
+                                </div>
+
+                                <h2>$$direccion$$</h2>
+                                <div class=" direccion" itemprop="direccion">
+                                    [[inmuebleData?name=`direccion`]]
+                                </div>
+                            </div>
+                            <div class="wrap3">
+                                <div class=" share ">
+                                    <span style = "float: left;">$$comparte_inmueble$$</span>
+                                    [[share]]
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+        <script>
+            $( document ).ready(function() {
+                
+                
+                
+                var precio;
+
+                if($("#_page.detalles_inmueble article.result.ofertaporc_10")){
+                    precio = $("#_page.detalles_inmueble article.result.ofertaporc_10 .wrapperinfo .info .info .precio.data").clone(true);
+                    original = precio.find(".precio_data").text();
+                    original = original.toString();
+                    original = original.replace(/,/g, '');
+                    original = parseInt(original);
+                    desc = original-(original * 0.1);
+                    desc = desc.toString();
+                    desc = desc.replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
+                    precio.find(".precio_data").html(desc);
+                    precio.find(".icon").css("background", "url(/img/descuentos/10.png)");
+                    precio.find(".icon").css("background-color", "white");
+                    $("#_page.detalles_inmueble article.result.ofertaporc_10 .wrapperinfo .info .info .precio.data .precio_data").css("text-decoration","line-through");
+                    $("#_page.detalles_inmueble article.result.ofertaporc_10 .wrapperinfo .info .info .precio.data .precio_data").css("color","red");
+                    $("#_page.detalles_inmueble article.result.ofertaporc_10 .wrapperinfo .info .info .construccion.dataS").after(precio);
+                }
+                if($("#_page.detalles_inmueble article.result.ofertaporc_20")){
+                    precio = $("#_page.detalles_inmueble article.result.ofertaporc_20 .wrapperinfo .info .info .precio.data").clone(true);
+                    original = precio.find(".precio_data").text();
+                    original = original.toString();
+                    original = original.replace(/,/g, '');
+                    original = parseInt(original);
+                    desc = original-(original * 0.2);
+                    desc = desc.toString();
+                    desc = desc.replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
+                    precio.find(".precio_data").html(desc);
+                    precio.find(".icon").css("background", "url(/img/descuentos/20.png)");
+                    precio.find(".icon").css("background-color", "white");
+                    $("#_page.detalles_inmueble article.result.ofertaporc_20 .wrapperinfo .info .info .precio.data .precio_data").css("text-decoration","line-through");
+                    $("#_page.detalles_inmueble article.result.ofertaporc_20 .wrapperinfo .info .info .precio.data .precio_data").css("color","red");
+                    $("#_page.detalles_inmueble article.result.ofertaporc_20 .wrapperinfo .info .info .construccion.dataS").after(precio);
+                }
+                if($("#_page.detalles_inmueble article.result.ofertaporc_30")){
+                    precio = $("#_page.detalles_inmueble article.result.ofertaporc_30 .wrapperinfo .info .info .precio.data").clone(true);
+                    original = precio.find(".precio_data").text();
+                    original = original.toString();
+                    original = original.replace(/,/g, '');
+                    original = parseInt(original);
+                    desc = original-(original * 0.3);
+                    desc = desc.toString();
+                    desc = desc.replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
+                    precio.find(".precio_data").html(desc);
+                    precio.find(".icon").css("background", "url(/img/descuentos/30.png)");
+                    precio.find(".icon").css("background-color", "white");
+                    $("#_page.detalles_inmueble article.result.ofertaporc_30 .wrapperinfo .info .info .precio.data .precio_data").css("text-decoration","line-through");
+                    $("#_page.detalles_inmueble article.result.ofertaporc_30 .wrapperinfo .info .info .precio.data .precio_data").css("color","red");
+                    $("#_page.detalles_inmueble article.result.ofertaporc_30 .wrapperinfo .info .info .construccion.dataS").after(precio);
+                }
+               
+                
+               
+               
+               
+            });
+                
+                
+            
+    
+        </script>
+    </body>
+</html>

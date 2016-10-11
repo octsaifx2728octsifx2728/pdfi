@@ -1,0 +1,342 @@
+.show-consumer .professional {
+	display: none;
+}
+.show-professional .consumer {
+	display: none;
+}
+.async-validator-feedback {
+	background-position: 0px 3px; color: rgb(153, 153, 153); margin-left: -15px; display: inline; position: absolute; background-repeat: no-repeat;
+}
+.valid.async-validator-feedback {
+	padding-left: 20px; font-weight: bold;
+}
+.invalid.async-validator-feedback {
+	padding-left: 20px; font-weight: bold;
+}
+.valid.async-validator-feedback {
+	color: rgb(102, 153, 34); background-image: url("/static/images/icon_checkmark.gif");
+}
+.invalid.async-validator-feedback {
+	color: rgb(221, 0, 0); background-image: url("/static/images/icon_negative-x.gif");
+}
+#facebookForm {
+	left: -10000px; top: -10000px; position: absolute;
+}
+.new-acct .has-acct {
+	display: none;
+}
+.has-acct .new-acct {
+	display: none;
+}
+.unmatched .matched {
+	display: none;
+}
+.matched .unmatched {
+	display: none;
+}
+.facebook-wrap p.has-acct.unmatched {
+	margin-top: 10px;
+}
+.facebook-wrap .consumer-info {
+	margin-top: 10px;
+}
+.facebook-wrap .auth-form p.submit {
+	margin-top: 15px;
+}
+.facebook-wrap .new-acct .consumer-info {
+	margin-top: 15px;
+}
+.facebook-wrap p.matched {
+	margin-bottom: 10px;
+}
+.facebook-wrap .has-acct p.submit {
+	margin-top: 0px;
+}
+.facebook-wrap .blurb {
+	clear: none;
+}
+.facebook-wrap .has-acct .async-validator-feedback {
+	display: none;
+}
+.facebook-wrap input.prefilled {
+	background-color: rgb(238, 238, 238);
+}
+.facebook-wrap .auth-form p.submit {
+	margin-left: 2px;
+}
+.facebook-wrap .auth-form #zillow-terms {
+	width: auto; margin-left: 2px;
+}
+.facebook-wrap .auth-form #fb-connect-zillow-terms {
+	padding-top: 6px;
+}
+.inline-auth {
+	background-color: rgb(255, 255, 255);
+}
+.inline-auth .auth-form {
+	width: 440px;
+}
+.inline-auth .auth-form fieldset {
+	width: 440px;
+}
+.auth-form select {
+	width: 256px;
+}
+.auth-form input[type='text'] {
+	width: 256px;
+}
+.auth-form input[type='email'] {
+	width: 256px;
+}
+.auth-form input[type='password'] {
+	width: 256px;
+}
+.auth-form select {
+	padding: 2px 0px 3px; width: auto; height: 24px; margin-bottom: 8px;
+}
+.ie7 .auth-form select {
+	height: 25px;
+}
+.auth-form p {
+	padding: 3px 2px; line-height: 1.1; margin-bottom: 10px;
+}
+.auth-form label {
+	padding: 3px 2px; line-height: 1.1; margin-bottom: 10px;
+}
+.auth-form input[type='text'] {
+	padding: 3px 2px; line-height: 1.1; margin-bottom: 10px;
+}
+.auth-form input[type='email'] {
+	padding: 3px 2px; line-height: 1.1; margin-bottom: 10px;
+}
+.auth-form input[type='password'] {
+	padding: 3px 2px; line-height: 1.1; margin-bottom: 10px;
+}
+.auth-form label {
+	width: 135px; clear: both; float: left;
+}
+.auth-form p {
+	padding: 0px 2px; clear: both; margin-bottom: 5px;
+}
+.auth-form p label {
+	margin: 0px; padding: 0px; width: auto; clear: none; float: none;
+}
+.auth-form p.no-label {
+	padding-left: 7px; margin-bottom: 10px; margin-left: 135px;
+}
+.auth-form p.submit {
+	float: left;
+}
+.auth-form div.error {
+	margin: 0px 2px 10px 0px;
+}
+.auth-form p.error {
+	margin: 0px 2px 10px 0px;
+}
+.login .auth-form div.error {
+	margin: 7px 0px 0px; width: 315px; float: right;
+}
+#content .auth-form div.error h4 {
+	margin: 0px; padding: 0px !important; text-align: center;
+}
+.forgot-pass p {
+	margin-bottom: 10px;
+}
+.forgot-pass p.submit {
+	padding-left: 0px; margin-bottom: 0px; margin-left: 0px; float: none;
+}
+.forgot-pass .hasErrors p.error {
+	padding: 5px; left: 280px; top: 108px; margin-right: 10px; position: absolute;
+}
+#forgotPasswordForm label {
+	width: auto; text-align: left; padding-left: 0px; font-weight: bold; margin-bottom: 5px; float: none; display: block;
+}
+.register .hasErrors p.error {
+	display: none;
+}
+.pro-info li {
+	clear: both;
+}
+#city {
+	width: 120px;
+}
+.pro-info .names .first {
+	width: 120px;
+}
+.pro-info .names .last {
+	width: 120px;
+}
+.pro-info .names .last {
+	margin-left: 10px;
+}
+.pro-info .names input {
+	margin-bottom: 5px;
+}
+.pro-info .names label {
+	margin-bottom: 5px;
+}
+.pro-info .names-filed-message {
+	margin-bottom: 10px; margin-left: 136px;
+}
+.pro-info select.state {
+	margin: 0px 5px 8px; width: 60px;
+}
+.ie7 .pro-info .phone {
+	vertical-align: top;
+}
+.pro-info .phone label {
+	margin-bottom: 15px;
+}
+.pro-info .phone .numeric {
+	width: 30px;
+}
+.phone #number {
+	width: 40px;
+}
+#zip {
+	width: 60px;
+}
+.phone #extension {
+	width: 60px;
+}
+.ext-phone {
+	float: right;
+}
+.ie7 .auth-form .ext-phone {
+	margin-left: 31px; float: none;
+}
+.auth-form p label {
+	text-indent: -15px; padding-left: 15px; display: block !important;
+}
+.auth-form p label input[type='checkbox'] {
+	width: 13px; height: 13px; vertical-align: bottom;
+}
+.auth-form .consumer-info li {
+	position: relative;
+}
+.auth-form .async-validator-feedback {
+	font-weight: normal; margin-top: 6px;
+}
+.auth-wrap .module-head h5 {
+	padding-right: 0.5em;
+}
+.auth-wrap .module-head .actions {
+	float: none;
+}
+.auth-wrap .module-head .actions a {
+	float: none;
+}
+.auth-wrap .module-head .actions a span.fb_button_text {
+	visibility: visible;
+}
+.auth-wrap .module-body {
+	background: rgb(255, 255, 255); padding: 10px;
+}
+.auth-wrap .module-foot {
+	padding: 8px 10px; border: 0px currentColor;
+}
+.inline-auth .register .show-professional {
+	width: 530px;
+}
+.inline-auth .register .show-professional fieldset {
+	width: 530px;
+}
+.inline-auth .login label {
+	width: 105px;
+}
+.inline-auth .show-consumer label {
+	width: 105px;
+}
+.inline-auth .login p.no-label {
+	margin-left: 105px;
+}
+.inline-auth .show-consumer p.no-label {
+	margin-left: 105px;
+}
+.inline-auth p.unmatched label {
+	width: auto;
+}
+.inline-auth .consumer-info li.new-acct label {
+	width: auto;
+}
+.inline-auth .pro-toggle label {
+	width: auto;
+}
+.auth-form p.no-label label {
+	width: auto;
+}
+.forgot-pass label {
+	text-align: right; padding-right: 5px; white-space: nowrap;
+}
+.login label {
+	text-align: right; padding-right: 5px; white-space: nowrap;
+}
+.register li label {
+	text-align: right; padding-right: 5px; white-space: nowrap;
+}
+.register li.phone label {
+	padding-right: 1px;
+}
+.login p.no-label label {
+	text-align: left;
+}
+.register #emailAddr {
+	margin-bottom: 2px;
+}
+.register #email-field-msg {
+	clear: none; margin-bottom: 8px;
+}
+.auth-form #proInfo_toggleArea {
+	margin: 0px -10px 10px; height: auto !important; padding-top: 10px; clear: both; min-height: 200px; background-color: rgb(245, 245, 245);
+}
+.auth-form #pro-info {
+	padding: 0px 10px; width: 405px; float: left;
+}
+.auth-form #pro-info .placeholder {
+	font-style: italic;
+}
+#zmm-upsell {
+	padding-left: 15px;
+}
+.auth-form #auth-disclaimer {
+	padding-right: 5px;
+}
+.ie7 .auth-form #auth-disclaimer {
+	width: 90px;
+}
+.ie7 .auth-form #proInfo_toggleArea {
+	position: relative; z-index: 5;
+}
+.ie7 #stayInTouch {
+	margin-left: 105px;
+}
+#registrationForm p.fb-reg {
+	margin-left: 0px;
+}
+.auth-form .invalid.async-validator-feedback {
+	width: 50px;
+}
+.auth .auth-wrap {
+	background: 0px;
+	margin: 10px 10px 10px 10px;
+	width: 565px;
+	padding-bottom: 0px;
+}
+.auth .module-head .actions {
+	line-height: 2.4;
+}
+.auth .auth-wrap .module-foot {
+	padding-left: 10px; border-top-color: currentColor; border-top-width: 0px; border-top-style: none;
+}
+.auth .auth-form label {
+	width: 30%;
+}
+.auth .auth-form p.no-label {
+	margin-left: 30%;
+}
+.auth #login-block .show-lightbox {
+	visibility: hidden;
+}
+.auth #login-block .right-bar {
+	border-right-color: transparent;
+}

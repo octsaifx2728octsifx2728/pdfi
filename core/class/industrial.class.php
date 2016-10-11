@@ -1,0 +1,269 @@
+<?php
+global $core;
+$core->loadClass("inmueble");
+
+class industrial_inmueble extends inmueble{
+    public $nombreS='$$industrial$$';
+    public $nombreP='$$industriales$$';
+    public $typename="industrial";
+    public $linktext='$$ver_este_inmueble_industrial$$';
+    public $sublinktext=array(
+        "planta"=>'$$ver_esta_planta$$',
+        "bodega"=>'$$ver_esta_bodega$$'
+    );
+    protected $_tabla="industriales";
+    protected $_idField="id_expediente";
+    protected $_fieldTypes=array("amueblado"=>"int");
+    protected $_subtipos=array(
+                    array(
+                        "name"=>"planta",
+                        "label"=>'$$planta$$',
+                        "options"=>array(),
+                        "params"=>""
+                        ),
+                    array(
+                        "name"=>"bodega",
+                        "label"=>'$$bodega$$',
+                        "options"=>array(),
+                        "params"=>""
+                        ));
+    public $typeid=4;
+    public $description='$$industrial_description$$';
+    protected $_precioRanges=array(
+        "tipovrventa"=>array(0,100000000),
+        "tipovrrenta"=>array(0,1000000),
+        "tipovrcomparto"=>array(0,500000)
+    );
+  protected $_meinteresa=array(
+      "default"=>'$$meinteresaesteinmueble$$',
+      "tipovrventa"=>array(
+            "default"=>'$$meinteresacompraresteinmueble$$',
+            "planta"=>'$$meinteresacomprarplanta$$',
+            "bodega"=>'$$meinteresacomprarbodega$$'
+          ),
+      "tipovrrenta"=>array(
+            "default"=>'$$meinteresarentaresteinmueble$$',
+            "planta"=>'$$meinteresarentarplanta$$',
+            "bodega"=>'$$meinteresarentarbodega$$'
+          ),
+      "tipovrcomparto"=>array(
+            "default"=>'$$meinteresacompartiresteinmueble$$',
+            "planta"=>'$$meinteresacompartirplanta$$',
+            "bodega"=>'$$meinteresacompartirbodega$$'
+          )
+  );
+    protected $_fieldsBasic=array(
+                array(
+                    "name"=>"metrica",
+                    "label"=>'$$metrica$$',
+                    "type"=>"select",
+                    "params"=>"",
+                    "selected"=>"metros",
+                    "options"=>array(
+                            "metros"=>'$$metros$$',
+                            "pies"=>'$$pies$$'
+                        )
+                    ),
+                array(
+                    "name"=>"m2",
+                    "label"=>'$$m2$$',
+                    "type"=>"number",
+                    "params"=>"fieldRequired_1  fieldMin_0  fieldMax_100000",
+                    "ranges"=>array(
+                            "tipovrventa"=>array(0,50000),
+                            "tipovrrenta"=>array(0,50000),
+                            "tipovrcomparto"=>array(0,50000)
+                        )
+                    ),
+                array(
+                    "name"=>"m2s",
+                    "label"=>'$$m2s$$',
+                    "type"=>"number",
+                    "params"=>"fieldMin_0 fieldMax_10000",
+                    "ranges"=>array(
+                            "tipovrventa"=>array(0,100000),
+                            "tipovrrenta"=>array(0,100000),
+                            "tipovrcomparto"=>array(0,100000)
+                        )
+                    ),
+        array(
+            "name"=>"amueblado",
+            "label"=>'$$equipado$$',
+            "type"=>"checkbox",
+            "params"=>""
+            ),
+        array(
+            "name"=>"noamueblado",
+            "label"=>'$$sinequipar$$',
+            "type"=>"checkbox",
+            "params"=>""
+            ),
+        array(
+            "name"=>"estacionamientos",
+            "label"=>'$$estacionamientos$$',
+            "type"=>"number",
+            "params"=>"fieldMin_0 fieldMax_10",
+                    "ranges"=>array(
+                            "tipovrventa"=>array(0,1000),
+                            "tipovrrenta"=>array(0,1000),
+                            "tipovrcomparto"=>array(0,1000)
+                        )
+            ),
+        array(
+            "name"=>"estacionamientos2",
+            "label"=>'$$estacionamientos2$$',
+            "type"=>"number",
+            "params"=>"fieldMin_0 fieldMax_10",
+                    "ranges"=>array(
+                            "tipovrventa"=>array(0,1000),
+                            "tipovrrenta"=>array(0,1000),
+                            "tipovrcomparto"=>array(0,1000)
+                        )
+            ),
+        array(
+            "name"=>"anio",
+            "label"=>'$$anio$$',
+            "type"=>"select",
+            "selected"=>"2013",
+                    "ranges"=>array(
+                            "tipovrventa"=>array(1900,2013),
+                            "tipovrrenta"=>array(1900,2013),
+                            "tipovrcomparto"=>array(1900,2013)
+                        ),
+            "options"=>array("1900"=>1900,
+                            "1901"=>1901,
+                            "1902"=>1902,
+                            "1903"=>1903,
+                            "1904"=>1904,
+                            "1905"=>1905,
+                            "1906"=>1906,
+                            "1907"=>1907,
+                            "1908"=>1908,
+                            "1909"=>1909,
+                            "1910"=>1910,
+                            "1911"=>1911,
+                            "1912"=>1912,
+                            "1913"=>1913,
+                            "1914"=>1914,
+                            "1915"=>1915,
+                            "1916"=>1916,
+                            "1917"=>1917,
+                            "1918"=>1918,
+                            "1919"=>1919,
+                            "1920"=>1920,
+                            "1921"=>1921,
+                            "1922"=>1922,
+                            "1923"=>1923,
+                            "1924"=>1924,
+                            "1925"=>1925,
+                            "1926"=>1926,
+                            "1927"=>1927,
+                            "1928"=>1928,
+                            "1929"=>1929,
+                            "1930"=>1930,
+                            "1931"=>1931,
+                            "1932"=>1932,
+                            "1933"=>1933,
+                            "1934"=>1934,
+                            "1935"=>1935,
+                            "1936"=>1936,
+                            "1937"=>1937,
+                            "1938"=>1938,
+                            "1939"=>1939,
+                            "1940"=>1940,
+                            "1941"=>1941,
+                            "1942"=>1942,
+                            "1943"=>1943,
+                            "1944"=>1944,
+                            "1945"=>1945,
+                            "1946"=>1946,
+                            "1947"=>1947,
+                            "1948"=>1948,
+                            "1949"=>1949,
+                            "1950"=>1950,
+                            "1951"=>1951,
+                            "1952"=>1952,
+                            "1953"=>1953,
+                            "1954"=>1954,
+                            "1955"=>1955,
+                            "1956"=>1956,
+                            "1957"=>1957,
+                            "1958"=>1958,
+                            "1959"=>1959,
+                            "1960"=>1960,
+                            "1961"=>1961,
+                            "1962"=>1962,
+                            "1963"=>1963,
+                            "1964"=>1964,
+                            "1965"=>1965,
+                            "1966"=>1966,
+                            "1967"=>1967,
+                            "1968"=>1968,
+                            "1969"=>1969,
+                            "1970"=>1970,
+                            "1971"=>1971,
+                            "1972"=>1972,
+                            "1973"=>1973,
+                            "1974"=>1974,
+                            "1975"=>1975,
+                            "1976"=>1976,
+                            "1977"=>1977,
+                            "1978"=>1978,
+                            "1979"=>1979,
+                            "1980"=>1980,
+                            "1981"=>1981,
+                            "1982"=>1982,
+                            "1983"=>1983,
+                            "1984"=>1984,
+                            "1985"=>1985,
+                            "1986"=>1986,
+                            "1987"=>1987,
+                            "1988"=>1988,
+                            "1989"=>1989,
+                            "1990"=>1990,
+                            "1991"=>1991,
+                            "1992"=>1992,
+                            "1993"=>1993,
+                            "1994"=>1994,
+                            "1995"=>1995,
+                            "1996"=>1996,
+                            "1997"=>1997,
+                            "1998"=>1998,
+                            "1999"=>1999,
+                            "2000"=>2000,
+                            "2011"=>2011,
+                            "2012"=>2012,
+                            "2013"=>2013),
+            "params"=>""
+            )
+        );
+    protected $_itemsGeneral=array(
+        "elevadors"=>array("nombre"=>'$$elevadorcarga$$'),
+        "sistema_seguridad"=>array("nombre"=>'$$sistema_seguridad$$'),
+        "muelle"=>array("nombre"=>'$$muelle$$'),
+        "bodega"=>array("nombre"=>'$$bodega$$'),
+        "aire"=>array("nombre"=>'$$aire$$'),
+        "terraza"=>array("nombre"=>'$$terraza$$'),
+        "circuito"=>array("nombre"=>'$$circuito$$'),
+        "calefaccion"=>array("nombre"=>'$$calefaccion$$'),
+        "ecologico"=>array("nombre"=>'$$ecologico$$'),
+        "portero"=>array("nombre"=>'$$caseta$$'),
+        "parque"=>array("nombre"=>'$$parque$$'),
+        "servicios"=>array("nombre"=>'$$servicios$$'),
+        "discapacitados"=>array("nombre"=>'$$discapacitados$$'),
+        "chimenea"=>array("nombre"=>'$$chimenea$$'),
+        "elevador"=>array("nombre"=>'$$elevador$$'),
+        "helipuerto"=>array("nombre"=>'$$helipuerto$$'),
+        
+        "zonaembarque"=>array("nombre"=>'$$zonaembarque$$'),
+        "tren"=>array("nombre"=>'$$tren$$'),
+        "autopista"=>array("nombre"=>'$$autopista$$'),
+        "aeropuerto"=>array("nombre"=>'$$aeropuerto$$'),
+        "basurero"=>array("nombre"=>'$$basurero$$'),
+        "licencias"=>array("nombre"=>'$$licencias$$'),
+        );
+    public function industrial_inmueble($id_expediente){
+        
+                $this->id=$id_expediente;
+    }
+}

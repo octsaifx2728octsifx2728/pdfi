@@ -1,0 +1,60 @@
+<div class="userDataManager adminform" id="_userDataManager"  itemscope itemtype="http://data-vocabulary.org/Person">
+    <div class="field nombre">
+        <label>$$nombre$$</label>
+        <input type="text" name="nombre" value="#nombre#" class="inputtext"  onchange="javascript:user.update({name:'nombre_pant',value:this.value})">
+    </div>
+    <div class="field email">
+        <label>$$email$$</label>
+        <input type="email" name="email" value="#email#" class="inputtext"  onchange="javascript:user.update({name:'usuario',value:this.value})">
+    </div>
+    <div class="field password">
+        <input type="button" name="password" value="$$changePassword$$" class="button gray-dark">
+
+
+<script>
+    $(".userDataManager>.password>.button").ultraLogin({
+        key:"login",
+        initform:7,
+        avaliableForms:[7]
+    });
+    </script>
+
+    </div>
+    <div class="field tel">
+        <label>
+                    <select name="telefonotag" onchange="javascript:user.update({name:'telefonotag',value:$(this).val()})">
+                        <option value="_____telefono-----" #telefono_selected#>$$telefono$$</option>
+                        <option value="_____casa-----" #casa_selected#>$$casa$$</option>
+                        <option value="_____oficina-----" #oficina_selected#>$$oficina$$</option>
+                        <option value="_____movil-----" #movil_selected#>$$movil$$</option>
+                        <option value="_____otro-----" #otro_selected#>$$otro$$</option>
+                    </select>
+                </label>
+        <input type="tel" name="tel" value="#tel#" class="inputtext"  onchange="javascript:user.update({name:'telefono',value:this.value})">
+    </div>
+    <div class="field tel">
+        <label>
+                    <select name="telefonotag1" onchange="javascript:user.update({name:'telefonotag1',value:$(this).val()})">
+                        <option value="_____telefono-----" #telefono_selected1#>$$telefono$$</option>
+                        <option value="_____casa-----" #casa_selected1#>$$casa$$</option>
+                        <option value="_____oficina-----" #oficina_selected1#>$$oficina$$</option>
+                        <option value="_____movil-----" #movil_selected1#>$$movil$$</option>
+                        <option value="_____otro-----" #otro_selected1#>$$otro$$</option>
+                    </select>
+                </label>
+        <input type="tel" name="tel" value="#tel1#" class="inputtext"  onchange="javascript:user.update({name:'telefono1',value:this.value})">
+    </div>
+    <div class="field tel">
+        <label>
+                    <select name="telefonotag2" onchange="javascript:user.update({name:'telefonotag2',value:$(this).val()})">
+                        <option value="_____telefono-----" #telefono_selected2#>$$telefono$$</option>
+                        <option value="_____casa-----" #casa_selected2#>$$casa$$</option>
+                        <option value="_____oficina-----" #oficina_selected2#>$$oficina$$</option>
+                        <option value="_____movil-----" #movil_selected2#>$$movil$$</option>
+                        <option value="_____otro-----" #otro_selected2#>$$otro$$</option>
+                    </select>
+                </label>
+        <input type="tel" name="tel" value="#tel2#" class="inputtext"  onchange="javascript:user.update({name:'telefono2',value:this.value})">
+    </div>
+
+</div>

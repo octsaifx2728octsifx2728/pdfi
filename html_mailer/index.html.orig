@@ -1,0 +1,38 @@
+<<<<<<< HEAD
+#DOCTYPE#
+
+
+<html#NAMESPACES#>
+
+<head>
+<base href="#BASE#">
+[[metas]]
+
+[[enviroment]]
+
+#ESTILOS#
+
+#SCRIPTS#
+
+
+[[analitics]]
+
+<script>
+    $(document).ready(function(){
+        // For use within normal web clients 
+        var isiPad = (navigator.userAgent.match(/iPhone/i)||navigator.userAgent.match(/iPad/i));
+        if(isiPad){
+            $(".principal").find(".promos3").css({"letter-spacing":"-5px"});
+            $(".banners>.banner").css({"letter-spacing":"-5px"});
+        }
+        
+    });
+</script>
+</head>
+<body>
+#MENSAJE#
+</body>
+</html>
+=======
+hola
+>>>>>>> gratis

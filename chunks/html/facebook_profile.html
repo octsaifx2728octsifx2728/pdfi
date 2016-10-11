@@ -1,0 +1,12 @@
+
+<script type="text/javascript">
+var fb_token="#TOKEN#";
+fb_api.fb_userload_callback.push(
+  function(user){
+    $(".facebook_profile>.name").append(user.first_name);
+    var avatar=document.createElement("img");
+    avatar.src="https://graph.facebook.com/"+user.id+"/picture";
+    $(".facebook_profile>.avatar").append(avatar);
+  }
+  );
+</script>

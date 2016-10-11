@@ -1,0 +1,42 @@
+#progress-meter {
+	FONT-FAMILY: verdana,arial,sans-serif; COLOR: #555
+}
+BODY {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+#progress-meter H5 {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+#progress-meter UL {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+#progress-meter LI {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+#progress-meter H5 {
+	FONT-SIZE: 14px; FONT-WEIGHT: bold
+}
+#progress-meter .meter {
+	FONT-SIZE: 14px; FONT-WEIGHT: bold
+}
+#progress-meter .meter {
+	BORDER-BOTTOM: #addf63 1px solid; BORDER-LEFT: #addf63 1px solid; MARGIN-TOP: 5px; WIDTH: 99%; HEIGHT: 23px; BORDER-TOP: #addf63 1px solid; BORDER-RIGHT: #addf63 1px solid
+}
+#progress-meter .complete {
+	LIST-STYLE-TYPE: none; FLOAT: left; HEIGHT: 100%
+}
+#progress-meter .incomplete {
+	LIST-STYLE-TYPE: none; FLOAT: left; HEIGHT: 100%
+}
+#progress-meter .complete {
+	TEXT-ALIGN: right; BACKGROUND-COLOR: #f7ffe7; BORDER-RIGHT: #addf63 1px solid
+}
+#progress-meter .incomplete {
+	TEXT-ALIGN: left; BACKGROUND-COLOR: #fff; DISPLAY: inline
+}
+#progress-meter .complete DIV {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; PADDING-TOP: 3px
+}
+#progress-meter .incomplete DIV {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; PADDING-TOP: 3px
+}

@@ -1,0 +1,97 @@
+#DOCTYPE#
+
+<html #NAMESPACES#>
+    <head>
+        <base href="#BASE#">
+        [[metas]]
+
+        [[enviroment]]
+
+        #ESTILOS#
+
+        #SCRIPTS#
+
+
+        [[analitics]]
+
+        <script type="text/javascript">
+            /*
+            $(document).ready(function(){
+                // For use within normal web clients
+                var isiPad = (navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i));
+
+                if(isiPad){
+                    $(".principal").find(".promohome1").css({"letter-spacing":"-1px"});
+                    $(".principal").find(".promohome2").css({"letter-spacing":"-2px"});
+                    $(".principal").find(".promohome4").css({"letter-spacing":"-3px"});
+                    $(".principal").find(".promos3").css({"letter-spacing":"-5px"});
+                    $(".banners>.banner").css({"letter-spacing":"-5px"});
+                }
+            });
+            */
+        </script>
+    </head>
+    <body>
+        [[socialblock]]
+        [[facebooksdk]]
+
+        <!--
+        <div class="alertas">
+            #ALERTAS#
+        </div>
+        -->
+
+        <div id="_page" class="homepage">
+            <div class="mainwrap">
+                <header>
+                    [[header]]
+                </header>
+
+                <div class="principal">
+                    [[promohome?plantilla=`3`]]
+
+                    <div class="video-principal">
+                        <div class="youtube">
+                            <div class="seoprom" style="position:absolute;z-index:0; width:100px;height:100px; overflow:hidden;margin:0 0 0 10px;">
+                                <h1>$$slogan1$$</h1>
+                                <h2>$$slogan2$$</h2>
+                                <h3>$$slogan3$$</h3>
+                            </div>
+                            <div class="video" style="position:absolute;z-index:10; margin:0 0 0 10px;">
+                                [[video?src=`video`&width=`459`&height=`279`]]
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bloque-busqueda">
+                    <div class="pasos">$$Step_1$$</div>
+                    <div class="seleccionar-busqueda">
+                        <div class="filters">
+                            [[filtersTypeTransaction]]
+                        </div>
+                        <div class="caja-de-busqueda">
+                            [[searchbox?ajax=`0`]]
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bloque-de-banners">
+                    [[bloquebanners]]
+                </div>
+
+                [[actividades]]
+
+                <div id="Layermap">
+                    <div id="map_canvas"></div>
+                    <div id="crosshair"></div>
+                </div>
+                <div class='clearb'></div>
+            </div>
+        </div>
+
+        <footer>
+            [[footer]]
+        </footer>
+    </body>
+</html>

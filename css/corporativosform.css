@@ -1,0 +1,39 @@
+.corporativos{
+	margin:10px 0;
+}
+.corporativos .corporativosButton{
+	padding: 10px 0;
+}
+.corporativosform {
+	width:440px;
+}
+.corporativosform .prod{
+	margin:3px;
+	width:200px;
+	float:left;
+	cursor:pointer;
+}
+.corporativosform .prod .titulo{
+	margin: 5px;
+	font-size: 21px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.corporativosform .prod .descripcion{
+margin: 10px;
+font-size: 12px;
+text-align: center;
+color: #CCC;
+
+}
+
+.corporativosform .prod .precio{
+
+margin: 10px;
+font-size: 15px;
+text-align: center;
+font-weight:bold;
+
+
+}

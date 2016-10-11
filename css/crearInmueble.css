@@ -1,0 +1,420 @@
+/*
+.panel p{
+    font-size: 15px;
+    text-align: left;
+    color: #1C1C4E;
+    font-weight: bold;
+    font-style: italic;
+    border-bottom: 5px solid #1C1C4E;
+    transition:  background-color .5s;
+    -moz-transition:  background-color .5s;
+    -webkit-transition:  background-color .5s;
+    -o-transition: background-color .5s;
+}
+
+.old p{
+}
+.selectSubtipo,
+.selectTransaccion,
+.selectTipo{
+    height: 190px;
+    width: 330px;
+    float: left;
+}
+.dinamicFields{
+    width:990px;
+}
+.panel .descripcion{
+    font-size: 13px;
+    text-align: left;
+    color: #666;
+    font-style: italic;
+    margin:25px 0;
+}
+.panel .seccion .field{
+width: 485px;
+float: left;
+height: 65px;
+text-align: left;
+margin: 0 5px;
+}
+.panel .seccion .field label{
+    font-size: 12px;
+    font-weight: bold;
+    font-style: italic;
+    color: #1C1C4E;
+    display: block;
+}*/
+.panel .hint{
+    color:#FF2A2A;
+    font-size: 9px;
+    margin: 0px 30px;
+    position: absolute;
+    border: 1px solid #ccc;
+    padding: 2px 5px;
+    border-radius: 5px;
+    box-shadow: -3px -3px 8px #ccc;
+    display:none;
+    background-color: #fff;
+}
+/*
+.panel .seccion .fieldType_posicion input,
+.panel .seccion .fieldType_selectmoneda select,
+.panel .seccion .fieldType_select select,
+.panel .seccion .fieldType_textarea textarea,
+.panel .seccion .fieldType_currency input,
+.panel .seccion .fieldType_number input,
+.panel .seccion .fieldType_text input{
+    margin: 0 0 0 15px;
+    background:white;
+    width: 455px;
+    height: 15px;
+    font-size: 12px;
+    padding: 2px 5px;
+    color: #ccc;
+    font-style: italic;
+    border: 2px solid #ccc;
+    box-shadow: 0px 0px 0px #1C1C4E;
+    border-radius: 5px;
+    transition:  background-color .5s;
+    -moz-transition: background-color .5s;
+    -webkit-transition:  background-color .5s;
+    -o-transition: background-color .5s;
+}
+.panel .seccion .fieldType_posicion input:focus,
+.panel .seccion .fieldType_selectmoneda select:focus,
+.panel .seccion .fieldType_select select:focus,
+.panel .seccion .fieldType_textarea textarea:focus,
+.panel .seccion .fieldType_currency input:focus,
+.panel .seccion .fieldType_number input:focus,
+.panel .seccion .fieldType_text input:focus{
+    color: #666;
+    font-style: normal;
+    border: 2px solid #1C1C4E;
+    box-shadow: 0px 0px 5px #1C1C4E;
+}
+*/
+.error .hint{
+    display:block !important;
+}
+.error .fotos .fotosContainer,
+.panel .seccion .error .ui-selectable,
+.panel .seccion .error input{
+    box-shadow: 0px 0px 5px red;
+}
+/*
+.panel .seccion .changed textarea,
+.panel .seccion .changed input{
+    color: #666;
+    font-style: normal;
+}
+.panel .seccion .fieldType_currency input,
+.panel .seccion .fieldType_number input{
+    width: 90px;
+    text-align: right;
+}
+.panel .seccion .fieldType_textarea{
+    height:180px;
+}
+.panel .seccion .fieldType_textarea .counter{
+    font-size:10px;
+    text-align:right;
+    color:#666;
+    display:block;
+}
+.panel .seccion .fieldType_textarea textarea{
+    height:150px;
+}
+
+.panel .seccion .fieldType_selectmoneda select,
+.panel .seccion .fieldType_select select{
+    height: 40px;
+    color: #666;
+    width: 230px;
+}
+.panel .old .field label{
+    color:#ccc;
+}
+
+.panel .seccion .fieldType_selectable{
+    height:110px;
+    width: 300px;
+}
+
+.panel .seccion .fieldType_selectable ul{
+    margin: 0;
+    padding: 3px 6px;
+    text-align: center;
+    font-size: 12px;
+    color: #666;
+    border-radius: 5px;
+    transition:  background-color .5s;
+    -moz-transition:  background-color .5s;
+    -webkit-transition:  background-color .5s;
+    -o-transition:  background-color .5s;
+    height: 60px;
+    overflow: hidden;
+    width: 300px;
+}
+
+.panel .seccion .fieldType_selectable:hover ul{
+    overflow:visible;
+}
+
+.panel .seccion .fieldType_selectable ul li{
+    display: none;
+    font-size: 17px;
+    width: 200px;
+    text-align: left;
+    list-style: none;
+    margin: 0px 30px;
+    float: left;
+    cursor: pointer;
+    background: #7BC8FC;
+    color: black;
+    font-weight: bold;
+    overflow: hidden;
+    height: 20px;
+    padding: 17px 20px;
+    text-align: left;
+    transition: background-color .5s;
+    -moz-transition:  background-color .5s;
+    -webkit-transition:  background-color .5s;
+    -o-transition:  background-color .5s;
+}
+
+
+.panel .seccion .fieldType_selectable ul .ui-selected,
+.panel .seccion .fieldType_selectable ul:hover li{
+    display: block;
+    overflow:visible;
+}
+
+.panel .seccion .fieldType_selectable ul .ui-selected,
+.panel .seccion .fieldType_selectable ul li:hover{
+    font-size: 17px;
+    background: #0099FF url("selector.png") right center no-repeat;
+    color: white;
+    border-radius: 10px;
+}
+.panel .seccion .fieldType_selectable .extras{
+    float:right;
+    width:250px;
+    height:35px;
+    margin: 10px 0 0;
+}
+.panel .seccion .fieldType_selectable .extras label{
+    display:inline;
+}
+.panel .seccion .fieldType_checkbox{
+    height:20px;
+    width:195px;
+    margin: 5px 0;
+}
+.panel .seccion .fieldType_checkbox input{
+    vertical-align:middle;
+}
+.panel .seccion .fieldType_checkbox label{
+    display:inline;
+}
+
+.panel .seccion_transaccion{
+    height:150px;
+}
+
+
+.panel .seccion_adicional{
+    height:350px;
+}
+.panel .seccion_posicion{
+    height:520px;
+}
+.panel .seccion_adicional .fieldType_number{
+    width: 280px;
+}
+.panel .seccion_adicional .fieldType_select{
+    width: 280px;
+}
+.panel .seccion_posicion .fieldType_posicion{
+    width:990px;
+    height:370px;
+}
+.panel .seccion_posicion .field_direccion{
+    width:990px;
+}
+.panel .seccion .fieldType_posicion .mapContainer{
+width: 580px;
+height: 300px;
+    float:right;
+    background:#ccc url('mapa.jpg') center center no-repeat;
+border: 5px double #347ce1;
+}
+
+.panel .seccion .fieldType_posicion input{
+    width:200px;
+}
+.crearInmueble .multimedia{
+    display:none;
+}
+
+.freemiumform .section .field .uploadFrame {
+margin: 0 0 0 -50px;
+}
+.panel .seccion .fieldType_currency .formated{
+    font-size:15px;
+    color:#00A53B;
+}
+.panel .seccion .fieldType_currency  .key,
+.panel .seccion .fieldType_currency .simbol{
+    display:none;
+}
+.panel .seccion .fieldType_currency .formated .key,
+.panel .seccion .fieldType_currency .formated .simbol{
+    display:inline;
+    font-weight:bold;
+}
+.panel .seccion .fieldType_currency .formated .decimal{
+    font-size:9px;
+    vertical-align: top;
+}
+.panel .seccion_general .field_subtipo{
+    margin-top:-105px;
+    
+}
+.panel .seccion_general{
+    height:450px;
+}
+.panel .seccion_caracteristicas{
+    height:370px;
+}
+.panel .seccion_caracteristicas{
+    height:370px;
+}
+
+.panel .seccion_tipo .field label,
+.panel .seccion_tipo .control,
+.panel .seccion_general .control,
+.panel .seccion_caracteristicas .control,
+.panel .seccion_adicional .control,
+.panel .seccion_tipo .descripcion,
+.panel .seccion_transaccion .field label,
+.panel .seccion_transaccion .control,
+.panel .seccion_transaccion .descripcion{
+    display:none;
+}
+
+
+.panel .submit{
+    background:url('fondos/registrate2.png') center center;
+    font-size: 20px;
+    border: 3px solid #ccc;
+    border-radius: 10px;
+    padding: 2px 10px;
+    cursor:pointer;
+}
+
+
+.panel .cancel{
+    background: #ccc;
+    font-size: 15px;
+    border: 3px solid #ccc;
+    border-radius: 10px;
+    padding: 2px 10px;
+    cursor:pointer;
+}
+
+.panel .cancel:hover,
+.panel .submit:hover{
+    border: 3px solid #666;
+}
+
+
+.panel .seccion_posicion .control{
+    width:990px;
+    text-align:center;
+}
+
+.submitPago{
+    width:610px;
+    margin:0 auto;
+}
+.panel_connect{
+    border: 3px solid #ccc;
+    width: 300px;
+    padding:10px 0;
+    float: left;
+    margin:10px;
+}
+.panel_registro{
+    border: 3px solid #ccc;
+    padding:10px 0;
+    width: 600px;
+    float: left;
+    height: 275px;
+    margin:10px;
+}
+.panel_login{
+    border: 3px solid #ccc;
+    padding:10px 0;
+    width: 500px;
+    float: left;
+    height: 140px;
+    margin:10px;
+}
+
+.productos .product, .productPrem{
+    cursor:pointer;
+}
+
+.productos .product:hover, .productPrem:hover{
+    background:#0B1341;
+}
+.panel .seccion_adicional .fieldType_checkbox{
+    width:140px;
+}
+.formadepago{
+    text-align:left;
+    margin:10px 85px;
+    padding: 10px;
+    border:1px solid #ccc;
+}
+.formadepago img{
+    width:120px;
+    vertical-align:middle;
+}
+.formadepago input{
+    vertical-align:middle;
+}
+
+.field_tipovr .new .icon{
+margin: -20px 0px 0px 220px;
+}
+.panel .seccion .field_direccion{
+  margin: -110px 0;
+}
+.panel .seccion .field_direccion textarea{
+  height:56px;
+}
+.infoPremium{
+    color: #423F3F;
+    font-size: 18px;
+}
+.infoPremium ul{
+    text-align: left;
+    padding-left: 72px;
+}
+.infoPremium ul.leftul{
+    float: left;
+}
+ul.rightul{
+    float: right;
+    padding: 0px;
+}
+.ulbox{
+    width: 90%;
+    margin: 0 auto;
+}
+.clear{
+    clear:both;
+}
+*/

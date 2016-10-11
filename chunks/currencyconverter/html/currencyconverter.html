@@ -1,0 +1,17 @@
+<div class="currencyconverter">
+  <ul class="curr">
+    #OPTIONS#
+  </ul>
+</div>
+
+<script>
+    
+  $(document).ready(function(){
+  $(".currencyconverter>ul.curr").selectable({
+    selected:function(ev,ui){
+        var key=$(ui.selected).attr("title");
+        currencyconverter.solveAllPage(key,0);
+      }
+    });
+  });
+  </script>

@@ -1,0 +1,60 @@
+<div class="item item_#ID# #NUEVO#">
+	<div class="destinatario us_#DID#">
+		<img src="#DAVATAR#">
+		<div class="nombre">
+			#DNOMBRE#
+		</div>
+	</div>
+	<div class="title" onclick="javascript:mensaje.showDetails(#ID#)">
+		#TITULO#
+	</div>
+	<div class="date">
+		#FECHA#
+	</div>
+</div>
+<div style="display:none">
+	<div class="mensaje_details buzon_mensajes" id="details_mensaje_#ID#">
+		<div class="item">
+			<div class="destinatario us_#DID#">
+				<img src="#DAVATAR#">
+				<div class="nombre">
+					#DNOMBRE#
+				</div>
+			</div>
+			<div class="date">
+				#FECHA#
+			</div>
+			<div class="title">
+				#TITULO#
+			</div>
+			<div class="mensaje">
+				#MENSAJE#
+			</div>
+			<div class="control">
+				<input type="button" class="button" value="$$borrar$$" onclick="javascript:if(confirm('$$borrar_advertencia$$'))mensaje.borrar(#ID#)">
+				<input type="button" class="button" value="$$responder$$" onclick="$.colorbox({inline:true,href:'#messageWritter_#DID##ID#'})">
+			</div>
+		</div>
+	</div>
+	
+	
+	
+	<div class="messageWritter" id="messageWritter_#DID##ID#">
+		<h2>$$contactar$$</h2>
+		<div class="mesaageForm">
+			<div class="field">
+				<label>$$subject$$</label>
+				<input type="text" id="messageWritter_#DID##ID#_subject" name="subject" required="required">
+			</div>
+			<div class="field">
+				<label>$$message$$</label>
+				<textarea name="message" id="messageWritter_#DID##ID#_message"> </textarea>
+			</div>
+			<div class="submit">
+				<input type="button" onclick="javascript:if(mensaje.send({id:'#DID#',key:'messageWritter_#DID##ID#',buton:this}))$.colorbox.close()" class="button submit" value="$$enviar$$">
+			</div>
+		</div>
+	</div>
+	
+	
+</div>

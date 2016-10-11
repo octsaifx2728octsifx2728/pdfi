@@ -1,0 +1,29 @@
+<div class="changePassword">
+            <h1>$$changePassword$$</h1>
+    <div class="formulario">
+        <form>
+            <div class="instrucciones">
+                $$changePasswordinstrucciones$$
+            </div>
+            <div class="field fieldType_password">
+                <label>$$password$$</label>
+                <input type="password" name="password" value="$$password$$" class="password notouch">    
+            </div>
+            <div class="field fieldType_password2">
+                <label>$$Password_Confirm$$</label>
+                <input type="password" name="password2" value="$$password$$" class="password2 notouch">    
+            </div>
+
+                <input type="submit" value="$$enviar$$" class="button submit">
+        </form>
+    </div>
+    <div class="mensaje">
+        $$passwordChanged$$
+    </div>
+</div>
+
+<script>
+    $(document).ready(function(){
+        $(".changePassword").changePasswordForm({});
+    });
+</script>

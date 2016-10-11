@@ -1,0 +1,30 @@
+<div class="meinteresa">
+	<span class="desc"  onclick='javascript:$.colorbox({"title":"$$contactar$$",inline:true,href:"#messageWritter_#client##KEY#",rel:"nofollow"});'>
+		#meinteresa#
+	</span>
+  
+</div> 
+
+<div style="display:none">
+	<div class="messageWritter" id="messageWritter_#client##KEY#">
+		<h2>$$contactar$$</h2>
+		<div class="mesaageForm">
+			<div class="field" style="display:none">
+				<label>$$email$$</label>
+				<input type="email" id="messageWritter_#client##KEY#_email" name="email" required="required" value="#email#">
+			</div>
+			<div class="field">
+				<label>$$subject$$</label>
+				<input type="text" id="messageWritter_#client##KEY#_subject" name="subject" required="required">
+			</div>
+			<div class="field">
+				<label>$$message$$</label>
+				<textarea name="message" id="messageWritter_#client##KEY#_message"> </textarea>
+			</div>
+			<div class="submit">
+				<input type="button" onclick="javascript:if(mensaje.send({id:'#client#',key:'messageWritter_#client##KEY#'}))$.colorbox.close()" class="button submit" value="$$enviar$$">
+			</div>
+		</div>
+	</div>
+</div>
+

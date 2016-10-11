@@ -1,0 +1,26 @@
+<div class="metricaconverter">
+    <ul class="metrica">
+        <li title="metros" class="metric metric_metros #METROS#">
+            <div>
+                $$metros$$
+                <span class="btn-identi">></span>
+            </div>
+        </li>
+        <li title="pies" class="metric metric_pies #PIES#">
+            <div>
+                $$pies$$
+                <span class="btn-identi">></span>
+            </div>
+        </li>
+    </ul>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $(".metricaconverter>ul.metrica").selectable({
+                selected:function(ev,ui){
+                    var key = $(ui.selected).attr("title");
+                    metricaconverter.solveAllPage(key, 0, 'metros');
+                }
+            });
+        });
+    </script>
+</div>

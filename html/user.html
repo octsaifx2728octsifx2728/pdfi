@@ -1,0 +1,167 @@
+#DOCTYPE#
+
+<html#NAMESPACES#>
+    <head>
+        <base href="#BASE#">
+        [[metas]]
+        #ESTILOS#
+        [[enviroment]]
+        #SCRIPTS#
+        [[analitics]]
+
+        <script type="text/javascript">
+            var user = new user_class([[userData?name=`id_cliente`]]);
+
+            
+            $(function(){
+                section = '#section#';
+                opts    = {};
+                tmp     = {
+                    'conversation': '#conversation#',
+                    'message'     : '#messsage#'
+                };
+
+                for(var index in tmp) {
+                    if (tmp.hasOwnProperty(index) && (tmp[index].indexOf('#') == -1)) {
+                        opts[index] = tmp[index];
+                    }
+                }
+
+                tmp = '';
+
+                $(document).off('click', 'button[name="action"]').on('click', 'button[name="action"]', function(){
+                    btn    = $(this);
+                    action = btn.val();
+
+                    switch (action) {
+                        case 'my_ads': {
+                            $('#user-favs, #user-messages').fadeOut(200, function(){
+                                $('#user-ads').fadeIn(200, function(){
+                                    $('#user-sections .active').removeClass('active');
+                                    btn.addClass('active');
+
+                                    opts = {};
+
+                                    add_history({
+                                        'state': opts,
+                                        'title': '$$mis_anuncios$$',
+                                        'url'  : 'properties'
+                                    });
+                                });
+                            });
+                            break;
+                        }
+                        case 'my_favs': {
+                            $('#user-ads, #user-messages').fadeOut(200, function(){
+                                $('#user-favs').fadeIn(200, function(){
+                                    $('#user-sections .active').removeClass('active');
+                                    btn.addClass('active');
+
+                                    opts = {};
+
+                                    add_history({
+                                        'state': opts,
+                                        'title': '$$mis_favoritos$$',
+                                        'url'  : 'favorites'
+                                    });
+                                });
+                            });
+                            break;
+                        }
+                        case 'messages': {
+                            $('#user-ads, #user-favs').fadeOut(200, function(){
+                                $('#user-messages').fadeIn(200, function(){
+                                    $('#user-sections .active').removeClass('active');
+                                    btn.addClass('active');
+
+                                    add_history({
+                                        'state': opts,
+                                        'title': '$$mensajes$$',
+                                        'url'  : 'messages'
+                                    });
+                                });
+                            });
+                            break;
+                        }
+                        case 'add_property': {
+                            location.href= "/app/addinmueble/freemium"
+                            break;
+                        }
+                        default:
+                            alert('$$unknown_button_action$$');
+                    }
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div class="alertas">
+            #ALERTAS#
+        </div>
+
+        <div id="_page" class="user_profile #owner#">
+            <div class="mainwrap">
+                <header>
+                    [[header]]
+                </header>
+
+                <div id="user-header">
+                    <div id="user-promotion">
+                        [[buy_broker]]
+                    </div>
+
+                    <div id="user-profile">
+                        <div id="user-avatar" class="avatar">
+                            [[userAvatar]]
+                        </div>
+                        <div id="user-info">
+                            [[userDataManager?plantilla=`1`]]
+                        </div>
+                    </div>
+                    <div id="user-stats">
+                        <div class="group_in_center">
+                            [[userStats]]
+                        </div>
+                    </div>
+                </div>
+
+                <div id="user-menu">
+                    <div id="user-sections">
+                        <button name="action" value="my_ads" class="lvl3 active">
+                            <span class="icon house"></span>
+                            $$mis_anuncios$$
+                        </button>
+                        <button name="action" value="my_favs" class="lvl3">
+                            <span class="icon heart"></span>
+                            $$mis_favoritos$$
+                        </button>
+                        <button name="action" value="messages" class="lvl3">
+                            <span class="icon msg"></span>
+                            <span class="counter msg_unread_counter">#countUnreadMessages#</span>
+                            $$mensajes$$
+                        </button>
+                    </div>
+
+                    <button name="action" value="add_property" class="lvl2">
+                        <span class="icon add"></span>
+                        $$add_new_ad$$
+                    </button>
+                </div>
+
+                <div id="user-ads">
+                    [[inmueblesUsuario]]
+                </div>
+
+                <div id="user-favs">
+                    [[favoritos_lista]]
+                </div>
+
+                <div id="user-messages">
+                    [[messages]]
+                </div>
+
+            </div>
+        </div>
+        [[socialblock]]
+    </body>
+</html>

@@ -1,0 +1,45 @@
+/* 
+    Document   : prehome
+    Created on : 31/01/2013, 12:23:14 PM
+    Author     : carlos
+    Description:
+        Purpose of the stylesheet follows.
+*/
+.prehome_cont{
+  display:none;
+}
+.prehome{
+  width:350px;
+  height:245px;
+  overflow:hidden;
+  background:url('fondos/prehome.jpg')center center repeat;
+  border-radius:10px;
+  border: 5px solid rgb(224, 242, 255);
+  text-align:center;
+  font-size:18px;
+  font-weight:bold;
+  color:#666;
+}
+.prehome .go{
+  margin:30px 0 0;
+}
+.prehome .welcome{
+  margin:10px 0;
+}
+.prehome .logo{
+  width:350px;
+  height:95px;
+}
+.prehome .selectors{
+  margin:5px 0 0 10px;
+  
+}
+.prehome .selectors .select{
+  width:160px;
+  height:20px;
+  float:left;
+}
+.prehome .selectors .select .languajeBlock{
+  border:1px solid black;
+  padding:1px;
+}

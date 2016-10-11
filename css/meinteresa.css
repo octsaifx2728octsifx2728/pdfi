@@ -1,0 +1,13 @@
+.meinteresa {
+    width: 150px;
+    background: #2ab1fc;
+    border: 2px solid #ccc7c7;
+    padding: 3px;
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+    text-align: center;
+    cursor: pointer;
+    position: absolute;
+    box-shadow: 3px 3px 15px #666;
+}

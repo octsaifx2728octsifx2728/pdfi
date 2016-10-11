@@ -1,0 +1,66 @@
+<?php
+class enviroment_chunk extends chunk_base implements  chunk{
+   public function out($params=array()){
+     global $core,$user;
+   $enviroment=array(
+       "languaje"=>$core->getEnviromentVar("languaje"),
+       "currency"=>$core->getEnviromentVar("currency"),
+       "metrica"=>$core->getEnviromentVar("metrica"),
+       "translations"=>array(
+           "anuncioFreemium"=>'$$anuncioFreemium$$',
+           "anuncioPremium"=>'$$anuncioPremium$$',
+           "anuncioOferta"=>'$$anuncioOferta$$',
+           "descripcionPremium"=>'$$descripcionPremium$$',
+           "descripcionOferta"=>'$$descripcionOferta$$',
+           "destacadoPremium"=>'$$destacadoPremium$$',
+           "rankeoPremium"=>'$$RANKEO_PREMIUM$$',
+           "recuadroPremium"=>'$$RECUADRO_PREMIUM$$',
+           "emailSemanal"=>'$$inclusionEmail$$',
+           "btnPremium"=>'$$btnPremium$$',
+           "btnOferta"=>'$$btnOferta$$',
+           "iconoPremium"=>'$$premium_icon$$',
+           "promoSociales"=>'$$PROMOCION_EN_REDES_SOCIALES$$',
+           "tipovrventa"=>'$$venta$$',
+           "tipovrrenta"=>'$$renta$$',
+           "tipovrcomparto"=>'$$comparto$$',
+           "residencial"=>'$$residencial$$',
+           "comercial"=>'$$comercial$$',
+           "oficina"=>'$$oficina$$',
+           "industrial"=>'$$industrial$$',
+           "terreno"=>'$$terreno$$',
+           "funerario"=>'$$funerario$$',
+           "pleasewrittemessage"=>'$$pleasewrittemessage$$',
+           "User_registration"=>'$$User_registration$$',
+           "ENTRAR"=>'$$ENTRAR$$',
+           "CONECTAR"=>'$$CONECTAR$$',
+           "REGISTRARSE"=>'$$REGISTRARSE$$',
+           "login_error_message"=>'$$login_error_message$$',
+           "metrica_metros2"=>'$$metrica_metros2$$',
+           "metrica_pies2"=>'$$metrica_pies2$$',
+           "metrica_metros"=>'$$metrica_metros$$',
+           "metrica_pies"=>'$$metrica_pies$$',
+           "precio_metros2"=>'$$precio_metros2$$',
+           "precio_pies2"=>'$$precio_pies2$$',
+           "metros2"=>'$$metros2$$',
+           "pies2"=>'$$pies2$$'),
+       "filters"=>(object)$core->getFilters(true),
+       "currencyconvertercallback"=>array(),
+       "user"=>array(
+           "id"=>$user->id,
+           "token"=>$user->get("token")),
+       "mesesLong"=>array('$$January$$',
+            '$$February$$',
+            '$$March$$',
+            '$$April$$',
+            '$$May$$',
+            '$$June$$',
+            '$$July$$',
+            '$$August$$',
+            '$$September$$',
+            '$$October$$',
+            '$$November$$',
+            '$$December$$')
+   );
+    return '<script>var enviroment='.json_encode($enviroment).'</script>';
+  }
+}

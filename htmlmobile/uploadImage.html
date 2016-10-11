@@ -1,0 +1,23 @@
+#DOCTYPE#
+
+
+<html#NAMESPACES#>
+
+<head>
+<base href="#BASE#">
+[[metas]]
+
+[[analitics]]
+
+</head>
+<body>
+<form action="app/upload/avatar" method="POST" enctype="multipart/form-data" id="uploadForm">
+	<input type="hidden" name="app" value="upload">
+	<input type="hidden" name="task" value="avatar">
+	<input type="hidden" name="callback" value="parent.#CALLBACK#">
+	<input type="hidden" name="idcallback" value="#ID#">
+	<input type="hidden" name="tipo" value="#TIPO#">
+	<input type="file" name="avatar[]" accept="image/*" onchange="javascript:this.parentNode.submit();parent.wait(true);" multiple />
+</form>
+</body>
+</html>

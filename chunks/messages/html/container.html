@@ -1,0 +1,133 @@
+ <div style="display:none">
+            <div id="_resultTemplateMensajes"  style="width:100%;">
+                <article>
+                    <table style="width:100%;">
+                        <tr>
+                            <td style="width:30%;">
+                    <div class="imagenListaMensajes"> 
+                         
+                       
+                            <img src="">
+                       
+                         
+                    </div>
+                       </td>
+                       <td style="width:70%;">
+                    <div class="titleMensajes" >
+                        <h1 >
+                            
+                        </h1>
+                    </div>
+                           </td>
+                         
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                        
+                                <div style="border-bottom:  solid 1px #ccc;"></div>
+                                
+                        
+                            </td>
+                        </tr>
+                    </table>
+                </article>
+            </div>
+        </div>
+
+<table id="chatContainer" style="width:100%; height: 100%; max-height: 350px;">
+    <tr>
+        <td  style="width:25%; height: 100%;">
+<div class="resultsContainerMensajesSfx" id="resultsContainerMensajesSfx"  style="overflow-y: auto;overflow-x: hidden;  height: 350px;max-height: 350px;width:100%;" >
+    
+    <div style="width:100%;">
+    
+        <input id="searchTextField" name="searchTextField" class="cajaBusquedaContacto" type="text" placeholder="Buscar..." autocomplete="off" style="width:100%; height: 100%;"/>
+   </div>
+    
+</div>
+</td>
+<td style="width:75%;">
+<div class="conversacionContainerMensajesSfx" id="conversacionContainerMensajesSfx"  style="width:100%;height:100%;border: solid 1px #ccc;">
+    
+    <table style="width:100%; height: 100%;">
+        <tr style="width:100%; height: 60%;">
+            <td>
+                <table style="width:100%; height: 100%;"> 
+                    <tr>
+                        <td align="left">
+                            Hola me interesa tu propiedad
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right">
+                            ok
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr style="width:100%; height: 40%;">
+            <td  align="left">
+                <div style="width: 98%;height: 100%;margin:1% 1% 1% 1%;" >
+                <textarea rows="4" cols="50" id="Mensaje" style="position:relative; width: 100%;height: 80%; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;">
+                    
+                </textarea>
+                    
+                    <input type="button" name="password" value="Enviar" class="button gray-dark">
+                    </div>
+                   
+            </td>
+        </tr>
+    </table>
+    
+</div>
+            </td>
+    </tr>
+</table>
+
+
+<script type="text/javascript">
+   
+        
+      
+        
+      
+       
+        $.ajax({
+            url:'http://e-spacios.com/sfx/Mensajes/ConsultarUsuarios',
+            type: "POST",
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            data: {}
+            ,success:function(data) {
+                
+                
+                
+            
+            var resultbox=document.getElementById("resultsContainerMensajesSfx");
+            var resultTemplate=document.getElementById("_resultTemplateMensajes");
+            
+         
+          console.log(data);
+         
+         for(var x=0;x<20;x++){
+             
+             
+             var template=resultTemplate.cloneNode(true);
+             
+         
+           
+            
+            $(template).find(".imagenListaMensajes").find("img").attr("src","cache/0/30/"+data[x].imagen);
+         
+          $(template).find(".titleMensajes").append(data[x].usuario);
+          
+           resultbox.appendChild(template);
+        }
+
+
+           }});
+   
+
+    
+</script>

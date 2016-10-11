@@ -1,0 +1,38 @@
+.payfilter_doublerangezoomParse{
+        width: 170px;
+        height: 40px;
+        overflow:hidden;
+    }
+    .payfilter_doublerangezoomParse .filterTop{
+        width: 170x;
+        height: 15px;
+        text-align: center;
+        font-style: italic;
+        font-weight: bold;
+color: #06f;
+font-size: 13px;
+    }
+    .payfilter_doublerangezoomParse .filterRegleta {
+        width: 170px;
+        background:url('payFilters/fondo.jpg')center center;
+        height: 25px;
+    }
+    .payfilter_doublerangezoomParse .filterRegleta .agujaRight,
+    .payfilter_doublerangezoomParse .filterRegleta .agujaLeft{
+        width:25px;
+        height:25px;
+        position:absolute;
+        cursor:pointer;
+        background:url('payFilters/handler.png')center center no-repeat;
+        z-index:10;
+    }
+    .payfilter_doublerangezoomParse .filterRegleta .agujaRight{
+        z-index:20;
+    }
+    .payfilter_doublerangezoomParse .filterRegleta .escala{
+        width: 170px;
+        background:url('payFilters/escala.png')center center;
+        height: 15px;
+        position: relative;
+        top: 5px;
+    }

@@ -1,0 +1,162 @@
+#DOCTYPE#
+<html#NAMESPACES#>
+    <head>
+        <base href="#BASE#">
+        [[metas]]
+        #ESTILOS#
+        [[enviroment]]
+        #SCRIPTS#
+        [[analitics]]
+
+        <script type="text/javascript">
+            var user = new user_class([[userData?name=`id_cliente`]]),
+                mapa = null;
+
+            $(document).ready(function(){
+                mapa = new paymapa({
+                    id:1,
+                    contenedor: 'map',
+                    init:true,
+                    geoloc:false,
+                    center: [22.207749178410882, -104.17236328125]
+                });
+
+                var zoom  = mapa.map.getZoom(),
+                    icono = '';
+
+                mapa.addMarker({
+                    position:new google.maps.LatLng(0, 0),
+                    animation:google.maps.Animation.DROP,
+                    clickable:true,
+                    draggable:false,
+                    title:"broker",
+                    visible:true,
+                    optimized:false,
+                    icon: icono,
+                    infowindow:true,
+                    infodata:'<div class="infowindowdata"><div class="title">'+"hola"+'</div><div class="foto"></div><div class="descripcion"><a href="'+"hola"+'</a></div></div>'
+                });
+
+                mapa.mapa.setZoom(4);
+
+                $(document).off('click', 'button[name="action"]').on('click', 'button[name="action"]', function(event){
+                    btn        = $(this);
+                    btn_action = btn.attr('value');
+
+                    switch (btn_action) {
+                        case 'follow': {
+                            btn.html('$$siguiendo$$');
+                            break;
+                        }
+
+                        default: {
+                            console.error('Unknown action "' + btn_action + '"');
+                        }
+                    }
+
+                    event.preventDefault();
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div class="alertas">
+            #ALERTAS#
+        </div>
+
+        <div id="_page" class="user_profile">
+            <div class="mainwrap">
+                <header>
+                    [[header]]
+                </header>
+                <div class='content'>
+                    <div id="cover_picture" class="light-gray">
+                        <div class="avatar">
+                            [[userAvatar]]
+                        </div>
+                        <div class="counters white">
+                            [[userStats]]
+                        </div>
+                    </div>
+
+                    <div id="broker_actions">
+                        <span class="name">#nombrePantalla#</span>
+                        <form method="post" action="/broker">
+                            <button name="action" value="follow" class="lvl3">
+                                $$follow$$
+                            </button>
+
+                            <div class="rating">
+                                Calificación
+                                <div class="stars">
+                                    <button name="action" value="rate&1" class="star-1 fa fa-star fa-lg" title="Nada recomendable"></button>
+                                    <button name="action" value="rate&2" class="star-2 fa fa-star fa-lg" title="Poco recomendable"></button>
+                                    <button name="action" value="rate&3" class="star-3 fa fa-star fa-lg" title="Recomendable"></button>
+                                    <button name="action" value="rate&4" class="star-4 fa fa-star fa-lg" title="Algo recomendable"></button>
+                                    <button name="action" value="rate&5" class="star-5 fa fa-star fa-lg" title="Muy recomendable"></button>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="quick_contact contacto">
+                            [[contact]]
+                        </div>
+                    </div>
+
+                    <div id="broker_info">
+                        <div class="info_container box">
+                            <div class="info_general">
+                                <div class="experience" style="top: -10px;">
+                                    [[broker?data=experiencias]]
+                                </div>
+                                <div class="info_right">
+                                    <div class="info_personal">
+                                        [[broker?data=info_personal]]
+                                    </div>
+                                    <div class="info_extra">
+                                        [[broker?data=info_extra]]
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="properties-map" id="map">
+                                [[searchmap]]
+                            </div>
+                        </div>
+                        <div class="info_contact single_box">
+                            <div class="info_contact_data">
+                                [[broker?data=contacto]]
+                            </div>
+                            <div class="comments">
+                                <h2>
+                                    <a href="/comments">
+                                        $$comentarios$$
+                                    </a>
+                                </h2>
+                                <div class="comments_container">
+                                    [[broker?data=comments]]
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="properties_and_feed">
+                        <div class="properties_list box">
+                            <h2>$$inmuebles$$</h2>
+                            [[inmueblesUsuario]]
+                        </div>
+                        <div class="feed box">
+                            <h2>$$news$$</h2>
+                            <div class="feed_content">
+                                [[broker?data=news]]
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        [[socialblock]]
+
+        <footer>
+        </footer>
+    </body>
+</html>

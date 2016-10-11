@@ -1,0 +1,34 @@
+
+.searchFilter .filter_tipoinmueble {
+    height:auto;
+    float:none;
+    width:100%;
+}
+.filters .currencyconverter select,
+.searchFilter .filter select{
+    width:100%;
+    font-size:19px;
+    height:25px;
+    background:#0099FF;
+    color:#ffffff;
+    font-weight:bold;
+    border:0 none;
+    border-radius:0;
+    padding:2px;
+    text-align:center;
+    margin:5px 0;
+}
+.searchFilter .filter_tipovr select{
+    display:none;
+}
+
+
+
+.searchFilter .selected_terreno fieldParent_residencial,
+.searchFilter .selected_comercial fieldParent_residencial,
+.searchFilter .selected_industrial fieldParent_residencial,
+.searchFilter .selected_funerario fieldParent_residencial,
+.searchFilter .selected_oficina fieldParent_residencial,
+.searchFilter .selected_residencial fieldParent_residencial{
+    display:inline;
+}

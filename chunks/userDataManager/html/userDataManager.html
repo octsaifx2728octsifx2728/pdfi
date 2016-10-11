@@ -1,0 +1,36 @@
+<div class="userDataManager adminform" id="_userDataManager">
+	<div class="field nombre">
+		<label>$$nombre$$</label>
+		<input type="text" name="nombre" value="#nombre#" class="inputtext">
+		<input class="button" type="button" value="$$guardar$$" onclick="javascript:user.update({name:'nombre_pant',value:$(this.parentNode).find('.inputtext').attr('value')})">
+	</div>
+	<div class="field email">
+		<label>$$email$$</label>
+		<input type="email" name="email" value="#email#" class="inputtext">
+		<input type="button" value="$$guardar$$" class="button"  onclick="javascript:user.update({name:'usuario',value:$(this.parentNode).find('.inputtext').attr('value')})">
+	</div>
+	<div class="field password">
+		<input type="button" name="password" value="$$changePassword$$" class="button" onclick="location.href='/app/user/resetPassword'">
+	</div>
+	<div class="field tel">
+            <label>
+                <select name="telefonotag" onchange="javascript:user.update({name:'telefono',value:$(this).val()})">
+                    <option value="_____telefono-----">$$telefono$$</option>
+                    <option value="_____casa-----">$$casa$$</option>
+                </select>
+            </label>
+		<input type="tel" name="tel" value="#tel#" class="inputtext">
+		<input type="button" value="$$guardar$$" class="button"  onclick="javascript:user.update({name:'telefono',value:$(this.parentNode).find('.inputtext').attr('value')})">
+	</div>
+	<div class="field tel">
+		<label>$$telefono$$</label>
+		<input type="tel" name="tel" value="#tel1#" class="inputtext">
+		<input type="button" value="$$guardar$$" class="button"  onclick="javascript:user.update({name:'telefono1',value:$(this.parentNode).find('.inputtext').attr('value')})">
+	</div>
+	<div class="field tel">
+		<label>$$telefono$$</label>
+		<input type="tel" name="tel" value="#tel2#" class="inputtext">
+		<input type="button" value="$$guardar$$" class="button"  onclick="javascript:user.update({name:'telefono2',value:$(this.parentNode).find('.inputtext').attr('value')})">
+	</div>
+	
+</div>

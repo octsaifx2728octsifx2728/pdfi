@@ -1,0 +1,74 @@
+<div class="videoLax">
+<div class="overlay" id="_videoOverlay"> </div>
+<div class="videoContainer" id="_video"> </div>
+</div>
+<script type="text/javascript">
+ var video_manager={
+ 	video_controler:null,
+ 	key:null,
+ 	url:"#SRC#",
+ 	overlay:null,
+ 	video:null,
+	videoregex:/(http[s]?:\/\/)?(www\.)?(youtube\.com|youtu\.be)\/[a-z0-9=\/\.&\?\-_]*/i,
+	videoclean:/(http[s]?:\/\/)?(www\.)?(youtube\.com|youtu\.be)\//i,
+ 	changeHandler:function(event) {
+        if (event.data == YT.PlayerState.ENDED) {
+         video_manager.reposo();
+        }
+     },
+    solveKey:function(url){
+    	if(video_manager.videoregex.test(url)){
+			var key=url.replace(video_manager.videoclean,"");
+			key=key.replace("watch?v=","");
+			key=key.replace("embed/","");
+			key=key.split("?");
+			key=key[0];
+			return key;
+    	}
+    },
+    init:function(){
+    	if(!video_manager.key){
+    		video_manager.key=video_manager.solveKey(video_manager.url);
+    	}
+    	video_manager.video_controler = new YT.Player('_video', {
+          width: '#WIDTH#',
+          height: '#HEIGHT#',
+          videoId: video_manager.key,
+          events: {
+            'onStateChange': video_manager.changeHandler
+           }
+      	});
+      	if(!video_manager.overlay){
+      		video_manager.overlay=document.getElementById("_videoOverlay");
+      		$(video_manager.overlay).css("width","#WIDTH#");
+      		$(video_manager.overlay).css("height","#HEIGHT#");
+      		var img=document.createElement("img");
+      		img.src="http://img.youtube.com/vi/"+video_manager.key+"/0.jpg";
+      		$(img).css("width","100%");
+      		$(img).css("height","100%");
+      		video_manager.overlay.appendChild(img);
+      		
+      		$(video_manager.overlay).click(video_manager.mostrar);
+      	}
+      	if(!video_manager.video){
+      		video_manager.video=document.getElementById("_video");
+      		
+      	}
+      	video_manager.reposo();
+    },
+    reposo:function(){
+    	$(video_manager.overlay).css("display","block");
+    	$(video_manager.video).css("display","none");
+    },
+    mostrar:function(){
+    	$(video_manager.overlay).css("display","none");
+    	$(video_manager.video).css("display","block");
+    	video_manager.video_controler.playVideo()
+    }
+ }
+      function onYouTubeIframeAPIReady() {
+      	video_manager.init();
+      	}
+      	
+</script>
+                   

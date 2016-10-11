@@ -1,0 +1,34 @@
+<div class="corporativosButton" onclick="javascript:$.colorbox({inline:true,href:'#_corporativosform'})">
+	$$corporativosBanner$$
+</div>
+
+<div style="display:none">
+	<div id="_corporativosform" class="adminForm corporativosform">
+		<h2>$$elijasupaquete$$</h2>
+                <form>
+		<div class="formasdepago">
+                    <div class="formadepago formadepago_paypal formadepagoid_1">
+                        <input type="radio" name="formadepago" value="1" id="_formadepago1_#KEY#" checked="checked">
+                        <label for="_formadepago1_#KEY#">
+                            <span class="icon">
+                                <img src="img/pago-paypal.png">
+                            </span>
+                            <span>$$paypal$$</span>
+                        </label>
+                    </div>
+                    <div class="formadepago formadepago_pasarela formadepagoid_2">
+                        <input type="radio" name="formadepago" value="2" id="_formadepago2_#KEY#">
+                        <label for="_formadepago2_#KEY#">
+                            <span class="icon">
+                                <img src="img/pago-otros.png">
+                            </span>
+                            <span>$$paywithCC$$</span>
+                        </label>
+                    </div>
+		</div>
+                </form>
+		<div class="paquetes">
+			#PAQUETES#
+		</div>
+	</div>
+</div>

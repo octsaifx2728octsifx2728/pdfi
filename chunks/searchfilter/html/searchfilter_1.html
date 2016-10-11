@@ -1,0 +1,465 @@
+
+
+<div class="blanco">
+    <div class="description">
+      $$searchfilter_description1$$
+    </div>
+    <div class="field radio">
+      <input type="radio" id="_filtersearch_casa" name="tipo" onchange="javascript:if(this.checked)searcher.applyFilter({name:'casa',value:1},mapa);" checked="checked">
+      <label for="_filtersearch_casa">
+        $$casa$$
+      </label>
+    </div>
+    <div class="field radio">
+      <input type="radio" id="_filtersearch_departamento" name="tipo" onchange="javascript:if(this.checked)searcher.applyFilter({name:'casa',value:2},mapa);">
+      <label for="_filtersearch_departamento">
+        $$departamento$$
+      </label>
+    </div>
+    <div class="field radio">
+      <input  #amuebladoChecked# type="radio" id="_filtersearch_amueblado1" name="amueblado" onchange="javascript:searcher.applyFilter({name:'amueblado',value:1},mapa)">
+      <label for="_filtersearch_amueblado">
+        $$amueblado$$
+      </label>
+    </div>
+    <div class="field radio">
+      <input type="radio" id="_filtersearch_amueblado2." name="amueblado" onchange="javascript:searcher.applyFilter({name:'amueblado',value:0},mapa)">
+      <label for="_filtersearch_amueblado">
+        $$sinamueblar$$
+      </label>
+    </div>
+</div>
+<div class="field radio" style="display:none">
+  <input #VR1# type="radio" name="vr" id="_filtersearch_vr1" onchange="javascript:searcher.applyFilter({name:'vr',value:1},mapa)">
+  <label for="_filtersearch_vr1">
+    $$Buy$$
+  </label>
+  <input #VR2# type="radio" name="vr" id="_filtersearch_vr2" onchange="javascript:searcher.applyFilter({name:'vr',value:2},mapa)">
+  <label for="_filtersearch_vr2">
+    $$Rent$$
+  </label>
+</div>
+<div class="field range filter_precio">
+  <label for="_filtersearch_precio">
+    $$precio$$
+  </label>
+
+    <div id="precioFilter" class="filtertype_doublerangezoom filtermin_0 filtermax_5000000">
+
+    </div>
+</div>
+<div class="field range filter_habitaciones">
+  <label for="_filtersearch_habitaciones">
+    $$habitaciones$$
+  </label>
+    <div id="habitacionesFilter" class="filtertype_doublerangezoom filtermin_0 filtermax_5000000"></div>
+</div>
+<div class="field range filter_banos">
+  <label for="_filtersearch_banos">
+    $$banos$$
+  </label>
+    <div id="banosFilter" class="filtertype_doublerangezoom filtermin_0 filtermax_5000000"></div>
+</div>
+<div class="field range filter_m2">
+  <label for="_filtersearch_m2">
+    $$m2$$
+  </label>
+    <div id="m2Filter" class="filtertype_doublerangezoom filtermin_0 filtermax_5000000"></div>
+</div>
+<div class="field range filter_precio_m2">
+  <label for="_filtersearch_precio_m2">
+    $$precio_m2$$
+  </label>
+    <div id="precio_m2Filter" class="filtertype_doublerangezoom filtermin_0 filtermax_5000000"></div>
+</div>
+<div class="field range filter_superficie">
+  <label for="_filtersearch_superficie">
+    $$superficie$$
+  </label>
+    <div id="superficieFilter" class="filtertype_doublerangezoom filtermin_0 filtermax_5000000"></div>
+</div>
+<div class="field range filter_anyo">
+  <label for="_filtersearch_anyo">
+    $$anyo_construccion$$
+  </label>
+    <div id="anyoFilter" class="filtertype_doublerangezoom filtermin_0 filtermax_5000000"></div>
+</div>
+<div class="field range filter_estacionamiento">
+  <label for="_filtersearch_estacionamiento">
+    $$estacionamientos$$
+  </label>
+    <div id="estacionamientoFilter" class="filtertype_doublerangezoom filtermin_0 filtermax_5000000"></div>
+</div>
+<div class="morefilters">
+    <div class="control">
+        <input type="button" value="$$more_filters$$" class="button gray-dark" onclick="javascript:$(this.parentNode.parentNode).find('.container').css('display',($(this.parentNode.parentNode).find('.container').css('display')=='block'?'none':'block'));">
+    </div>
+    <div class="container" style="display:none">
+        <div class="field checkbox">
+          <input #cocinaChecked# type="checkbox" id="_filtersearch_cocina" onchange="javascript:searcher.applyFilter({name:'cocina',value:this.checked?1:0},mapa)">
+          <label for="_filtersearch_cocina">
+            $$cocina$$
+          </label>
+        </div>
+        <div class="field checkbox">
+          <input #bibliotecaChecked# type="checkbox" id="_filtersearch_biblioteca" onchange="javascript:searcher.applyFilter({name:'biblioteca',value:this.checked?1:0},mapa)">
+          <label for="_filtersearch_biblioteca">
+            $$biblioteca$$
+          </label>
+        </div>
+        <div class="field checkbox">
+          <input #estudioChecked# type="checkbox" id="_filtersearch_estudio" onchange="javascript:searcher.applyFilter({name:'estudio',value:this.checked?1:0},mapa)">
+          <label for="_filtersearch_estudio">
+            $$estudio$$
+          </label>
+        </div>
+        <div class="field checkbox">
+          <input #tvChecked# type="checkbox" id="_filtersearch_tv" onchange="javascript:searcher.applyFilter({name:'tv',value:this.checked?1:0},mapa)">
+          <label for="_filtersearch_tv">
+            $$tv$$
+          </label>
+        </div>
+        <div class="field checkbox">
+          <input #chimeneaChecked# type="checkbox" id="_filtersearch_chimenea" onchange="javascript:searcher.applyFilter({name:'chimenea',value:this.checked?1:0},mapa)">
+          <label for="_filtersearch_chimenea">
+            $$chimenea$$
+          </label>
+        </div>
+        <div class="field checkbox">
+          <input #cavaChecked# type="checkbox" id="_filtersearch_cava" onchange="javascript:searcher.applyFilter({name:'cava',value:this.checked?1:0},mapa)">
+          <label for="_filtersearch_cava">
+            $$cava$$
+          </label>
+        </div>
+        <div class="field checkbox">
+          <input #vestidorChecked# type="checkbox" id="_filtersearch_vestidor" onchange="javascript:searcher.applyFilter({name:'vestidor',value:this.checked?1:0},mapa)">
+          <label for="_filtersearch_vestidor">
+            $$vestidor$$
+          </label>
+        </div>
+        <div class="field checkbox">
+          <input #bodegaChecked# type="checkbox" id="_filtersearch_bodega" onchange="javascript:searcher.applyFilter({name:'bodega',value:this.checked?1:0},mapa)">
+          <label for="_filtersearch_bodega">
+            $$bodega$$
+          </label>
+        </div>
+        <div class="field checkbox">
+          <input #circuitoChecked# type="checkbox" id="_filtersearch_circuito" onchange="javascript:searcher.applyFilter({name:'circuito',value:this.checked?1:0},mapa)">
+          <label for="_filtersearch_circuito">
+            $$circuito$$
+          </label>
+        </div>
+        <div class="field checkbox">
+          <input #lavadoChecked# type="checkbox" id="_filtersearch_lavado" onchange="javascript:searcher.applyFilter({name:'lavado',value:this.checked?1:0},mapa)">
+          <label for="_filtersearch_lavado">
+            $$lavado$$
+          </label>
+        </div>
+        <div class="field checkbox">
+          <input #elevadorChecked# type="checkbox" id="_filtersearch_elevador" onchange="javascript:searcher.applyFilter({name:'elevador',value:this.checked?1:0},mapa)">
+          <label for="_filtersearch_elevador">
+            $$elevador$$
+          </label>
+        </div>
+        <div class="field checkbox">
+          <input #elevadorsChecked# type="checkbox" id="_filtersearch_elevadors" onchange="javascript:searcher.applyFilter({name:'elevadors',value:this.checked?1:0},mapa)">
+          <label for="_filtersearch_elevadors">
+            $$elevadors$$
+          </label>
+        </div>
+        <div class="field checkbox">
+          <input #tintoreriaChecked# type="checkbox" id="_filtersearch_tintoreria" onchange="javascript:searcher.applyFilter({name:'tintoreria',value:this.checked?1:0},mapa)">
+          <label for="_filtersearch_tintoreria">
+            $$tintoreria$$
+          </label>
+        </div>
+        <div class="field checkbox">
+          <input #aireChecked# type="checkbox" id="_filtersearch_aire" onchange="javascript:searcher.applyFilter({name:'aire',value:this.checked?1:0},mapa)">
+          <label for="_filtersearch_aire">
+            $$aire$$
+          </label>
+        </div>
+        <div class="field checkbox">
+          <input #calefaccionChecked# type="checkbox" id="_filtersearch_calefaccion" onchange="javascript:searcher.applyFilter({name:'calefaccion',value:this.checked?1:0},mapa)">
+          <label for="_filtersearch_calefaccion">
+            $$calefaccion$$
+          </label>
+        </div>
+        <div class="field checkbox">
+          <input #porteroChecked# type="checkbox" id="_filtersearch_portero" onchange="javascript:searcher.applyFilter({name:'portero',value:this.checked?1:0},mapa)">
+          <label for="_filtersearch_portero">
+            $$portero$$
+          </label>
+        </div>
+        <div class="field checkbox">
+          <input #redChecked# type="checkbox" id="_filtersearch_red" onchange="javascript:searcher.applyFilter({name:'red',value:this.checked?1:0},mapa)">
+          <label for="_filtersearch_red">
+            $$red$$
+          </label>
+        </div>
+        <div class="field checkbox">
+          <input #sistema_seguridadChecked# type="checkbox" id="_filtersearch_sistema_seguridad" onchange="javascript:searcher.applyFilter({name:'sistema_seguridad',value:this.checked?1:0},mapa)">
+          <label for="_filtersearch_sistema_seguridad">
+            $$sistema_seguridad$$
+          </label>
+        </div>
+        <div class="field checkbox">
+          <input #jardinChecked# type="checkbox" id="_filtersearch_jardin" onchange="javascript:searcher.applyFilter({name:'jardin',value:this.checked?1:0},mapa)">
+          <label for="_filtersearch_jardin">
+            $$jardin$$
+          </label>
+        </div>
+        <div class="field checkbox">
+          <input #terrazaChecked# type="checkbox" id="_filtersearch_terraza" onchange="javascript:searcher.applyFilter({name:'terraza',value:this.checked?1:0},mapa)">
+          <label for="_filtersearch_terraza">
+            $$terraza$$
+          </label>
+        </div>
+        <div class="field checkbox">
+          <input #vistaChecked# type="checkbox" id="_filtersearch_vista" onchange="javascript:searcher.applyFilter({name:'vista',value:this.checked?1:0},mapa)">
+          <label for="_filtersearch_vista">
+            $$vista$$
+          </label>
+        </div>
+        <div class="field checkbox">
+          <input #parqueChecked# type="checkbox" id="_filtersearch_parque" onchange="javascript:searcher.applyFilter({name:'parque',value:this.checked?1:0},mapa)">
+          <label for="_filtersearch_parque">
+            $$parque$$
+          </label>
+        </div>
+        <div class="field checkbox">
+          <input #playaChecked# type="checkbox" id="_filtersearch_playa" onchange="javascript:searcher.applyFilter({name:'playa',value:this.checked?1:0},mapa)">
+          <label for="_filtersearch_playa">
+            $$playa$$
+          </label>
+        </div>
+        <div class="field checkbox">
+          <input #muelleChecked# type="checkbox" id="_filtersearch_muelle" onchange="javascript:searcher.applyFilter({name:'muelle',value:this.checked?1:0},mapa)">
+          <label for="_filtersearch_muelle">
+            $$muelle$$
+          </label>
+        </div>
+        <div class="field checkbox">
+          <input #albercaChecked# type="checkbox" id="_filtersearch_alberca" onchange="javascript:searcher.applyFilter({name:'alberca',value:this.checked?1:0},mapa)">
+          <label for="_filtersearch_alberca">
+            $$alberca$$
+          </label>
+        </div>
+        <div class="field checkbox">
+          <input #jacuzziChecked# type="checkbox" id="_filtersearch_jacuzzi" onchange="javascript:searcher.applyFilter({name:'jacuzzi',value:this.checked?1:0},mapa)">
+          <label for="_filtersearch_jacuzzi">
+            $$jacuzzi$$
+          </label>
+        </div>
+        <div class="field checkbox">
+          <input #gimnasioChecked# type="checkbox" id="_filtersearch_gimnasio" onchange="javascript:searcher.applyFilter({name:'gimnasio',value:this.checked?1:0},mapa)">
+          <label for="_filtersearch_gimnasio">
+            $$gimnasio$$
+          </label>
+        </div>
+        <div class="field checkbox">
+          <input #spaChecked# type="checkbox" id="_filtersearch_spa" onchange="javascript:searcher.applyFilter({name:'spa',value:this.checked?1:0},mapa)">
+          <label for="_filtersearch_spa">
+            $$spa$$
+          </label>
+        </div>
+        <div class="field checkbox">
+          <input #tenisChecked# type="checkbox" id="_filtersearch_tenis" onchange="javascript:searcher.applyFilter({name:'tenis',value:this.checked?1:0},mapa)">
+          <label for="_filtersearch_tenis">
+            $$tenis$$
+          </label>
+        </div>
+        <div class="field checkbox">
+          <input #golfChecked# type="checkbox" id="_filtersearch_golf" onchange="javascript:searcher.applyFilter({name:'golf',value:this.checked?1:0},mapa)">
+          <label for="_filtersearch_golf">
+            $$golf$$
+          </label>
+        </div>
+        <div class="field checkbox">
+          <input  #clubChecked# type="checkbox" id="_filtersearch_club" onchange="javascript:searcher.applyFilter({name:'club',value:this.checked?1:0},mapa)">
+          <label for="_filtersearch_club">
+            $$club$$
+          </label>
+        </div>
+        <div class="field checkbox">
+          <input #sjuegosChecked# type="checkbox" id="_filtersearch_sjuegos" onchange="javascript:searcher.applyFilter({name:'sjuegos',value:this.checked?1:0},mapa)">
+          <label for="_filtersearch_sjuegos">
+            $$sjuegos$$
+          </label>
+        </div>
+        <div class="field checkbox">
+          <input #fiestasChecked# type="checkbox" id="_filtersearch_fiestas" onchange="javascript:searcher.applyFilter({name:'fiestas',value:this.checked?1:0},mapa)">
+          <label for="_filtersearch_fiestas">
+            $$fiestas$$
+          </label>
+        </div>
+        <div class="field checkbox">
+          <input #juegosChecked# type="checkbox" id="_filtersearch_juegos" onchange="javascript:searcher.applyFilter({name:'juegos',value:this.checked?1:0},mapa)">
+          <label for="_filtersearch_juegos">
+            $$juegos$$
+          </label>
+        </div>
+        <div #mascotasChecked# class="field checkbox">
+          <input type="checkbox" id="_filtersearch_mascotas" onchange="javascript:searcher.applyFilter({name:'mascotas',value:this.checked?1:0},mapa)">
+          <label for="_filtersearch_mascotas">
+            $$mascotas$$
+          </label>
+        </div>
+        <div class="field checkbox">
+          <input #condominiosChecked# type="checkbox" id="_filtersearch_condominios" onchange="javascript:searcher.applyFilter({name:'condominios',value:this.checked?1:0},mapa)">
+          <label for="_filtersearch_condominios">
+            $$condominios$$
+          </label>
+        </div>
+        <div class="field checkbox">
+          <input #ecologicoChecked# type="checkbox" id="_filtersearch_ecologico" onchange="javascript:searcher.applyFilter({name:'ecologico',value:this.checked?1:0},mapa)">
+          <label for="_filtersearch_ecologico">
+            $$ecologico$$
+          </label>
+        </div>
+        <div class="field checkbox">
+          <input #discapacitadosChecked# type="checkbox" id="_filtersearch_discapacitados" onchange="javascript:searcher.applyFilter({name:'discapacitados',value:this.checked?1:0},mapa)">
+          <label for="_filtersearch_discapacitados">
+            $$discapacitados$$
+          </label>
+        </div>
+        <div class="field checkbox">
+          <input #helipuertoChecked# type="checkbox" id="_filtersearch_helipuerto" onchange="javascript:searcher.applyFilter({name:'helipuerto',value:this.checked?1:0},mapa)">
+          <label for="_filtersearch_helipuerto">
+            $$helipuerto$$
+          </label>
+        </div>
+
+    </div>
+</div>
+
+
+<script>
+
+    var stpnm;
+    $(document).ready(function(){
+        $("#precioFilter").payfilter({
+            separadorMiles:",",
+            filtertype:"doublerangezoom",
+            currencyconverter:true,
+            minimo:#PRECIOMIN#,
+            maximo:#PRECIOMAX#,
+            startMin:#PRECIO0#,
+            startMax:#PRECIO1#,
+            callBack:function(vals,obj){
+                if(stpnm)clearTimeout(stpnm);
+                if(vals[1]>=obj.options.maximo){
+                    vals[1]="n";
+                }
+                stpnm=setTimeout("searcher.applyFilter({name:'precio1',value:'"+vals[0]+"-"+vals[1]+"'},mapa)",500);
+                }
+            });
+        $("#habitacionesFilter").payfilter({
+            separadorMiles:",",
+            filtertype:"doublerangezoom",
+            minimo:#HABITACIONESMIN#,
+            maximo:#HABITACIONESMAX#,
+            startMin:#HABITACIONES0#,
+            startMax:#HABITACIONES1#,
+            callBack:function(vals,obj){
+                if(stpnm)clearTimeout(stpnm);
+                if(vals[1]>=obj.options.maximo){
+                    vals[1]="n";
+                }
+                stpnm=setTimeout("searcher.applyFilter({name:'habitaciones1',value:'"+vals[0]+"-"+vals[1]+"'},mapa)",500);
+                }
+            });
+        $("#banosFilter").payfilter({
+            separadorMiles:",",
+            filtertype:"doublerangezoom",
+            minimo:#BANOSMIN#,
+            maximo:#BANOSMAX#,
+            startMin:#BANOS0#,
+            startMax:#BANOS1#,
+            callBack:function(vals,obj){
+                if(stpnm)clearTimeout(stpnm);
+                if(vals[1]>=obj.options.maximo){
+                    vals[1]="n";
+                }
+                stpnm=setTimeout("searcher.applyFilter({name:'banos1',value:'"+vals[0]+"-"+vals[1]+"'},mapa)",500);
+                }
+            });
+        $("#m2Filter").payfilter({
+            separadorMiles:",",
+            filtertype:"doublerangezoom",
+            minimo:#M2MIN#,
+            maximo:#M2MAX#,
+            startMin:#M20#,
+            startMax:#M21#,
+            callBack:function(vals,obj){
+                if(stpnm)clearTimeout(stpnm);
+                if(vals[1]>=obj.options.maximo){
+                    vals[1]="n";
+                }
+                stpnm=setTimeout("searcher.applyFilter({name:'m21',value:'"+vals[0]+"-"+vals[1]+"'},mapa)",500);
+                }
+            });
+        $("#precio_m2Filter").payfilter({
+            separadorMiles:",",
+            filtertype:"doublerangezoom",
+            minimo:#PRECIOM2MIN#,
+            maximo:#PRECIOM2MAX#,
+            startMin:#PRECIOM20#,
+            startMax:#PRECIOM21#,
+            callBack:function(vals,obj){
+                if(stpnm)clearTimeout(stpnm);
+                if(vals[1]>=obj.options.maximo){
+                    vals[1]="n";
+                }
+                stpnm=setTimeout("searcher.applyFilter({name:'preciom21',value:'"+vals[0]+"-"+vals[1]+"'},mapa)",500);
+                }
+            });
+        $("#superficieFilter").payfilter({
+            separadorMiles:",",
+            filtertype:"doublerangezoom",
+            minimo:#M2SMIN#,
+            maximo:#M2SMAX#,
+            startMin:#M2S0#,
+            startMax:#M2S1#,
+            callBack:function(vals,obj){
+                if(stpnm)clearTimeout(stpnm);
+                if(vals[1]>=obj.options.maximo){
+                    vals[1]="n";
+                }
+                stpnm=setTimeout("searcher.applyFilter({name:'m2s1',value:'"+vals[0]+"-"+vals[1]+"'},mapa)",500);
+                }
+            });
+        $("#anyoFilter").payfilter({
+            separadorMiles:"",
+            filtertype:"doublerangezoom",
+            minimo:#ANIOMIN#,
+            maximo:#ANIOMAX#,
+            startMin:#ANIO0#,
+            startMax:#ANIO1#,
+            callBack:function(vals,obj){
+                console.log(vals);
+                if(stpnm)clearTimeout(stpnm);
+                if(vals[1]>=obj.options.maximo){
+                    vals[1]="n";
+                }
+                stpnm=setTimeout("searcher.applyFilter({name:'anio1',value:'"+vals[0]+"-"+vals[1]+"'},mapa)",500);
+                }
+            });
+        $("#estacionamientoFilter").payfilter({
+            separadorMiles:",",
+            filtertype:"doublerangezoom",
+            minimo:#ESTACIONAMIENTOSMIN#,
+            maximo:#ESTACIONAMIENTOSMAX#,
+            startMin:#ESTACIONAMIENTOS0#,
+            startMax:#ESTACIONAMIENTOS1#,
+            callBack:function(vals,obj){
+                if(stpnm)clearTimeout(stpnm);
+                if(vals[1]>=obj.options.maximo){
+                    vals[1]="n";
+                }
+                stpnm=setTimeout("searcher.applyFilter({name:'estacionamientos1',value:'"+vals[0]+"-"+vals[1]+"'},mapa)",500);
+                }
+            });
+        }
+    )
+</script>

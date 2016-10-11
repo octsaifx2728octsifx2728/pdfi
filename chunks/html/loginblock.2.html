@@ -1,0 +1,155 @@
+<div class="lblock">
+
+	<div class="controles">
+
+		<div class="boton_login">
+			<a  href="#loginform" rel="nofollow" class="log2 control entrar" id="_login_button"> ENTRAR
+			</a>
+		</div>
+		
+		<div class="boton_login log3" >
+			#FB_LOGIN#
+		</div>
+		
+		<div class="boton_login">
+		<a href="#registerform" rel="nofollow"	class="log1 control"   id="register_opener">
+		</a>
+		</div>
+
+	</div>
+
+</div>
+
+
+
+
+
+
+<div style="display:none;">
+	
+	<div id="forgot_password" class="module-body yui3-widget-bd clearfix form adminForm forgotPass">
+		<div class="field">
+			<label for="forgot_password_email">$$email$$</label>
+			<input type="email" id="forgot_password_email">
+		</div>
+		<div class="control">
+			<input type="button" id="forgot_password_button" value="$$enviar_password_a_mi_correo$$" class="button">
+		</div>
+	</div>
+	
+	<div id="forgot_password_success" class="module-body yui3-widget-bd clearfix form adminForm forgotPass">
+		<div class="field">
+			<label for="">$$password_enviado$$</label>
+		</div>
+	</div>
+	
+<div id="loginform" class="module-body yui3-widget-bd clearfix form">
+  <article>
+    <form action="/app/login/login" method="post" name="ingreso" id="ingreso" onSubmit="return ingreso();">
+    <input type="hidden" name="form_action" value="login" />
+    <input type="hidden" name="submitForm" value="1" />
+      <div class="top">
+	<h1>
+	<img src="img/icon-usuario.jpg">
+	$$login_submit$$
+	</h1>
+      </div>
+      <div class="right">
+	<input type="image" src="img/btn-login_#LANG#.png" class="submit">
+	  <input id="rememberMe" class="checkbox" name="rememberMe" type="checkbox">
+	  <label for="rememberMe" class="rememberMe">
+		$$login_rememberme$$
+	  </label>
+      </div>
+      <div class="middle">
+	<div class="field">
+	  <label>
+	    $$login_email$$:
+	  </label>
+	  <input id="emailAddr" name="emailAddr" maxLength="100" size="30" type="email" required />
+	</div>
+	<div class="field">
+	  <label>
+	    $$login_password$$:
+	  </label>
+	  <input id="password" name="password" maxLength="20" size="30" type="password" required />
+	</div>
+	<div class="links">
+	  <a href="#forgot_password" id="password_restore">$$login_forget_your_password$$</a>
+	</div>
+	<div class="field2">
+	</div>
+      </div>
+      <div class="bottom">
+	<b>$$login_you_don_have_an_account$$</b> <a class="example1"  href="#registerform" rel="nofollow"  id="register_opener2">$$login_Register_Now$$</a>
+      </div>
+    </form>
+  </article>
+</div>
+
+
+	<div class="formulario form" id="registerForm">
+	  <form id="registrationForm" onsubmit="return loginblock_c.checkForm(this)" class="auth-form clearfix show-consumer" method="post" name="registrationForm" action="/">
+	    <input name="app" value="login" type="hidden">
+	    <input name="task" value="register" type="hidden">
+	    <input id="fbtoken" name="fbtoken" value="" type="hidden">
+	    <div class="top">
+	      <h2><img src="img/icon-configuracion-cuenta.jpg"> $$User_registration$$</h2>
+	    </div>
+	    <div class="middle">
+	      <div class="field">
+		<label for="emailAddr">$$login_email$$:</label>
+		<input id="emailAddr" name="emailAddr" maxLength="255" type="email" required="required" autocomplete="off" size="30">
+	      </div>
+	      <div class="field">
+		<label for="screen_name">$$Screen_name$$:</label>
+		<input id="screen_name" name="screenName" maxLength="255" type="text" required="required" autocomplete="off" size="30">
+	      </div>
+	      <div class="field">
+		<label for="password">$$login_password$$:</label>
+		<input name="password" type="password" id="password"  maxLength="20" required="required" autocomplete="off">
+	      </div>
+	      <div class="field">
+		<label for="passwordConfirm">$$Password_Confirm$$:</label>
+		<input id="passwordConfirm" name="passwordConfirm" maxLength="20" type="password" required="required" autocomplete="off">
+	      </div>
+	    </div>
+	    <div class="bottom">
+	      <strong>
+		<INPUT id="proCheckbox" name="proCheckbox" type="checkbox">
+		<label for="proCheckbox"> $$Im_a_Professional$$</label>
+	      </strong>
+	      <br>
+	      <strong>
+		<INPUT id="stayInTouchCheckbox" name="stayInTouchCheckbox" CHECKED="checked" type="checkbox">
+		<label for="stayInTouchCheckbox"> $$SendNews$$</label>
+	      </strong>
+	      <div class="advertencia">
+		$$Accept_Terms$$.
+	      </div>
+	      <input type="image" src="img/btn-registrarse-#LANG#.png">
+	    </div>
+	  </form>
+	</div>
+</div>
+
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $("#_login_button").colorbox({rel:"nofollow",inline:true,href:"#loginform"});
+  $("#register_opener").colorbox({rel:"nofollow",inline:true,href:"#registerForm"});
+  $("#register_opener2").colorbox({rel:"nofollow",inline:true,href:"#registerForm"});
+  $("#password_restore").colorbox({rel:"nofollow",inline:true,href:"#forgot_password"});
+  $("#forgot_password_button").click(function(){
+  	var d=new Date();
+  	var email=$("#forgot_password_email").val();
+  	var url="/api/login/restore?email="+encodeURI(email)+"&idcallback="+d.getTime();
+  	var script=document.createElement("script");
+  	script.type="text/javascript";
+  	script.src=url;
+  	document.getElementsByTagName("head")[0].appendChild(script);
+    $.colorbox({rel:"nofollow",inline:true,href:"#forgot_password_success"});
+  });
+  });
+</script>

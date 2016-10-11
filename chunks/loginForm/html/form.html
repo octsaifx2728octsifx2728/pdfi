@@ -1,0 +1,40 @@
+<style>
+    #reserPass:hover{
+        
+        color: black;
+        
+    }
+</style>
+<div class="loginForm">
+    <form action="/" method="POST" >
+        <div class="errorMessage"></div>
+        <input type="hidden" name="app" value="login">
+        <input type="hidden" name="task" value="login">
+        <input type="hidden" name="return" value="#RETURN#">
+
+        <div class="controles">
+            <input type="submit" class="cancel gray-dark" value="$$ENTRAR$$">
+        </div>
+
+        <div class="field field_type_email">
+            <label >$$login_email$$*:</label>
+            <input class="emptyOnFocus verifyOnFly verifyType_email required" required type="email" name="email" placeholder="$$login_email$$"   style="margin-right: 20px;">
+        </div>
+
+        <div class="field field_type_password">
+            <label >$$login_password$$*:</label>
+            <input class="emptyOnFocus verifyOnFly minSize_5 required" required type="password" name="password" placeholder="$$login_password$$">
+        </div>
+    </form>
+    <div class="recovery-text">
+        <a id="reserPass" href="/app/user/resetPassword">
+            $$resetPassword$$
+        </a>
+    </div>
+    <script type="text/javascript">
+        
+        $(function(){
+            $('.loginForm > form').loginForm();
+        });
+    </script>
+</div>

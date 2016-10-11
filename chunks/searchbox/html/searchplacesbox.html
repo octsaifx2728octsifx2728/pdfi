@@ -1,0 +1,65 @@
+
+<div class="searchbox nosearchbox">
+    <input id="searchTextField" name="searchTextField" class="searchTextField" type="text" />
+</div>
+
+<script type="text/javascript">
+    var autocomplete;
+    function sp_action(){
+        
+        
+        var ajax  = "#AJAX#" * 1,
+            place = autocomplete.getPlace();
+
+        if(place){
+            if(ajax){
+                if(place.geometry.viewport){
+                    var bound = place.geometry.viewport;
+
+                }else{
+                    var sw    = new google.maps.LatLng(place.geometry.location.lat() + 0.0045, place.geometry.location.lng() - 0.0045);
+                    var ne    = new google.maps.LatLng(place.geometry.location.lat() - 0.0045, place.geometry.location.lng() + 0.0045);
+                    var bound = new google.maps.LatLngBounds(sw, ne);
+                }
+
+                mapa.mapa.fitBounds(bound);
+
+            }else {
+                if(place.geometry.viewport){
+                    var ne = place.geometry.viewport.getNorthEast(),
+                        sw = place.geometry.viewport.getSouthWest();
+
+                }else{
+                    var sw = new google.maps.LatLng(place.geometry.location.lat() + 0.0045, place.geometry.location.lng() - 0.0045),
+                        ne = new google.maps.LatLng(place.geometry.location.lat() - 0.0045, place.geometry.location.lng() + 0.0045);
+                }
+
+                var tipovr     = enviroment.translations[enviroment.filters.tipovr]     ? enviroment.translations[enviroment.filters.tipovr]     : "",
+                    tipoobjeto = enviroment.translations[enviroment.filters.tipoobjeto] ? enviroment.translations[enviroment.filters.tipoobjeto] : "",
+                    url        = "app/searchbounds/" + ne.lat() + ":" +
+                                                       ne.lng() + ":" +
+                                                       sw.lat() + ":" +
+                                                       sw.lng() + ":" +
+                                                       encodeURI(tipovr + "-" + tipoobjeto + "-" + place.formatted_address.replace(/\s/g,"-"));
+
+                url += "?tipovr=" + enviroment.filters.tipovr + "&tipoobjeto=" + enviroment.filters.tipoobjeto;
+
+                wait(true);
+
+                //console.log(url);
+
+                location.href = url;
+            }
+        }
+    }
+
+    $(document).ready(function() {
+       
+       
+        var input = document.getElementById('searchTextField'),
+            options = {};
+
+        autocomplete = new google.maps.places.Autocomplete(input, options);
+        google.maps.event.addListener(autocomplete, 'place_changed',sp_action);
+    });
+</script>

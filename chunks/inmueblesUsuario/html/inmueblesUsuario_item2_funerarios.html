@@ -1,0 +1,61 @@
+<div class="header-premium_#PREMIUM#" style="display:none;">
+    <div class="header-premium-title">PREMIUM</div>
+</div>
+<div class="header-oferta_#OFERTA#" style="display:none;">
+    <div class="header-oferta-title">OFERTA</div>
+</div>
+<div class="itemtipo_#CASA#">
+    <div  itemscope itemtype="http://data-vocabulary.org/Product" class="item item_#id# user_#USER# tipo_#CASA# duplex_#DUPLEX# #VENCIDO# #VENCIDOPremium# premium_#PREMIUM# oferta_#OFERTA# vendido_#VENDIDO# metrica_#METRICA# moneda45convert moneda45_#MONEDA#">
+        <div class="overlay"></div>
+        <h1 class="title" style ="padding-left: 56px;">
+            <meta  itemprop="offerURL" content="#URL#" />
+            <a href="#URL#"  itemprop="product-name" content="#TITLE#">
+                #TITLE#
+            </a>
+        </h1>
+        <div class="precio data" title="$$precio$$">
+            <!--div class="icon"></div-->
+            <div class="iconmoneda"></div>
+            <span class="precio_simbolo"></span>
+            <span class="precio_data converPrice" itemprop="product-price" content="#PRECIO#">
+                $#PRECIO#
+            </span>
+        </div>
+        <div class="imagen">
+            <div onclick="location.href='#URL#'" class="overlayvendido" style="background: url('/img/lang/$$_languajeKey$$/stamps/vendido250.png') center center no-repeat; background-size: 200px 200px;"></div>
+            <a href="#URL#" itemprop="image">
+                <img src="cache/$$_languajeKey$$/250/190/#IMAGEN#">
+            </a>
+            <div class="share">
+                #SHARE#
+            </div>
+        </div>
+        <div class="top_top">
+            <div class="caracteristicas">
+                <meta itemprop="product-category" content="#TIPONOMBRE#-#SUBTIPONOMBRE#"/>
+                <span class="caract casa_#CASA#" title="#CASA_TITLE#"></span>
+                <span class="caract amueblado_#AMUEBLADO#" title="#AMUEBLADO_TITLE#"></span>
+            </div>
+            <div class="vr vr_#vr#">
+                #VRTITLE#
+            </div>
+        </div>
+        <div class="info user">
+            <div class="anyo dataS grey" title="$$anio$$">
+                <div class="icon"></div>
+                <span>#CONSTRUCCION#</span>
+            </div>
+        </div>
+        <div class="items">
+            #ITEMS#
+        </div>
+        <div class="description" itemprop="product-description">
+            [[inmuebleData?id=`#ID#`&tipo=`#CASA#`&name=`descripcion`]]
+        </div>
+        <div class="bottom">
+            <div class="contact">
+                #CONTACT#
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,206 @@
+<div class="crearInmueble" id="_crearInmueble">
+    <div class="panel selectTipo">
+        [[selectTipoInmueble]]
+    </div>
+
+    <div class="panel selectTransaccion"></div>
+    <div class="panel selectSubtipo"></div>
+    <div class="panel dinamicFields"></div>
+
+    <div class="panel multimedia fieldType_media fieldRequired_1">
+        <div class="adminform freemiumform mediaform">
+            <h2>
+                $$contenido_multimedia$$
+            </h2>
+            <div class="section fotos">
+                <h3>
+                    $$fotos_del_inmueble$$
+                </h3>
+                <div class="instrucciones">
+                    $$instrucciones_upload_images$$
+                </div>
+                <div class="hint">
+                    $$images_hint$$
+                </div>
+                <div class="fotosContainer module3">
+                    <div class="top">
+                        $$fotos$$
+                        <div>
+                            <span class="total">
+                                0
+                            </span>
+                            /
+                            <span class="max">
+                                0
+                            </span>
+                        </div>
+                    </div>
+                    <div class="wrap">
+                        <div class="field imagen new">
+                            <div class="uploadOverlay">
+                                <input class="uploadbutton" type="button" value="">
+                            </div>
+                            <iframe class="uploadFrame uploadFotoFrame">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section images360">
+                <h3>
+                    $$imagenes360_del_inmueble$$
+                </h3>
+                <div class="instrucciones">
+                    $$instrucciones_upload_images360$$
+                </div>
+                <div class="fotos360Container module3">
+                    <div class="top">
+                        $$fotos360$$
+                        <div>
+                            <span class="total">
+                                0
+                            </span>
+                            /
+                            <span class="max">
+                                0
+                            </span>
+                        </div>
+                    </div>
+                    <div class="wrap">
+                        <div class="field imagen new">
+                            <div class="uploadOverlay">
+                                <input class="uploadbutton" type="button" value="">
+                            </div>
+                            <iframe class="uploadFrame uploadFoto360Frame"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section videos" >
+                <h3>
+                    $$videos_del_inmueble$$
+                </h3>
+                <div class="module3 videos_container">
+                    <div class="wrap">
+                        <div class="instrucciones">
+                            $$instrucciones_videos$$
+                        </div>
+                        <div class="field video video_0 prohibido">
+                            <input type="text"  value="$$youtube_url$$">
+                            <div class="video_overlay">
+                                $$sube_mas_videos_contratando$$
+                            </div>
+                            <div class="videoContainer"> </div>
+                        </div>
+                        <div class="field video video_1 prohibido">
+                            <input type="text" value="$$youtube_url$$">
+                            <div class="video_overlay">
+                                $$sube_mas_videos_contratando$$
+                            </div>
+                            <div class="videoContainer"> </div>
+                        </div>
+                        <div class="field video video_2 prohibido">
+                            <input type="text" value="$$youtube_url$$">
+                            <div class="video_overlay">
+                                $$sube_mas_videos_contratando$$
+                            </div>
+                            <div class="videoContainer"> </div>
+                        </div>
+                        <div class="field video video_3 prohibido">
+                            <input type="text" value="$$youtube_url$$">
+                            <div class="video_overlay">
+                                $$sube_mas_videos_contratando$$
+                            </div>
+                            <div class="videoContainer"> </div>
+                        </div>
+                        <div class="field video video_4 prohibido">
+                            <input type="text" value="$$youtube_url$$">
+                            <div class="video_overlay">
+                                $$sube_mas_videos_contratando$$
+                            </div>
+                            <div class="videoContainer"> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class='control'>
+            <input type='button' value='Ok' class='submit gray-dark'>
+            <input type='button' value='Cancel' class='cancel gray-dark'>
+        </div>
+    </div>
+    <div class="panel submitGratis">
+        <div class="button">
+            <div class="products"></div>
+        </div>
+    </div>
+    <div class="panel submitPago productos">
+        <div class="button">
+            <div class="formasdepago">
+                <form>
+                    <div class="formadepago formadepago_paypal formadepagoid_1">
+                        <input type="radio" name="formadepago" value="1" id="_formadepago1" checked="checked">
+                        <label for="_formadepago1">
+                            <span class="icon">
+                                <img src="img/pago-paypal.png">
+                            </span>
+                            <span>
+                                $$paypal$$
+                            </span>
+                        </label>
+                    </div>
+                  <div class="formadepago formadepago_pasarela formadepagoid_2">
+                        <input type="radio" name="formadepago" value="2" id="_formadepago2">
+                        <label for="_formadepago2">
+                            <span class="icon">
+                                <img src="img/pago-otros.png">
+                            </span>
+                            <span>
+                                $$paywithCC$$
+                            </span>
+                        </label>
+                    </div>
+                    
+                    
+                    
+                </form>
+            </div>
+            
+                    
+        </div>
+        
+            <div class="formasdepago1" >
+                <form>
+                    <div class="formadepago formadepago_paypal formadepagoid_1">
+                        <input type="radio" name="formadepago" value="1" id="_formadepago" checked="checked">
+                        <label for="_formadepago1">
+                            <span class="icon">
+                                <img src="img/pago-paypal.png">
+                            </span>
+                            <span>
+                                $$paypal$$
+                            </span>
+                        </label>
+                    </div>
+                     <div class="formadepago formadepago_pasarela formadepagoid_2" id="formasdepago1">
+                        <input type="radio" name="formadepago" value="2" id="_formadepago2">
+                        <label for="_formadepago2">
+                            <span class="icon">
+                                <img src="img/pago-otros.png">
+                            </span>
+                            <span>
+                                $$paywithCC$$
+                            </span>
+                        </label>
+                    </div>
+                </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function(){
+        
+        $("#_crearInmueble").crearInmueble({incompletos: #INCOMPLETOS#});
+    });
+</script>

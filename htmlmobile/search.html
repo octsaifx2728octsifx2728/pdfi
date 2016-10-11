@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+
+
+<html>
+
+<head>
+<base href="#BASE#">
+
+[[metas]]
+
+#ESTILOS#
+
+[[enviroment]]
+
+#SCRIPTS#
+
+[[analitics]]
+
+<script type="text/javascript">
+  var resultados=[[jsonResults]];
+  var searcher=new searcher_class(1);
+
+
+var mapa=null;
+
+function addMapMarkers(){
+  mapa.clear();
+  for(var x=0; x<resultados.length;x++){
+    mapa.addMarker({
+      position:new google.maps.LatLng(resultados[x].coordenaday, resultados[x].coordenadax),
+      clickable:true,
+      draggable:false,
+      title:resultados[x].title,
+      visible:true,
+      icon:"img/casa.gif",
+      optimized:true,
+      infowindow:true,
+      
+      infolink:resultados[x].url,
+      infodata:'<div class="infowindowdata"><div class="title">'+resultados[x].title+'</div><div class="foto"><a href="'+resultados[x].url+'"><img src="cache/50/38/'+resultados[x].imagen+'"></a></div><div class="descripcion"><a href="'+resultados[x].url+'">'+resultados[x].descripcion+'</a></div></div>'
+      });
+  }
+
+}
+
+
+var ajaxsearchTimeout=false;
+function search(e,box){
+  if(e.keyCode==13){
+    var query=box.value;
+    location.href="http://www.e-spacios.com/app/search/"+encodeURI(query);
+  }
+  else {
+    if(ajaxsearchTimeout){
+      clearTimeout(ajaxsearchTimeout);
+    }
+    ajaxsearchTimeout=setTimeout(function(){searcher.search(box.value)},1000);
+  }
+}
+
+function searchplaces(e,box){
+  if(e.keyCode==13){
+    var query=box.value;
+    location.href="http://www.e-spacios.com/app/searchplaces/"+encodeURI(query);
+  }
+  else {
+    if(ajaxsearchTimeout){
+      clearTimeout(ajaxsearchTimeout);
+    }
+    
+    ajaxsearchTimeout=setTimeout(function(){
+      searcher.searchplaces(box.value,mapa,dfg)
+      },1000);
+  }
+}
+
+function searchBounds(bounds){
+    if(ajaxsearchTimeout){
+      clearTimeout(ajaxsearchTimeout);
+    }
+    ajaxsearchTimeout=setTimeout(function(){searcher.searchBounds(bounds)},1000);
+}
+
+$(document).ready(function(){
+
+var center=[#CENTER#];
+  
+  searcher.resultbox=document.getElementById("resultsContainer");
+  searcher.resultTemplate=document.getElementById("_resultTemplate");
+  searcher.resultContainer=resultados;
+  searcher.lastSearch="#QUERY#";
+  searcher.lastSearchType="#SEARCHTYPE#";
+	if(searcher.lastSearchType=="bounds"){
+		var coords=searcher.lastSearch.split(":");
+		var ne=new google.maps.LatLng(coords[0],coords[1]);
+		var sw=new google.maps.LatLng(coords[2],coords[3]);
+		var bound=new google.maps.LatLngBounds(sw,ne);
+		var center=bound.getCenter();
+		
+	}
+   //center=new google.maps.LatLng(0,0);
+mapa=new paymapa({
+    id:1,
+    contenedor:"searchmap",
+    init:true,
+    geoloc:false,
+    center:center,
+    zoom:20
+    });
+mapa.ignorezoom=true;
+mapa.map.fitBounds(bound);
+//mapa.map.setZoom(mapa.map.getZoom()+2);
+ mapa.mapDragEndCallback.push(searchBounds);
+ 
+mapa.ignorezoom=false;
+
+addMapMarkers();
+console.log("mapa terminado");
+
+return false;
+
+
+  searcher.resultbox=document.getElementById("resultsContainer");
+  searcher.resultTemplate=document.getElementById("_resultTemplate");
+  searcher.resultContainer=resultados;
+  searcher.lastSearch="#QUERY#";
+  searcher.lastSearchType="#SEARCHTYPE#";
+	if(searcher.lastSearchType=="bounds"){
+		var coords=searcher.lastSearch.split(":");
+		var ne=new google.maps.LatLng(coords[0],coords[1]);
+		var sw=new google.maps.LatLng(coords[2],coords[3]);
+		var bound=new google.maps.LatLngBounds(sw,ne);
+		var centers=bound.getCenter();
+		center=[centers.lat(),centers.lng()];
+		
+	}
+  mapa=new paymapa({
+    id:1,
+    contenedor:"searchmap",
+    init:true,
+    geoloc:false,
+    center:[0,0]
+    });
+	  mapa.boundsChangeCallback.push(searchBounds);
+	if(searcher.lastSearchType=="bounds"&&bound&&resultados.length<1){
+			mapa.mapa.setCenter(bound.getCenter());
+			mapa.mapa.setZoom(20);
+			mapa.mapa.fitBounds(bound);
+			}
+	else{
+		if(searcher.lastSearchType=="bounds"){
+		  mapa.mapa.setCenter(bound.getCenter());
+		  addMapMarkers();
+		 mapa.mapa.fitBounds(bound);
+		  }
+		 else {
+		  addMapMarkers();
+		  mapa.centerOnMarkers();
+		 }
+	}
+  });
+</script>
+
+</head>
+<body style="background:#ffffff">
+
+<div class="alertas">
+  #ALERTAS#
+</div>
+
+<div id="_page" class="searchpage">
+<div class="mainwrap">
+<!--top_top-->
+
+
+<article>
+  <div class="main">
+                            <div class="mapa">
+                                    <div class="searchmap">
+                                          [[searchmap]]
+                                    </div>
+                            </div>
+  </div><!--//main-->
+
+</article>
+
+</div><!--Main Wrap -->
+<div class="footer">
+<footer>
+</footer>
+</div>
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,111 @@
+<div class="login">
+    <div class="controles">
+        <div class="control entrar">
+            <input type="button" class="button loginButton_1" value="$$ENTRAR$$">
+        </div>
+        <div class="control registrar">
+            <input type="button" class="button loginButton_1" value="$$REGISTRARSE$$">
+        </div>
+        <div class="control conectar">
+            <div class="button loginButton_1" >
+                <span class="conect_txt">$$CONECTAR$$</span>
+                <a href="#">
+                    <img src="/images/icon_in.png" alt="LinkedIn">
+                </a>
+                <a href="#">
+                    <img src="/images/icon_fb.png" alt="Facebook">
+                </a>
+                <a href="#">
+                    <img src="/images/icon_g+.png" alt="Google">
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="boxes hidden">
+        <div class="box box_loginform">
+            <div class="top">
+                <h2>
+                    <img src="img/icon-configuracion-cuenta.jpg">
+                    $$login_submit$$
+                </h2>
+            </div>
+            <div class="middle">
+                <div class="iframeContainer"></div>
+                <div class="links">
+                    <span class="recordar">
+                        <a class="button">
+                            $$login_forget_your_password$$
+                        </a>
+                    </span>
+                    <b>$$login_you_don_have_an_account$$</b>
+                    <span class="registrar">
+                        <a class="button">
+                            $$login_Register_Now$$
+                        </a>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="box box_registerform">
+            <div class="top">
+                <h2>
+                    <img src="img/icon-configuracion-cuenta.jpg">
+                    $$User_registration$$
+                </h2>
+            </div>
+            <div class="middle">
+                <div class="iframeContainer"></div>
+                <div class="advertencia">
+                    $$Accept_Terms$$.
+                </div>
+                <div class="links">
+                    <span class="entrar">
+                        <a class="button loginButton">
+                            $$alreadyIHaveAnAccount$$
+                        </a>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="box box_reminderform">
+            <div class="top">
+                <h2>
+                    <img src="img/icon-configuracion-cuenta.jpg">
+                    $$User_remember$$
+                </h2>
+            </div>
+            <div class="middle">
+                <div class="iframeContainer"></div>
+                <div class="links">
+                    <span class="registrar">
+                        <a class="button">
+                            $$login_Register_Now$$
+                        </a>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $(".login>.controles>.entrar>.button").ultraLogin({
+            key:"login",
+            initform:1,
+            avaliableForms:[1,2,8]
+        });
+
+        $(".login>.controles>.registrar>.button").ultraLogin({
+            key:"login",
+            initform:2,
+            avaliableForms:[1,2,8]
+        });
+
+        $(".login>.controles>.conectar>.button").ultraLogin({
+            key:"login",
+            initform:8,
+            avaliableForms:[1,2,8]
+        });
+    </script>
+</div>

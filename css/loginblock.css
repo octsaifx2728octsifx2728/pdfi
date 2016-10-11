@@ -1,0 +1,185 @@
+.lblock{
+	width:500px;
+	height:55px;
+	padding:3px;
+	color: #71716F;
+}
+.lblock a{
+	color: #71716F;
+}
+
+.lblock .boton_login{
+	float: left;
+	width: 150px;
+	padding: 2px 2px 2px 2px;
+}
+.lblock .wrap{
+	background:#f3f3f3;
+	width:100%;
+	height:100%;
+	overflow:hidden;
+	margin:0;
+	border-radius: 13px;
+}
+.lblock .top {
+	background:url('back_idioma.png');
+	width: 86px;
+	height: 69px;
+	position:absolute;
+	margin: -16px 0 0 245px;
+}
+.lblock .avatar {
+	float: left;
+	width: 38px;
+	height: 38px;
+	overflow: hidden;
+	margin: 8px;
+}
+.lblock .avatar img{
+	width:100%;
+}
+.lblock .hello{
+	width: 95px;
+	float: left;
+	margin: 13px 0;
+	font-size: 12px;
+	font-weight: bold;
+}
+.lblock .hello .name{
+	width:15px;
+}
+.lblock .controles{
+float: left;
+padding: 10px 0;
+}
+
+.lblock .controles .log1{
+	background: url('loginblock/registrate.png') center left no-repeat;
+	display: block;
+	margin: 9px 0 20px 10px;
+	padding: 3px 0px 0px 0px;
+	font-size: 10px;
+	font-weight: bold;
+	width: 154px;
+	height: 35px;
+	border-radius: 15px;
+
+}
+
+
+.lblock .controles .log2{
+ background: url('loginblock/login.png') center left no-repeat;
+ display: block;
+ margin: 2px 0 10px 20px;
+ padding: 16px 0px 0px 4px;
+ font-size: 18px;
+ font-weight: bold;
+ color: white;
+ width: 139px;
+ height: 34px;
+ border-radius: 15px;
+}
+
+.lblock .controles .log3{
+	display: block;
+	margin: 11px 0 20px 20px;
+	padding: 3px 0px 0px 15px;
+	font-size: 10px;
+	font-weight: bold;
+	width: 154px;
+	height: 35px;
+	border-radius: 15px;
+}
+
+.lblock .languaje{
+	font-size: 10px;
+	font-weight: bold;
+	margin: 25px 20px 0;
+}
+.lblock .languaje a{
+	display:block;
+	margin: 5px 0;
+}
+.facebook{
+	float: left;
+	margin: 0px 0px;
+	float: left;
+}
+.userlogged .facebook{
+	margin: 9px -95px;
+	position: absolute;
+}
+.forgotPass{
+	text-align:center;
+	padding:10px;
+	width:250px;
+}
+.forgotPass .field label{
+	margin: 0 10px;
+	font-weight: bold;
+	font-size: 15px;
+	text-align:center;
+}
+
+
+/********** LOGUEADO **************/
+
+
+/***********Login Module ************/
+
+
+.top_top {
+  width:100%;
+  height:100px;
+  margin:15px 0 0;
+}
+.top_top .module{
+	width: 520px;
+	height: 75px;
+	float: right;
+}
+.top_top .module .wrap{
+}
+
+
+.logueado {
+	width: 500px;
+	height: 60px;
+	float: rigth;
+}
+
+
+.botones-logueado{
+	margin-top: 10px;
+}
+
+.botones-login-cerrar-sesion{
+	width:148px;
+	height: 32px;
+	background:url('loginblock/back-log.png') center center no-repeat  ;	
+	float:left;
+	padding-left: 10px;
+	margin: 15px 20px 0px 0px;
+	font-size: 17px;
+	font-weight: bold;
+	color: #fff;
+
+}
+
+.botones-login-mi-espacio{
+	width:148px;
+	height: 32px;
+	background:url('loginblock/back-mi-espacio.png') center center no-repeat ;	
+	float:left;
+	margin: 15px 10px 0px 0px;
+	font-size: 17px;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+
+.texto{
+	padding: 3px 10px 0px 0px;
+	color: #ffffff;
+	text-align: center;
+	}
+

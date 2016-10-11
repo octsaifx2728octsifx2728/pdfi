@@ -1,0 +1,26 @@
+<div class="loginForm">
+  <form action="/" method="POST" id="reminderform_#KEY#" >
+    <div class="errorMessage">
+      $$reminder_error_message$$
+    </div>
+    <input type="hidden" name="app" value="login">
+    <input type="hidden" name="task" value="reminder">
+    <div class="controles">
+      <input type="submit" class="button submit" value="" style="background:white url('img/btn-login_$$_languajeKey$$.png') center center no-repeat">
+    </div>
+    <div class="field field_type_email">
+      <label for="email_#KEY#">$$login_email$$*:</label>
+      <input class="emptyOnFocus verifyOnFly verifyType_email required" id="email_#KEY#" type="email" name="email" value="$$login_email$$">
+    </div>
+  </form>
+  
+  <script>
+    
+$(document).ready(
+  function(){
+    $("#reminderform_#KEY#").loginForm();
+    }
+  );
+  </script>
+</div>
+

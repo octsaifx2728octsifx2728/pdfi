@@ -1,0 +1,39 @@
+<div class="admin_overlay">
+    <input type="button" value="$$cambiar_foto$$" class="button" onclick="javascript:user.showAvatarForm({actual:'#AVATAR#',form:'#adminavatar',uploadApi:'/app/uploadFile/Avatar'});">
+</div>
+<img   itemprop="user-photo" src="#AVATAR#" class="avatar_image">
+
+
+<div style="display:none">
+    <div class='adminForm' id='adminavatar'>
+        <input type="hidden" class="id_user" value="">
+        <h2>$$changeAvatar$$</h2>
+        <div class="actual">
+            <img src=''>
+        </div>
+        <div class='control'>
+            <input type="button" value="$$subirfoto$$" class="option" onclick="javascript:$('#adminavatar>.acciones>.accion1').css('display','block');$('#adminavatar>.acciones>.accion2').css('display','none');">
+            <input type="button" value="$$use_facebook_photo$$" class="option" onclick="javascript:$('#adminavatar>.acciones>.accion1').css('display','none');$('#adminavatar>.acciones>.accion2').css('display','block');">
+            <input type='button' value='$$use_linkedin_photo$$' class='option' onclick="getLinkedinPhoto()">
+            <img class="lnImage" src=""/>
+        </div>
+        <div class="acciones">
+            <div class="accion1">
+                <div class="uploadOverlay">
+                    <div class="button">
+                        $$seleccione_archivo$$
+                    </div>
+                </div>
+                <iframe class="uploadFrame" id="_uploadAvatarFrame">
+                </iframe>
+            </div>
+            <div class="accion2">
+                <img src="">
+                <input type="button" class="button" value="$$usar_foto$$" onclick="javascript:user.submitAvatar($(this.parentNode).find('img').attr('src'))">
+            </div>
+        </div>
+        <div class="submit" style="display:none">
+            <input type="button" class="button" value="$$submit$$" onclick="javascript:$.colorbox.close();user.update({name:'avatar',value:$(this.parentNode.parentNode).find('.actual>img').attr('src')});">
+        </div>
+    </div>
+</div>

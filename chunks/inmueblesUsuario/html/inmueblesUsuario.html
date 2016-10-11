@@ -1,0 +1,81 @@
+
+                    <script>
+                            $(document).ready(function(){
+                                $(".button_borrar").ultraLogin({
+                                    key:"login",
+                                    chunk:"vendido",
+                                    params_chunk:{"plantilla":"1"},
+                                    initform:9,
+                                    avaliableForms:[9]
+                                });
+                                
+                                $(".inmueblesUsuario").find(".metrica>select").change(function(){
+                                    $(this).parents(".item").removeClass("metrica_metros");
+                                    $(this).parents(".item").removeClass("metrica_pies");
+                                    $(this).parents(".item").addClass("metrica_"+$(this).val());
+                                    $(this).parents(".item").find(".info").removeClass("infometrica_metros");
+                                    $(this).parents(".item").find(".info").removeClass("infometrica_pies");
+                                    $(this).parents(".item").find(".info").addClass("infometrica_"+$(this).val());
+                                    $(this).parents(".item").find(".preciom2").attr("title",enviroment.translations["precio_"+$(this).val()+"2"]);
+                                    $(this).parents(".item").find(".m2").attr("title",enviroment.translations[""+$(this).val()+"2"]);  
+                                })
+
+                                $(".inmueblesUsuario .item .info").each(function(index){
+                                    $(this).find(".anio").insertAfter($(this).find(".noamueblado"));
+                                });
+                            });
+                        </script>
+<div class="inmueblesUsuario">
+	<div class="wrapper">
+		#INMUEBLES#
+	</div>
+</div>
+
+<div style="display:none">
+	
+	
+	<div id="_renovar">
+		<h2>$$renovar_suscripcion$$</h2>
+		
+		<div class="formasdepago">
+                    <div class="formadepago formadepago_paypal formadepagoid_1">
+                        <input type="radio" name="formadepago" value="1" id="_formadepago1" checked="checked">
+                        <label for="_formadepago1">
+                            <span class="icon">
+                                <img src="img/pago-paypal.png">
+                            </span>
+                            <span>$$paypal$$</span>
+                        </label>
+                    </div>
+                    <div class="formadepago formadepago_pasarela formadepagoid_2">
+                        <input type="radio" name="formadepago" value="2" id="_formadepago2">
+                        <label for="_formadepago2">
+                            <span class="icon">
+                                <img src="img/pago-otros.png">
+                            </span>
+                            <span>$$paywithCC$$</span>
+                        </label>
+                    </div>
+		</div>
+                
+		<div class="section pago">
+			<h2>$$forma_de_pago$$</h2>
+			<div class="productos">
+                            
+			</div>
+		</div>
+		<div class="section terminos">
+			<h3>$$terminos_y_condiciones$$</h3>
+			<div class="field">
+				<input type="checkbox" id="TOC2">
+				<label for="TOC2">$$acepto_toc$$</label>
+			</div>
+			<div class="alertForm">
+				<b>*</b> $$debe_aceptar_toc$$
+			</div>
+			<div class="alertForm2">
+				<b>*</b> $$debe_elegir_una_opcion$$
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,580 @@
+body,
+#_page.detalles_inmueble{
+}
+
+
+.title{
+	width: 100%;
+      font-size:16px;
+}
+.images{
+	width: 710px;
+	margin:10px 0;
+	height:590px;
+}
+
+.title h1{
+	font-size:15px;
+	text-align:left;
+	margin:0px;
+	padding:5px;
+        background:#ffffff;
+}
+
+.title .info .caracteristicas{
+	background: white;
+	width: 50px;
+	height: 90px;
+	float: left;
+	display:none;
+}
+
+.title .info .caract{
+	width:25px;
+	height:25px;
+	margin:15px auto;
+}
+
+.title .info .casa_1{
+	background:url("icons.png") 0 0 no-repeat;
+}
+.title .info .casa_2{
+	background:url("icons.png") 0 -25px no-repeat;
+}
+.title .info .amueblado_1{
+	background:url("icons.png") 0 -25px no-repeat;
+}
+.title .info .amueblado_2{
+	background:url("icons.png") -25px -25px no-repeat;
+}
+.title .info .info {
+	font-size:12px;
+	font-weight:bold;
+	text-align:left;
+        background:#ffffff;
+        margin:8px 0 0;
+}
+.title .info .info .dataS,
+.title .info .info .data{
+	float: left;
+	margin: 5px 10px;
+	}
+.title .info .info .dataS{
+        width:65px;
+        height:25px;
+        font-size:9px
+	}
+.title .info .info .dataS .icon,
+.title .info .info .data .icon{
+	width: 25px;
+	height:25px;
+	float:left;
+	margin: -7px 5px 0;
+	}
+	
+	
+	
+.precio .icon{
+  background:url('icons.png') -50px -25px no-repeat;
+}
+.preciom2 .icon{
+  background:url('icons.png') -75px -25px no-repeat;
+}
+.preciom2 .icon{
+  background:url('icons.png') -75px -25px no-repeat;
+}
+.superficie .icon{
+  background:url('icons.png') -0px -50px no-repeat;
+}
+.habitaciones .icon{
+  background:url('icons.png') -25px -50px no-repeat;
+}
+.banos .icon{
+  background:url('icons.png') -50px -50px no-repeat;
+}
+.estacionamientos .icon{
+  background:url('icons.png') -75px -50px no-repeat;
+}
+.construccion .icon{
+  background:url('icons.png') -0px -75px no-repeat;
+}
+.m2 .icon{
+  background:url('icons.png') -25px -75px no-repeat;
+}
+
+.result .right {
+	width:275px;
+	float:right;
+}
+
+.result .module {
+	background: #E8EBEF;
+	padding: 5px;
+	box-shadow: 5px 5px 20px #000000;
+        border-radius: 10px;
+}
+.result .module h2{
+	font-size:14px;
+}
+.result .servicios_title{
+	font-size: 12px;
+	font-weight: bold;
+	margin:0 0 15px;
+        border-radius:10px;
+}
+.result .servicios{
+	margin:10px 0 0;
+	background:#ffffff;
+}
+.result .contacto{
+	text-align:left;
+}
+.result .descripcion{
+	margin: 10px 0 0;
+	font-size: 15px;
+	text-align: left;
+	font-weight: normal;
+	padding: 5px 10px;
+	overflow:hidden;
+}
+.result .share{
+}
+.result .mapa{
+	margin:10px 0 0;
+	width: 710px;
+}
+.result .share img{
+	width:25px;
+	height:25px;
+	margin:  -5px 0 0;
+}
+.result .contacto {
+	text-align:center;
+}
+.result .contacto .desc{
+	display:block;
+	margin:5px 0;
+}
+.result .contacto img{
+	width: 25px;
+	height: 25px;
+	vertical-align: middle;
+	border: 0 none;
+}
+
+.result .servicios .item{
+	width: 25px;
+	height: 25px;
+	float: left;
+	margin:3px;
+}
+
+
+
+.result .items .jardin_1{
+  background:url('icons.png') -50px -75px no-repeat;
+}
+.result .items .lavado_1{
+  background:url('icons.png') -75px -75px no-repeat;
+}
+.result .items .servicio_1{
+  background:url('icons.png') 0 -100px no-repeat;
+}
+.result .items .vestidor_1{
+  background:url('icons.png') -25px -100px no-repeat;
+}
+.result .items .estudio_1{
+  background:url('icons.png') -50px -100px no-repeat;
+}
+.result .items .tv_1{
+  background:url('icons.png') -75px -100px no-repeat;
+}
+.result .items .cocina_1{
+  background:url('icons.png') -100px 0 no-repeat;
+}
+.result .items .chimenea_1{
+  background:url('icons.png') -100px -25px no-repeat;
+}
+.result .items .terraza_1{
+  background:url('icons.png') -100px -50px no-repeat;
+}
+.result .items .jacuzzi_1{
+  background:url('icons.png') -100px -75px no-repeat;
+}
+.result .items .alberca_1{
+  background:url('icons.png') -100px -100px no-repeat;
+}
+.result .items .vista_1{
+  background:url('icons.png') -125px 0 no-repeat;
+}
+.result .items .aire_1{
+  background:url('icons.png') -125px -25px no-repeat;
+}
+.result .items .calefaccion_1{
+  background:url('icons.png') -125px -50px no-repeat;
+}
+.result .items .bodega_1{
+  background:url('icons.png') -125px -75px no-repeat;
+}
+.result .items .elevador_1{
+  background:url('icons.png') -125px -100px no-repeat;
+}
+.result .items .elevadors_1{
+  background:url('icons.png') 0 -125px no-repeat;
+}
+.result .items .portero_1{
+  background:url('icons.png') -25px -125px no-repeat;
+}
+.result .items .seguridad_1{
+  background:url('icons.png') -50px -125px no-repeat;
+}
+.result .items .circuito_1{
+  background:url('icons.png') -75px -125px no-repeat;
+}
+.result .items .red_1{
+  background:url('icons.png') -100px -125px no-repeat;
+}
+.result .items .gimnasio_1{
+  background:url('icons.png') -125px -125px no-repeat;
+}
+.result .items .spa_1{
+  background:url('icons.png') -150px 0 no-repeat;
+}
+.result .items .golf_1{
+  background:url('icons.png') -150px -25px no-repeat;
+}
+.result .items .tenis_1{
+  background:url('icons.png') -125px -175px no-repeat;
+}
+.result .items .juegos_1{
+  background:url('icons.png') -150px -200px no-repeat;
+}
+.result .items .sjuegos_1{
+  background:url('icons.png') -100px -175px no-repeat;
+}
+.result .items .fiestas_1{
+  background:url('icons.png') -150px -125px no-repeat;
+}
+.result .items .biblioteca_1{
+  background:url('icons.png') -75px -150px no-repeat;
+}
+.result .items .eventos_1{
+  background:url('icons.png') 0 -150px no-repeat;
+}
+.result .items .mascotas_1{
+  background:url('icons.png') -125px -200px no-repeat;
+}
+.result .items .cava_1{
+  background:url('icons.png') -50px -150px no-repeat;
+}
+.result .items .hotel_1{
+  background:url('icons.png') -75px -175px no-repeat;
+}
+.result .items .playa_1{
+  background:url('icons.png') -50px -175px no-repeat;
+}
+.result .items .muelle_1{
+  background:url('icons.png') 0 -175px no-repeat;
+}
+.result .items .parque_1{
+  background:url('icons.png') -25px -175px no-repeat;
+}
+.result .items .tintoreria_1{
+  background:url('icons.png') -150px -175px no-repeat;
+}
+.result .items .ecologico_1{
+  background:url('icons.png') -125px -150px no-repeat;
+}
+ .result .items .discapacitados_1{
+  background:url('icons.png') -100px -150px no-repeat;
+}
+.result .items .helipuerto_1{
+  background:url('icons.png') -150px -100px no-repeat;
+}
+.result .items .condominios_1{
+  background:url('icons.png') -25px -150px no-repeat;
+}
+.result .items .club_1{
+  background:url('icons.png') -100px -200px no-repeat;
+}
+
+
+
+
+
+
+.result .items .jardin_0{
+  background:url('icons.png') -225px -75px no-repeat;
+}
+.result .items .lavado_0{
+  background:url('icons.png') -250px -75px no-repeat;
+}
+.result .items .servicio_0{
+  background:url('icons.png') -175px -100px no-repeat;
+}
+.result .items .vestidor_0{
+  background:url('icons.png') -200px -100px no-repeat;
+}
+.result .items .estudio_0{
+  background:url('icons.png') -225px -100px no-repeat;
+}
+.result .items .tv_0{
+  background:url('icons.png') -250px -100px no-repeat;
+}
+.result .items .cocina_0{
+  background:url('icons.png') -275px 0 no-repeat;
+}
+.result .items .chimenea_0{
+  background:url('icons.png') -275px -25px no-repeat;
+}
+.result .items .terraza_0{
+  background:url('icons.png') -275px -50px no-repeat;
+}
+.result .items .jacuzzi_0{
+  background:url('icons.png') -275px -75px no-repeat;
+}
+.result .items .alberca_0{
+  background:url('icons.png') -275px -100px no-repeat;
+}
+.result .items .vista_0{
+  background:url('icons.png') -300px 0 no-repeat;
+}
+.result .items .aire_0{
+  background:url('icons.png') -300px -25px no-repeat;
+}
+.result .items .calefaccion_0{
+  background:url('icons.png') -300px -50px no-repeat;
+}
+.result .items .bodega_0{
+  background:url('icons.png') -300px -75px no-repeat;
+}
+.result .items .elevador_0{
+  background:url('icons.png') -300px -100px no-repeat;
+}
+.result .items .elevadors_0{
+  background:url('icons.png') -175px -125px no-repeat;
+}
+.result .items .portero_0{
+  background:url('icons.png') -200px -125px no-repeat;
+}
+.result .items .seguridad_0{
+  background:url('icons.png') -225px -125px no-repeat;
+}
+.result .items .circuito_0{
+  background:url('icons.png') -250px -125px no-repeat;
+}
+.result .items .red_0{
+  background:url('icons.png') -275px -125px no-repeat;
+}
+.result .items .gimnasio_0{
+  background:url('icons.png') -300px -125px no-repeat;
+}
+.result .items .spa_0{
+  background:url('icons.png') -325px 0 no-repeat;
+}
+.result .items .golf_0{
+  background:url('icons.png') -325px -25px no-repeat;
+}
+.result .items .tenis_0{
+  background:url('icons.png') -300px -175px no-repeat;
+}
+.result .items .juegos_0{
+  background:url('icons.png') -325px -200px no-repeat;
+}
+.result .items .sjuegos_0{
+  background:url('icons.png') -275px -175px no-repeat;
+}
+.result .items .fiestas_0{
+  background:url('icons.png') -325px -125px no-repeat;
+}
+.result .items .biblioteca_0{
+  background:url('icons.png') -250px -150px no-repeat;
+}
+.result .items .eventos_0{
+  background:url('icons.png') -175px -150px no-repeat;
+}
+.result .items .mascotas_0{
+  background:url('icons.png') -300px -200px no-repeat;
+}
+.result .items .cava_0{
+  background:url('icons.png') -225px -150px no-repeat;
+}
+.result .items .hotel_0{
+  background:url('icons.png') -250px -175px no-repeat;
+}
+.result .items .playa_0{
+  background:url('icons.png') -300px -175px no-repeat;
+}
+.result .items .muelle_0{
+  background:url('icons.png') -175px -175px no-repeat;
+}
+.result .items .parque_0{
+  background:url('icons.png') -200px -175px no-repeat;
+}
+.result .items .tintoreria_0{
+  background:url('icons.png') -325px -175px no-repeat;
+}
+.result .items .ecologico_0{
+  background:url('icons.png') -300px -150px no-repeat;
+}
+ .result .items .discapacitados_0{
+  background:url('icons.png') -275px -150px no-repeat;
+}
+.result .items .helipuerto_0{
+  background:url('icons.png') -325px -100px no-repeat;
+}
+.result .items .condominios_0{
+  background:url('icons.png') -200px -150px no-repeat;
+}
+.result .items .club_0{
+  background:url('icons.png') -275px -200px no-repeat;
+}
+
+
+.infowindowdata .title {
+	background:transparent;
+	box-shadow: 0px 0px 0px #000000;
+	width: 100%;
+	height: auto;
+	
+}
+
+.userdata .wrap{
+	background:#2ab1fc;
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+}
+.userdata .wrap2{
+	background:#ededed;
+	border-radius: 0;
+}
+.userdata .wrap3{
+	background:#2ab1fc;
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	padding: 12px 25px;
+	color: white;
+}
+.mapa .wrap,
+.images .wrap{
+	background:#ededed;
+}
+.userdata .top,
+.mapa .top,
+.images .top{
+	background:url("freemium/fondo_foto.png");
+	position: absolute;
+	z-index: 10;
+	width: 130px;
+	height: 32px;
+	margin: -11px 0 0 570px;
+	padding: 13px 0 0;
+	font-weight: bold;
+	font-size: 12px;
+	text-align: center;
+}
+.userdata .top{
+	margin: -11px 0 0 125px;
+}
+.userdata .avatar{
+	width: 100px;
+	float: left;
+	height: 100px;
+	margin: 10px;
+	overflow:hidden;
+}
+.userdata .avatar img{
+	width:100%;
+}
+.userdata .nombre {
+	margin: 40px 0 0;
+	text-align: left;
+	font-size: 17px;
+	font-weight: bold;
+}
+.userdata h2{
+	font-size:12px;
+	border-bottom: 1px solid #ccc;
+}
+.userdata .wrap3 h2{
+	margin: 0;
+	border: 0 none;
+	float: left;
+}
+.favoritobutton{
+	width: 130px;
+	font-size: 10px;
+	text-align: center;
+	float: right;
+	background: #EDEDED;
+	height: 16px;
+	border: 1px solid #CCC;
+	padding: 3px 0;
+	cursor:pointer;
+}
+.favoritobutton .icon{
+	width: 25px;
+	height: 25px;
+	float: left;
+	background: url(icons.png) -75px 0px no-repeat;
+	margin: -5px 0 0;
+}
+.fav .icon{
+	background: url(icons.png) -50px 0px no-repeat;
+}
+
+div.mapa #searchmap {
+  width:100%;
+  height:240px;
+}
+
+
+  .precio_orig .icon{
+      display:none;
+  }
+  
+  .precio_orig{
+        position: absolute;
+        font-size: 10px;
+        background: white;
+        padding: 2px 12px;
+        color: #666;
+        box-shadow: 5px 5px 10px #666;
+        margin: 1px 0 0 110px;
+        border-radius: 10px;
+        display: none;
+  }
+  .precio:hover .precio_orig{
+        display: block;
+  }
+  .detalles_inmueble .avatar .admin_overlay{
+      display:none;
+  }
+  
+  
+.contacto{	
+	padding: 0px 20px 0px 0px;	
+}
+
+
+.result .imagen{
+    width:130px;
+    height:130px;
+    margin:0px 5px;
+}
+
+.contacto .button{
+    padding:5px 10px;
+    font-size:12px;
+    margin:10px;
+    
+}
+
+.contacto .email{
+    background: url('/css/loginblock/login.png') center center no-repeat;
+}
+.contacto .telefono{
+    background: url('/css/fondos/registrate2.png') center center repeat-x;
+}

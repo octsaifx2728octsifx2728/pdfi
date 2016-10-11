@@ -1,0 +1,113 @@
+<?php
+class login_handler implements handler{
+	function run($task,$params=array()){
+            global $user,$document,$core,$result;
+            
+            
+            
+            switch ($task){
+                case "restore":
+                    $app=&$core->getApp("login");
+                    $app->sendPasswordToEmail($_GET["email"]);
+                    $result["error"]="0";
+                    $result["errorDescription"]="OK";
+                    break;
+              case "logout":
+                  //$user->logout();
+                unset($_SESSION["id_clienteSfx"]);
+                
+                
+                    $user->logout($_GET["callBack"]);
+                break;
+              case "getToken":
+                  //token=$user->getToken($_GET["email"],$_GET["password"]);
+                  if($user->login($_GET["email"],$_GET["password"])){
+                    $result["error"]="0";
+                    $result["errorDescription"]="OK";
+                    if($token=$user->get("token")){
+                        
+                        }
+                    else {
+                        $token=md5($_GET["password"].rand()."espacios");
+                        $user->set("token",$token);
+                        
+                    }
+                 $_SESSION["id_clienteSfx"]=$user->id;
+                        
+                    $result["token"]=$token;
+                    }
+                  else {
+                    $result["error"]="1";
+                    $result["errorDescription"]="Acceso Denegado";
+                  }
+                  break;
+                  
+              case "login":
+                if($_POST["email"]&&$_POST["password"]){
+                  $user->login($_POST["email"],$_POST["password"]);
+                  }
+                  
+                 
+                  
+		if($user->id){
+                    
+                        header("location:".urldecode($_POST["return"]));
+                  exit;
+                }
+                else {
+                        header("location:".urldecode($_POST["return"]));
+                  exit;
+                }
+                break;
+                case "register":
+                    
+                   
+                    if($_POST["email"]||$_POST["screenName"]||$_POST["password"]){
+                      $user->register($_POST);
+                      $user->forceLogin();
+                      if($user->id) {
+                        header("location:".urldecode($_POST["return"]));
+                        exit;
+                        
+                        }
+                      }
+                        header("location:".urldecode($_POST["return"]));
+                      exit;
+                  break;
+                case "register2":
+                    if($_GET["email"]||$_GET["screen_name"]||$_GET["password"]){
+                      $user->register(array("email"=>$_GET["email"],
+				"screenName"=>$_GET["screen_name"],
+				"password"=>$_GET["password"]
+				));
+                      $user->forceLogin();
+                      if($user->id) {
+                    $result["error"]="0";
+                    $result["errorDescription"]="OK";
+                        
+                        }
+else{
+                    $result["error"]="1";
+                    $result["errorDescription"]="Register Error";
+
+}
+                      }
+                  break;
+                case "reminder":
+                  if(user::reminderPassword($_POST["email"])){
+                    }
+                      echo '<script>location.href="/app/login/registerform#error"</script>';
+                      exit;
+                  break;
+                case "form":
+                    $document=$core->getDocument("loginForm.html");
+                  break;
+                case "registerform":
+                    $document=$core->getDocument("registerForm.html");
+                  break;
+                case "reminderform":
+                    $document=$core->getDocument("reminderForm.html");
+                  break;
+            }
+	
+}}

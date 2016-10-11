@@ -1,0 +1,126 @@
+#DOCTYPE#
+
+
+<html#NAMESPACES#>
+
+<head>
+<base href="#BASE#">
+[[metas]]
+
+[[enviroment]]
+
+#ESTILOS#
+
+#SCRIPTS#
+
+
+[[analitics]]
+
+</head>
+<body>
+<!--	
+<div class="alertas">
+  #ALERTAS#
+</div>
+-->
+
+<div id="_page" class="homepage">
+	
+<div class="mainwrap">
+	
+<!-- // header -->
+<header>
+	
+  [[header]]
+</header>
+
+<article>
+  <div class="promocion">
+  	<h1>$$PROMOCION_important$$</h1>
+  	<div class=" bloque cintillo">
+  		$$promohome52$$
+  	</div>
+  	<div class=" bloque right">
+	  	<div>
+	  		$$suscribe_now$$
+	  	</div>
+	  	<div>
+	  		$$createanaccountwith$$
+	  	</div>
+	  	<div class="botones">
+            <div>
+                <a href="/app/linkedin/login">
+                    <img src="/img/lang/en/conectar_linkedin.jpg" alt="linkedin icon">
+                </a>
+            </div>
+            <div>
+                <a href="/app/facebook/login">
+                    <img src="/img/lang/en/conectar_facebook.jpg" alt="linkedin icon">
+                </a>
+            </div>
+        </div>
+	  	<div>
+	  		$$orregisterwithus$$
+	  	</div>
+	  	<div>
+	  		[[registerForm?plantilla=`2`]]
+	  	</div>
+  	</div>
+  	<div class=" bloque left">
+  		<p>
+  			$$promohome6$$
+  		</p>
+  		<p>
+  			$$promohome7$$
+  		</p>
+  		<ul>
+  			<li>$$promofotosStandar$$</li>
+  			<li>$$promofotos360Standar$$</li>
+  			<li>$$promovideosStandar$$</li>
+  			<li>$$vigencia1anyo$$</li>
+  			<li>$$andmore$$</li>
+  		</ul>
+  		<div class="nota">
+  			$$promohome8$$
+  		</div>
+  	</div>
+  </div>
+
+	
+</article>
+
+            <script>
+            	$(document).ready(function(){
+            		var f1=new Date();
+            		var f2=new Date(2013,7,30,23,59);
+            		var f3=f2-f1;
+            		$(".promocounter").text("0");
+            	});
+            </script>
+
+<!-- redes sociales -->
+<div id="fijo">
+   <img src="img/social_icon2.png" width="57" height="146" style="float:right" border="0" usemap="#Map" />
+    <map name="Map" id="Map">
+      <area shape="rect" coords="21,11,53,45" href="$$fb_link$$" target="_blank" alt="facebook" />
+      <area shape="rect" coords="22,54,53,84" href="https://twitter.com/e_spacios" target="_blank" alt="twitter" />
+      <area shape="rect" coords="22,95,52,126" href="http://www.youtube.com/embed/ZLwP_iCFDYM" target="_blank" alt="Linkin" />
+      <area shape="rect" coords="22,75,52,106" href="http://www.linkedin.com/company/e-spacios-com" target="_blank" alt="twitter" />
+    </map>
+</div>
+<!-- fin redes sociales-->
+
+
+</div>
+
+<footer>
+    [[footer]]
+</footer>
+</div>
+
+
+
+
+
+</body>
+</html>

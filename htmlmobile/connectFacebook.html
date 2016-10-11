@@ -1,0 +1,199 @@
+#DOCTYPE#
+
+
+<html#NAMESPACES#>
+
+<head>
+<base href="http://www.e-spacios.com/">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="#LANG#" />
+<title>$$pagetitle$$</title>
+<meta name="description" content="$$pagedescription$$" />
+<meta name="keywords" content="$$pagekeywords$$" />
+
+
+<link rel="shortcut icon" href="iconoespacios.ico" />
+<meta property="og:title" content="$$pagetitle$$"/>
+<meta property="og:type" content="article"/>
+<meta property="og:url" content="http://www.e-spacios.com/"/>
+<meta property="og:image" content="http://www.e-spacios.com/img/espaciosch.gif"/>
+<meta property="og:site_name" content="e-spacios.com"/>
+<meta property="og:description" content="$$pagedescription$$"/>
+<!-- DUBLIN CORE -->
+<meta name="DC.Title" content="$$pagetitle$$" />
+<meta name="DC.Publisher" content="e-spacios.com" />
+<meta name="DC.Creator" content="e-spacios.com" />
+<meta name="Revisit" content="5 days" />
+<meta name="revisit-after" content="5 days" />
+<meta name="language" content="en" />
+<meta name="distribution" content="global" />
+<meta name="resource-type" content="document" />
+<meta name="classification" content="public" />
+<meta name="rating" content="General" />
+<meta name="generator" content="http://www.e-spacios.com/" />
+<meta name="Pagetype" content="web" />
+<meta name="Audience" content="All" />
+<!-- Geo Meta tags -->
+<meta name="geo.region" content="MX-MEX" />
+<meta name="geo.placename" content="Ciudad de M&eacute;xico" />
+<meta name="geo.position" content="19.431643;-99.185706" />
+<meta name="ICBM" content="19.431643, -99.185706" />
+
+#ESTILOS#
+#SCRIPTS#
+
+[[facebookuser]]
+[[analitics]]
+<script type="text/javascript">
+fb_api.fb_userload_callback.push(
+  function(user){
+    document.getElementById("emailAddr").value=user.email;
+    document.getElementById("emailAddr2").value=user.email;
+    document.getElementById("screen_name").value=user.first_name;
+    document.getElementById("fbtoken").value=fb_token;
+    document.getElementById("fbtoken2").value=fb_token;
+  }
+  );
+</script>
+</head>
+<body>
+<div class="alertas">
+  #ALERTAS#
+</div>
+
+<div id="_page" class="facebookConnect">
+<div class="mainwrap">
+<!--top_top-->
+<header>
+  <img src="images/facebook-connect.jpg">
+  <h1>$$connect_with_facebook$$</h1>
+</header>
+<!--//top_top-->
+<article>
+  <div class="main">
+  <div class="step1">
+    <div class="option1 option">
+      <h2 class="optiontitle">
+	<a id="step1">
+	  <img src="images/cubo.jpg">
+	  <br>
+	  $$Register_new_account$$
+	</a>
+      </h2>
+      <div style="display:none">
+	<div class="formulario form" id="form1">
+	  <form id="registrationForm" class="auth-form clearfix show-consumer" method="post" name="registrationForm" action="/">
+	    <input name="app" value="login" type="hidden">
+	    <input name="task" value="register" type="hidden">
+	    <input id="fbtoken" name="fbtoken" value="" type="hidden">
+	    <div class="top">
+	      <h2><img src="img/icon-configuracion-cuenta.jpg"> $$User_registration$$</h2>
+	    </div>
+	    <div class="middle">
+	      <div class="field">
+		<label for="emailAddr">$$login_email$$:</label>
+		<input id="emailAddr" name="emailAddr" maxLength="255" type="email" required="required" autocomplete="off" size="30">
+	      </div>
+	      <div class="field">
+		<label for="screen_name">$$Screen_name$$:</label>
+		<input id="screen_name" name="screenName" maxLength="255" type="text" required="required" autocomplete="off" size="30">
+	      </div>
+	      <div class="field">
+		<label for="password">$$login_password$$:</label>
+		<input name="password" type="password" id="password"  maxLength="20" required="required" autocomplete="off">
+	      </div>
+	      <div class="field">
+		<label for="passwordConfirm">$$Password_Confirm$$:</label></td>
+		<input id="passwordConfirm" name="passwordConfirm" maxLength="20" type="password" required="required" autocomplete="off">
+	      </div>
+	    </div>
+	    <div class="bottom">
+	      <strong>
+		<INPUT id="proCheckbox" name="proCheckbox" type="checkbox">
+		<label for="proCheckbox"> $$Im_a_Professional$$</label>
+	      </strong>
+	      <br>
+	      <strong>
+		<INPUT id="stayInTouchCheckbox" name="stayInTouchCheckbox" CHECKED="checked" type="checkbox">
+		<label for="stayInTouchCheckbox"> $$SendNews$$</label>
+	      </strong>
+	      <div class="advertencia">
+		$$Accept_Terms$$.
+	      </div>
+	      <input type="image" src="img/btn-registrarse-#LANG#.png">
+	    </div>
+	  </form>
+	</div>
+      </div>
+    </div>
+    <div class="option2 option">
+      <h2 class="optiontitle">
+	<a id="step2">
+	  <img src="images/user.jpg">
+	  <br>
+	  $$I_have_an_account$$
+	</a>
+      </h2>
+      <div style="display:none">
+	<div class="formulario form" id="form2">
+	  <form action="/" method="post" name="ingreso" id="ingreso" onSubmit="return ingreso();">
+	  <input name="app" value="login" type="hidden">
+	  <input name="task" value="login" type="hidden">
+	  <input id="fbtoken2" name="fbtoken" value="" type="hidden">
+	    <div class="top">
+	      <h1>
+		  <img src="img/icon-usuario.jpg">
+		  $$login_submit$$
+	      </h1>
+	    </div>
+	    <div class="right">
+	      <input type="image" src="img/btn-login_#LANG#.png" class="submit">
+		<input id="rememberMe" class="checkbox" name="rememberMe" type="checkbox">
+		<label for="rememberMe" class="rememberMe">
+		      $$login_rememberme$$
+		</label>
+	    </div>
+	    <div class="middle">
+	      <div class="field">
+		<label>
+		  $$login_email$$:
+		</label>
+		<input id="emailAddr2" name="emailAddr" maxLength="100" size="30" type="email" required />
+	      </div>
+	      <div class="field">
+		<label>
+		  $$login_password$$:
+		</label>
+		<input id="password" name="password" maxLength="20" size="30" type="password" required />
+	      </div>
+	      <div class="links">
+		<a href="forgotpassword.php">$$login_forget_your_password$$</a>
+	      </div>
+	      <div class="field2">
+	      </div>
+	    </div>
+	    <div class="bottom">
+	    </div>
+	  </form>
+	</div>
+      </div>
+    </div>
+  </div>
+  </div>
+</article>
+
+</div><!--Main Wrap -->
+<div class="footer">
+<footer>
+</footer>
+</div>
+
+<script type="text/javascript">
+$(document).ready(function(){
+    $("#step1").colorbox({inline:true,href:"#form1"});
+    $("#step2").colorbox({inline:true,href:"#form2"});
+   });
+</script>
+
+</body>
+</html>

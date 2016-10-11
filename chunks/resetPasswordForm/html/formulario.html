@@ -1,0 +1,25 @@
+<div class="resetPassword">
+            <h1>$$resetPassword$$</h1>
+    <div class="formulario">
+        <form>
+            <div class="instrucciones">
+                $$resetPasswordinstrucciones$$
+            </div>
+            <div class="field fieldType_email">
+                <label>$$email$$</label>
+                <input type="email" name="email" value="$$email$$" class="emailbox notouch">    
+                <input type="submit" value="$$enviar$$" class="cancel gray-dark">
+            </div>
+
+        </form>
+    </div>
+    <div class="mensaje">
+        $$unEmailSeHaEnviado$$
+    </div>
+</div>
+
+<script>
+    $(document).ready(function(){
+        $(".resetPassword").resetPasswordForm({});
+    });
+</script>

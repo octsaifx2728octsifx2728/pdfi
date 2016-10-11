@@ -1,0 +1,54 @@
+<div class="registerForm">
+    <form action="/" method="POST">
+        <div class="errorMessage">
+            $$register_error_message$$
+        </div>
+        <input type="hidden" name="app" value="login">
+        <input type="hidden" name="task" value="register">
+        <input type="hidden" name="return" value="#RETURN#">
+        <div class="controles">
+            <button name="" value="" class="submit">
+                $$registrer$$
+            </button>
+        </div>
+        <div class="field field_type_email">
+            <label for="email_#KEY#">$$login_email$$*:</label>
+            <input class="emptyOnFocus verifyOnFly verifyType_email required" id="email_#KEY#" type="email" name="email" placeholder="$$login_email$$">
+        </div>
+        <div class="field field_type_text">
+            <label for="name_#KEY#">$$Screen_name$$*:</label>
+            <input class="emptyOnFocus verifyOnFly minSize_3 required" id="name_#KEY#" type="text" name="screenName" placeholder="$$Screen_name$$">
+        </div>
+        <div class="verifyPasswordMatch">
+            <div class="field field_type_password">
+                <label for="password_#KEY#">
+                    $$login_password$$*:
+                </label>
+                <input class="emptyOnFocus verifyOnFly verifyType_securePassword minSize_5 required" id="password_#KEY#" type="password" name="password" placeholder="$$login_password$$">
+                <div class="hint hint2">
+                    $$Password_alert1$$
+                </div>
+            </div>
+            <div class="field field_type_passwordConfirm">
+                <label for="passwordConfirm_#KEY#">
+                    $$Password_Confirm$$*:
+                </label>
+                <input class="required" id="passwordConfirm_#KEY#" type="password" placeholder="$$Password_Confirm$$">
+                <div class="hint hint1">
+                    $$Password_alert2$$
+                </div>
+            </div>
+        </div>
+        <div class="field field_type_checkbox">
+            <input id="imapro" name="proCheckbox_#KEY#" type="checkbox">
+            <label for="imapro" onclick="$('input#' + this.getAttribute('for')).click();">
+                $$Im_a_Professional$$
+            </label>
+        </div>
+    </form>
+    <script type="text/javascript">
+        $(function(){
+            $(".registerForm>form").registerform();
+        });
+    </script>
+</div>

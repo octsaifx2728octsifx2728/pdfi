@@ -1,0 +1,50 @@
+<div class="searchbox">
+    <input id="searchTextField" name="searchTextField" class="searchTextField" type="text"  onkeyup="$('.pac-container').css('top',($(this).position().top-$('.pac-container').height())+'px')"/>
+</div>
+
+<script type="text/javascript">
+var autocomplete;
+function sp_action(){
+	
+  	var ajax="#AJAX#"*1;
+    var place = autocomplete.getPlace();
+    if(place){
+    	if(ajax){
+    		if(place.geometry.viewport)
+    		{
+    			var bound=place.geometry.viewport;
+    		}
+    		else{
+	    		var sw=new google.maps.LatLng(place.geometry.location.lat()+0.0045,place.geometry.location.lng()-0.0045);
+	    		var ne=new google.maps.LatLng(place.geometry.location.lat()-0.0045,place.geometry.location.lng()+0.0045);
+	    		var bound=new google.maps.LatLngBounds(sw,ne);
+    		}
+	      mapa.mapa.fitBounds(bound);
+	     }
+	     else {
+	     	if(place.geometry.viewport){
+		     	var ne=place.geometry.viewport.getNorthEast();
+	    		var sw=place.geometry.viewport.getSouthWest();
+	    		}
+	    	else{
+	    		var sw=new google.maps.LatLng(place.geometry.location.lat()+0.0045,place.geometry.location.lng()-0.0045);
+	    		var ne=new google.maps.LatLng(place.geometry.location.lat()-0.0045,place.geometry.location.lng()+0.0045);
+	    	}
+                var tipovr=enviroment.translations[enviroment.filters.tipovr]?enviroment.translations[enviroment.filters.tipovr]:"";
+                var tipoobjeto=enviroment.translations[enviroment.filters.tipoobjeto]?enviroment.translations[enviroment.filters.tipoobjeto]:"";
+    		var url="app/searchbounds/"+ne.lat()+":"+ne.lng()+":"+sw.lat()+":"+sw.lng()+":"+encodeURI(tipovr+"-"+tipoobjeto+"-"+place.formatted_address.replace(/\s/g,"-"))+"?tipovr="+enviroment.filters.tipovr+"&tipoobjeto="+enviroment.filters.tipoobjeto;
+    		wait(true);
+                //console.log(url);
+    		location.href=url;
+	     }
+      
+      }
+}
+$(document).ready(function(){
+  var input = document.getElementById('searchTextField');
+  var options = {
+  };
+  autocomplete = new google.maps.places.Autocomplete(input, options);
+  google.maps.event.addListener(autocomplete, 'place_changed',sp_action);
+  });
+</script>

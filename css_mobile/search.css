@@ -1,0 +1,304 @@
+body #_page{
+  background:#ffffff;
+}
+.searchbox{
+    margin: 10px auto;
+}
+.top_top .module{
+	width:460px;
+}
+.currencyconverter{
+	text-align:right;
+}
+
+.ranking {
+   width:50px;
+   float:right;
+   display:none;
+}
+
+.ranking .button{
+  cursor:pointer;
+  float:left;
+}
+.ranking .favorito{
+  background:url('icons.png') -50px 0 no-repeat;
+  width:25px;
+  height:25px;
+}
+.ranking .nofavorito{
+  background:url('icons.png') -75px 0 no-repeat;
+  width:25px;
+  height:25px;
+}
+.ranking .facebook{
+  width:24px;
+  height:25px;
+  overflow:hidden;
+}
+.ranking .gplus{
+  width:37px;
+  height:27px;
+}
+
+.step {
+  text-align:left;
+}
+.step .title {
+  font-size: 18px;
+  font-weight: bold;
+  background:white;
+}
+.step .description{
+  font-size: 12px;
+  font-weight: normal;
+  padding: 5px;
+  background:white;
+}
+.searchfilter .range {
+    width: 190px;
+    margin: 8px 0;
+    background: white;
+    height: 65px;
+}
+.searchfilter .titulo,
+.searchfilter .range label{
+  display:block;
+  font-weight:bold;
+  color:#000000;
+  font-size:14px;
+  margin:0;
+}
+.searchfilter .section{
+    margin: 10px 0;
+    background: white;
+    font-size:11px;
+}
+.searchfilter .range label span{
+  color:#06f;
+	display: block;
+	font-size: 12px;
+	text-align: center;
+	margin: 5px auto;
+}
+.searchfilter .range label span span{
+	display:inline;
+}
+
+.top_top div.currencyconverter_module{
+  position: absolute;
+  width: 300px;
+  left: 50%;
+  margin: 0 0 0 -150px;
+}
+.top_top .currencyconverter_module .currencyconverter{
+  text-align:center;
+  width:300px;
+  margin:0 auto;
+}
+
+.searchfilter .morefilters .control {
+	text-align:center;
+}
+
+.searchfilter .morefilters .container {
+	position: absolute;
+	background: white;
+	padding: 3px;
+	border: 1px solid #CCC;
+	border-radius: 5px;
+	box-shadow: 2px 4px 20px #000000;
+	margin: 0 0 0 10px;
+        z-index:10;
+}
+.destacado_1{
+  background:#e2eaf5;
+  }
+  
+  .top_top {
+    height:150px;
+  }
+  .top_top .module_right .login,
+  .top_top .module_right .logueado,
+  .top_top .module_right .block{
+    float:right;
+  }
+  
+  .searchpage .header .linea-vertical{
+      display: none;
+  }
+  .searchpage .header {
+      height:110px;
+  }
+  
+  .main td.left{
+        width: 180px;
+        vertical-align: top;
+        border: 8px solid #E8EBEF;
+        background: #E8EBEF;
+  }
+  .searchfilter .radio{
+    font-size: 11px;
+    float: left;
+    width: 95px;
+    margin:5px 0;
+  }
+  .searchfilter .radio input{
+      vertical-align: middle;
+  }
+  .searchfilter .blanco{
+      background:white;
+        width: 190px;
+        height: 80px;
+  }
+  .searchfilter .filterType_range .ui-slider-handle{
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    background: url('payFilters/handler.png')center center no-repeat;
+    border:0 none;
+    
+  }
+  .searchfilter .filterType_range .ui-slider-range{
+    background: url('payFilters/escala.png')center center;
+    height: 13px;
+    margin: 3px 0 0;
+  }
+  .searchfilter .filterType_range{
+      height:70px;
+  }
+  .searchfilter .filterType_range .valores{
+      text-align: center;
+font-style: italic;
+font-weight: bold;
+color: #06f;
+font-size: 13px;
+  }
+  .searchfilter .filterType_range .container{
+    background: url('payFilters/fondo.jpg') center center no-repeat;
+    width: 175px;
+    height: 16px;
+    border: 0 none;
+  }
+  .center .mapa{
+      position:absolute;
+      width:100%;
+      height:100%;
+  }
+  .center .mapa .step{
+      background:#ffffff;
+      margin:0 0 8px;
+      padding:2px;
+  }
+  
+  .searchbox .filters {
+    width: 400px;
+    height: 20px;
+    background: #2AB1FC;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 2px;
+  }
+  
+  .searchbox .filters .searchFilter {
+      height:20px;
+      position:absolute;
+      z-index:10;
+  }
+  
+  .searchbox .filters .searchFilter .filter{
+      float:left;
+  }
+.searchbox .filters .searchFilter .filter_tipoinmueble .field{
+    display: none;
+    font-size: 12px;
+    width: 85px;
+    text-align: left;
+    cursor: pointer;
+    background: #7BC8FC;
+    color: black;
+    font-weight: bold;
+    overflow: hidden;
+    height: 16px;
+    padding: 2px 10px;
+    text-align: left;
+    transition: all .5s;
+    -moz-transition: all .5s;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+}
+
+
+.searchbox .filters .searchFilter .filter_tipoinmueble .selected{
+    background: #0099FF url("selector.png") right center no-repeat;
+    color: white;
+    border-radius: 10px;
+    display:block;
+}
+.searchbox .filters .searchFilter .filter_tipoinmueble .field:hover{
+    background: #0099FF right center no-repeat;
+    color: white;
+    border-radius: 10px;
+}
+.searchbox .filters .searchFilter .filter_tipoinmueble:hover{
+    overflow: visible;
+    position:relative;
+}
+.searchbox .filters .searchFilter .filter_tipoinmueble:hover .field{
+    display:block;
+}
+
+.searchbox .filters .searchFilter .filter_tipoinmueble .field input{
+    vertical-align:middle;
+	display:none;
+}
+.searchbox .filters .searchFilter .filter_tipovr ,
+.searchbox .filters .searchFilter .filter_typeTransaction {
+    width: 290px;
+    height: 22px;
+    margin:0;
+    float: left;
+    
+}
+.searchbox .filters .searchFilter .filter_tipovr .field input{
+    margin:0 0 0 5px;
+    vertical-align:middle;
+}
+.searchbox .filters .searchFilter .filter_tipovr .field,
+.searchbox .filters .searchFilter .filter_typeTransaction .field{
+    float: left;
+    background: url('fondo-tipo-busqueda.png') center center;
+    display: none;
+    width: 85px;
+    border-radius: 15px;
+    margin: 0px 2px;
+    color: #757575;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    padding: 2px 0;
+    text-align: left;
+}
+.searchbox .filters .searchFilter .selected_residencial .fieldParent_residencial,
+.searchbox .filters .searchFilter .selected_comercial .fieldParent_comercial,
+.searchbox .filters .searchFilter .selected_industrial .fieldParent_industrial,
+.searchbox .filters .searchFilter .selected_oficina .fieldParent_oficina,
+.searchbox .filters .searchFilter .selected_terreno .fieldParent_terreno,
+.searchbox .filters .searchFilter .selected_funerario .fieldParent_funerario{
+    display:block;
+}
+.searchbox .filters .searchFilter .filter_tipovr .field:hover,
+.searchbox .filters .searchFilter .filter_typeTransaction .field:hover{
+    color: #000000;
+    border:1px solid #666;
+}
+.searchbox .filters .searchFilter .filter_tipovr .new .icon{
+    display:none;
+}
+.searchbox input.searchTextField {
+    border-radius: 0;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+}

@@ -1,0 +1,133 @@
+div.top {
+	height:120px;
+}
+
+div.top .left .logo {
+margin: 0;
+}
+
+article .module{
+	background:white;
+	margin:10px auto;
+	padding:40px;
+	box-shadow: 5px 5px 20px black;
+}
+
+.section {
+	margin:30px 0;
+	border: 1px solid #EEE;
+	padding: 10px;
+}
+
+.section h2{
+	font-size: 18px;
+	text-align: left;
+	border-bottom: 1px solid #CCC;
+}
+
+.totales table {
+	width:100%;
+}
+.totales table thead{
+	background: #CCC;
+	font-size: 15px;
+}
+.totales table tbody{
+	font-size: 12px;
+}
+.totales table tbody td,
+.totales table tbody th{
+	border:1px solid #eee;
+	margin:3px;
+	}
+.totales td.total{
+	text-align:right;
+	font-weight:bold;
+}	
+	
+.section .field {
+	width: 730px;
+	margin: 5px auto;
+	padding: 10px 0;
+	text-align:left;
+}
+.section .field label {
+	display: block;
+	font-size: 12px;
+	font-weight: bold;
+}
+.section .field textarea ,
+.section .field select ,
+.section .field input {
+    margin: 0 0 0 15px;
+    /*background: white;*/
+    width: 455px;
+    height: 15px;
+    font-size: 12px;
+    padding: 2px 5px;
+    color: #ccc;
+    font-style: italic;
+    border: 2px solid #ccc;
+    box-shadow: 0px 0px 0px #1C1C4E;
+    border-radius: 5px;
+    transition: background-color .5s;
+    -moz-transition: background-color .5s;
+    -webkit-transition: background-color .5s;
+    -o-transition: background-color .5s;
+}
+.section .field select,
+.section .changed input{
+    color: #666;
+    font-style: normal;
+}
+.section .field select{
+    height:30px;
+    width:465px;
+}
+.section .field select:focus ,
+.section .field input:focus {
+    color: #666;
+    font-style: normal;
+    border: 2px solid #1C1C4E;
+    box-shadow: 0px 0px 5px #1C1C4E;
+}
+.section .field .hint{
+    font-size:11px;
+    color:red;
+    font-weight: bold;
+    margin:0 0 0 25px;
+    display:none;
+}
+.section .error .hint{
+    display:block;
+}
+.section .error input{
+    box-shadow: 0px 0px 8px red;
+}
+.section .field textarea{
+	height: 100px;
+}
+input.submit{
+	font-size: 15px;
+	padding: 8px 15px;
+}
+input.submit:hover{
+    box-shadow: 0px 0px 5px #1C1C4E;
+}
+.alertForm {
+	font-size: 11px;
+	color: red;
+	display:none;
+}
+.error .alertForm{
+	display:block;
+}
+.error .error input {
+	background:#ffCACA;
+}
+.section .instructions{
+    text-align:left;
+    font-size:13px;
+    color:#666;
+    font-style:italic;
+}

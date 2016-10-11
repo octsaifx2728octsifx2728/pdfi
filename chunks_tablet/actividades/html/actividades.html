@@ -1,0 +1,19 @@
+<div class="actividades">
+	<h2>$$actividad_reciente$$</h2>
+	<nav>
+		<div class="wrap" id="_actividades">
+                      #ITEMS#
+		</div>
+	</nav>
+</div>
+
+<script type="text/javascript">
+$(document).ready(function(){
+	var act=new actividades({
+		contenedor:document.getElementById('_actividades'),
+		id:"_actividades1",
+		lastid:"#LASTID#",
+		firstid:"#FIRSTID#"
+	});
+});
+</script>

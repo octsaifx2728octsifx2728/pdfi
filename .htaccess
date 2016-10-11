@@ -1,0 +1,129 @@
+
+php_flag session.upload_progress.enabled	"1"	
+php_flag session.upload_progress.cleanup	"1"	
+php_flag session.upload_progress.prefix	"upload_progress_"	
+php_flag session.upload_progress.name	"PHP_SESSION_UPLOAD_PROGRESS"	
+php_flag session.upload_progress.freq	"1%"
+php_flag session.upload_progress.min_freq	"1"
+
+Options -MultiViews
+Options +FollowSymLinks
+RewriteEngine on
+#No permite mostrar directorios
+Options -Indexes
+
+
+
+
+#Redirecciona en caso de que una pagina no exista
+
+RewriteRule sitemap.xml /feed.php?app=feed&task=sitemap [L,QSA]
+RewriteRule sitemap_es.xml /feed.php?app=feed&task=sitemap&lang=es [L,QSA]
+RewriteRule sitemap_en.xml /feed.php?app=feed&task=sitemap&lang=en [L,QSA]
+RewriteRule sitemap_pt.xml /feed.php?app=feed&task=sitemap&lang=pt [L,QSA]
+
+RewriteRule (casas-en-venta-mexico-df.html) /index.php?app=searchbounds&task=19.5918522:-98.94008529999996:19.0482207:-99.36417030000001:Casas-en-Venta-Mexico-DF&forceLang=es&tipovr=tipovrventa [L,QSA]
+RewriteRule (departamentos-en-renta-mexico-df.html) /index.php?app=searchbounds&task=19.5918522:-98.94008529999996:19.0482207:-99.36417030000001:Departamentos-en-Renta-Mexico-DF&forceLang=es&tipovr=tipovrrenta [L,QSA]
+RewriteRule (houses-for-sale-in-mexico-city.html) /index.php?app=searchbounds&task=19.5918522:-98.94008529999996:19.0482207:-99.36417030000001:Houses-for-Sale-in-Mexico-City&forceLang=en&tipovr=tipovrventa [L,QSA]
+RewriteRule (apartments-for-rent-in-mexico-city.html) /index.php?app=searchbounds&task=19.5918522:-98.94008529999996:19.0482207:-99.36417030000001:Apartments-for-Rent-in-Mexico-City&forceLang=en&tipovr=tipovrrenta [L,QSA]
+
+RewriteRule (casas-en-venta-bogota-colombia.html) /index.php?app=searchbounds&task=4.8371001:-73.99631:3.72977:-74.45176989999999:Casas-en-Venta-Bogota-Colombia&forceLang=es&tipovr=tipovrventa [L,QSA]
+RewriteRule (departamentos-en-renta-bogota-colombia.html) /index.php?app=searchbounds&task=4.8371001:-73.99631:3.72977:-74.45176989999999:Departamentos-en-Renta-Bogota-Colombia&forceLang=es&tipovr=tipovrrenta [L,QSA]
+RewriteRule (houses-for-sale-in-bogota-colombia.html) /index.php?app=searchbounds&task=4.8371001:-73.99631:3.72977:-74.45176989999999:Houses-for-Sale-in-Bogota-Colombia&forceLang=en&tipovr=tipovrventa [L,QSA]
+RewriteRule (apartments-for-rent-in-bogota-colombia.html) /index.php?app=searchbounds&task=4.8371001:-73.99631:3.72977:-74.45176989999999:Apartments-for-Rent-in-Bogota-Colombia&forceLang=en&tipovr=tipovrrenta [L,QSA]
+
+RewriteRule (casas-en-venta-guadalajara-mexico.html) /index.php?app=searchbounds&task=20.7438466:-103.26376170000003:20.6037373:-103.40706460000001:Casas-en-Venta-Guadalajara-Mexico&forceLang=es&tipovr=tipovrventa [L,QSA]
+RewriteRule (departamentos-en-renta-guadalajara-mexico.html) /index.php?app=searchbounds&task=20.7438466:-103.26376170000003:20.6037373:-103.40706460000001:Departamentos-en-Renta-Guadalajara-Mexico&forceLang=es&tipovr=tipovrrenta [L,QSA]
+RewriteRule (houses-for-sale-in-guadalajara-mexico.html) /index.php?app=searchbounds&task=20.7438466:-103.26376170000003:20.6037373:-103.40706460000001:Houses-for-Sale-in-Guadalajara-Mexico&forceLang=en&tipovr=tipovrventa [L,QSA]
+RewriteRule (apartments-for-rent-in-guadalajara-mexico.html) /index.php?app=searchbounds&task=20.7438466:-103.26376170000003:20.6037373:-103.40706460000001:Apartments-for-Rent-in-Guadalajara-Mexico&forceLang=en&tipovr=tipovrrenta [L,QSA]
+
+RewriteRule (casas-en-venta-santiago-de-chile.html) /index.php?app=searchbounds&task=-33.0487158:-69.76899430000003:-34.2878805:-70.9577496:Casas-en-Venta-Santiago-de-Chile&forceLang=es&tipovr=tipovrventa [L,QSA]
+RewriteRule (departamentos-en-renta-santiago-de-chile.html) /index.php?app=searchbounds&task=-33.0487158:-69.76899430000003:-34.2878805:-70.9577496:Departamentos-en-Renta-Santiago-de-Chile&forceLang=es&tipovr=tipovrrenta [L,QSA]
+RewriteRule (houses-for-sale-in-santiago-chile.html) /index.php?app=searchbounds&task=-33.0487158:-69.76899430000003:-34.2878805:-70.9577496:Houses-for-Sale-in-Santiago-Chile&forceLang=en&tipovr=tipovrventa [L,QSA]
+RewriteRule (apartments-for-rent-in-santiago-chile.html) /index.php?app=searchbounds&task=-33.0487158:-69.76899430000003:-34.2878805:-70.9577496:Apartments-for-Rent-in-Santiago-Chile&forceLang=en&tipovr=tipovrrenta [L,QSA]
+
+RewriteRule (casas-en-venta-en-la-victoria-peru.html) /index.php?app=searchbounds&task=-12.0575698:-76.99629119999997:-12.0906571:-77.03543530000002:Casas-en-Venta-en-La-Victoria-Peru&forceLang=es&tipovr=tipovrventa [L,QSA]
+RewriteRule (departamentos-en-renta-en-la-victoria-peru.html) /index.php?app=searchbounds&task=-12.0575698:-76.99629119999997:-12.0906571:-77.03543530000002:Departamentos-en-Renta-en-La-Victoria-Peru&forceLang=es&tipovr=tipovrrenta [L,QSA]
+RewriteRule (houses-for-sale-in-la-victoria-peru.html) /index.php?app=searchbounds&task=-12.0575698:-76.99629119999997:-12.0906571:-77.03543530000002:Houses-for-Sale-in-La-Victoria-Peru&forceLang=en&tipovr=tipovrventa [L,QSA]
+RewriteRule (apartments-for-rent-in-la-victoria-peru.html) /index.php?app=searchbounds&task=-12.0575698:-76.99629119999997:-12.0906571:-77.03543530000002:Apartments-for-Rent-in-La-Victoria-Peru&forceLang=en&tipovr=tipovrrenta [L,QSA]
+
+RewriteRule (casas-en-venta-en-acapulco.html) /index.php?app=searchbounds&task=16.9284774:-99.72324179999998:16.7387787:-100.00207060000002:Casas-en-Venta-en-Acapulco&forceLang=es&tipovr=tipovrventa [L,QSA]
+RewriteRule (departamentos-en-renta-en-acapulco.html) /index.php?app=searchbounds&task=16.9284774:-99.72324179999998:16.7387787:-100.00207060000002:Departamentos-en-Renta-en-Acapulco&forceLang=es&tipovr=tipovrrenta [L,QSA]
+RewriteRule (houses-for-sale-in-acapulco.html) /index.php?app=searchbounds&task=16.9284774:-99.72324179999998:16.7387787:-100.00207060000002:Houses-for-Sale-in-Acapulco&forceLang=en&tipovr=tipovrventa [L,QSA]
+RewriteRule (apartments-for-rent-in-acapulco.html) /index.php?app=searchbounds&task=16.9284774:-99.72324179999998:16.7387787:-100.00207060000002:Apartments-for-Rent-in-Acapulco&forceLang=en&tipovr=tipovrrenta [L,QSA]
+
+RewriteRule (casas-en-venta-en-medellin-colombia.html) /index.php?app=searchbounds&task=6.37325:-75.47760010000002:6.16711:-75.71859:Casas-en-Venta-en-Medellin-Colombia&forceLang=es&tipovr=tipovrventa [L,QSA]
+RewriteRule (departamentos-en-renta-en-medellin-colombia.html) /index.php?app=searchbounds&task=6.37325:-75.47760010000002:6.16711:-75.71859:Departamentos-en-Renta-en-Medellin-Colombia&forceLang=es&tipovr=tipovrrenta [L,QSA]
+RewriteRule (houses-for-sale-in-medellin-colombia.html) /index.php?app=searchbounds&task=6.37325:-75.47760010000002:6.16711:-75.71859:Houses-for-Sale-in-Medellin-Colombia&forceLang=en&tipovr=tipovrventa [L,QSA]
+RewriteRule (apartments-for-rent-in-medellin-colombia.html) /index.php?app=searchbounds&task=6.37325:-75.47760010000002:6.16711:-75.71859:Apartments-for-Rent-in-Medellin-Colombia&forceLang=en&tipovr=tipovrrenta [L,QSA]
+
+RewriteRule (casas-en-venta-en-monterrey-mexico.html) /index.php?app=searchbounds&task=25.7972378:-100.18418910000003:25.5003874:-100.42196860000001:Casas-en-Venta-en-Monterrey-Mexico&forceLang=es&tipovr=tipovrventa [L,QSA]
+RewriteRule (departamentos-en-renta-en-monterrey-mexico.html) /index.php?app=searchbounds&task=25.7972378:-100.18418910000003:25.5003874:-100.42196860000001:Departamentos-en-Renta-en-Monterrey-Mexico&forceLang=es&tipovr=tipovrrenta [L,QSA]
+RewriteRule (houses-for-sale-in-monterrey-mexico.html) /index.php?app=searchbounds&task=25.7972378:-100.18418910000003:25.5003874:-100.42196860000001:Houses-for-Sale-in-Monterrey-Mexico&forceLang=en&tipovr=tipovrventa [L,QSA]
+RewriteRule (apartments-for-rent-in-monterrey-mexico.html) /index.php?app=searchbounds&task=25.7972378:-100.18418910000003:25.5003874:-100.42196860000001:Apartments-for-Rent-in-Monterrey-Mexico&forceLang=en&tipovr=tipovrrenta [L,QSA]
+
+RewriteRule (casas-en-venta-en-puebla-mexico.html) /index.php?app=searchbounds&task=19.1381977:-98.10350110000002:18.9443809:-98.28243079999999:Casas-en-Venta-en-Puebla-Mexico&forceLang=es&tipovr=tipovrventa [L,QSA]
+RewriteRule (departamentos-en-renta-en-puebla-mexico.html) /index.php?app=searchbounds&task=19.1381977:-98.10350110000002:18.9443809:-98.28243079999999:Departamentos-en-Renta-en-Puebla-Mexico&forceLang=es&tipovr=tipovrrenta [L,QSA]
+RewriteRule (houses-for-sale-in-puebla-mexico.html) /index.php?app=searchbounds&task=19.1381977:-98.10350110000002:18.9443809:-98.28243079999999:Houses-for-Sale-in-Puebla-Mexico&forceLang=en&tipovr=tipovrventa [L,QSA]
+RewriteRule (apartments-for-rent-in-puebla-mexico.html) /index.php?app=searchbounds&task=19.1381977:-98.10350110000002:18.9443809:-98.28243079999999:Apartments-for-Rent-in-Puebla-Mexico&forceLang=en&tipovr=tipovrrenta [L,QSA]
+
+#****************************selector de idioma
+
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-F
+RewriteRule \+/(.*)$ /index.php?app=urlShorter&task=long&key=$1&redirect=1 [L,QSA]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-F
+RewriteRule ([a-z][a-z])/app/([a-zA-Z0-9]*)/(.*)$ /index.php?forceLang=$1&app=$2&task=$3 [L,QSA]
+
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-F
+RewriteRule cache/([a-z][a-z])/([0-9]*)/([0-9]*)/stamp/([a-z]*)/(.*)$ /index.php?forceLang=$1&app=cache&width=$2&height=$3&path=$5&stamp=$4 [L]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-F
+RewriteRule cache/([0-9]*)/([0-9]*)/stamp/([a-z]*)/(.*)$ /index.php?app=cache&width=$1&height=$2&path=$4&stamp=$3 [L]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-F
+RewriteRule cache/([a-z][a-z])/([0-9]*)/([0-9]*)/(.*)$ /index.php?forceLang=$1&app=cache&width=$2&height=$3&path=$4 [L]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-F
+RewriteRule cache/([0-9]*)/([0-9]*)/(.*)$ /index.php?app=cache&width=$1&height=$2&path=$3 [L]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-F
+RewriteRule app/([a-zA-Z0-9]*)/(.*)$ /index.php?app=$1&task=$2 [L,QSA]
+
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-F
+RewriteRule api/([a-zA-Z0-9]*)/(.*)$ /api.php?app=$1&task=$2 [L,QSA]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-F
+RewriteRule sfx/([a-zA-Z0-9]*)/(.*)$ /sfx.php?app=$1&task=$2 [L,QSA]
+
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-F
+RewriteRule ([a-z][a-z])/$ /index.php?forceLang=$1 [L,QSA]
+
+
+
+
+ErrorDocument 404 http://e-spacios.local/404.php

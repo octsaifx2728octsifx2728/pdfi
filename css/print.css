@@ -1,0 +1,771 @@
+* {
+	margin: 0px; padding: 0px;
+}
+body {
+	color: rgb(68, 68, 68); font-family: verdana,arial,sans-serif; font-size: 9pt;
+}
+a {
+	color: rgb(51, 102, 187);
+}
+a img {
+	border: 0px currentColor;
+}
+fieldset {
+	border: 0px currentColor;
+}
+#a-col {
+	display: none !important;
+}
+#a-column iframe {
+	display: none !important;
+}
+#c-column {
+	display: none !important;
+}
+#captcha {
+	display: none !important;
+}
+#collapse-bar_toggleArea {
+	display: none !important;
+}
+#corpleft a {
+	display: none !important;
+}
+#criteria {
+	display: none !important;
+}
+#debugblock {
+	display: none !important;
+}
+#detailsToolbar {
+	display: none !important;
+}
+#e-mailsummary {
+	display: none !important;
+}
+#empty-aboutme {
+	display: none !important;
+}
+#feedbackform {
+	display: none !important;
+}
+#feedbacklinks {
+	display: none !important;
+}
+#ft dl {
+	display: none !important;
+}
+#ft {
+	display: none !important;
+}
+#getupdates {
+	display: none !important;
+}
+#graph .generic-box-content h4 {
+	display: none !important;
+}
+#graph h2 span {
+	display: none !important;
+}
+#HDad {
+	display: none !important;
+}
+#HDCallout {
+	display: none !important;
+}
+#hdgraph ul {
+	display: none !important;
+}
+#home #inlinesearch {
+	display: none !important;
+}
+#map-container {
+	display: none !important;
+}
+#map-controls {
+	display: none !important;
+}
+#map-house {
+	display: none !important;
+}
+#mapwrap fieldset {
+	display: none !important;
+}
+#myzestimator #wizard {
+	display: none !important;
+}
+#myzestimator .note a {
+	display: none !important;
+}
+#myzestimator p.add {
+	display: none !important;
+}
+#myzillow .map-menu {
+	display: none !important;
+}
+#offerInfo a {
+	display: none !important;
+}
+#primary-nav {
+	display: none !important;
+}
+#profile-aboutme-editRegion {
+	display: none !important;
+}
+#refine-options {
+	display: none !important;
+}
+#refine_search {
+	display: none !important;
+}
+#returnToStart {
+	display: none !important;
+}
+#saver {
+	display: none !important;
+}
+#search {
+	display: none !important;
+}
+#see-comps {
+	display: none !important;
+}
+#sort-control {
+	display: none !important;
+}
+#sort-orders {
+	display: none !important;
+}
+#stacksup p a {
+	display: none !important;
+}
+#stacksup ul {
+	display: none !important;
+}
+#tab-home-comments {
+	display: none !important;
+}
+#tab-wiki {
+	display: none !important;
+}
+#updateValue {
+	display: none !important;
+}
+#user-profile .comment-body a {
+	display: none !important;
+}
+#user-profile .gen-col1 .button {
+	display: none !important;
+}
+#wiki .col2 {
+	display: none !important;
+}
+#wikiEditPageUnlinked {
+	display: none !important;
+}
+#wikiEditRegion {
+	display: none !important;
+}
+#zestimatortip {
+	display: none !important;
+}
+#zestimatortiplink {
+	display: none !important;
+}
+#zoomed_too_far_out {
+	display: none !important;
+}
+#zoomed_too_far_out_result_list {
+	display: none !important;
+}
+.ad {
+	display: none !important;
+}
+.ads {
+	display: none !important;
+}
+.advertisement {
+	display: none !important;
+}
+.backtotop {
+	display: none !important;
+}
+.banner-message {
+	display: none !important;
+}
+.button {
+	display: none !important;
+}
+.claimbar li.right {
+	display: none !important;
+}
+.claimbar ul li.right {
+	display: none !important;
+}
+.col2 p a {
+	display: none !important;
+}
+.comment-actions {
+	display: none !important;
+}
+.comments h3 a {
+	display: none !important;
+}
+.contact {
+	display: none !important;
+}
+.corpaboutbottom dl dt a {
+	display: none !important;
+}
+.divider {
+	display: none !important;
+}
+.edit-link {
+	display: none !important;
+}
+.expand {
+	display: none !important;
+}
+.favorites-map {
+	display: none !important;
+}
+.flag-content {
+	display: none !important;
+}
+.footerads {
+	display: none !important;
+}
+.generic-toolbar {
+	display: none !important;
+}
+.hdfacts thead {
+	display: none !important;
+}
+.hide {
+	display: none !important;
+}
+.home-options {
+	display: none !important;
+}
+.homeReportFeedback {
+	display: none !important;
+}
+.inline-button {
+	display: none !important;
+}
+.inline-edit-page {
+	display: none !important;
+}
+.inlineHelp {
+	display: none !important;
+}
+.landing-page {
+	display: none !important;
+}
+.leaderboard {
+	display: none !important;
+}
+.legend {
+	display: none !important;
+}
+.linkEmph {
+	display: none !important;
+}
+.loan-ad {
+	display: none !important;
+}
+.map-menu {
+	display: none !important;
+}
+.no-stroke {
+	display: none !important;
+}
+.none {
+	display: none !important;
+}
+.owner h3 {
+	display: none !important;
+}
+.owner-tools {
+	display: none !important;
+}
+.printhide {
+	display: none !important;
+}
+.rate-table {
+	display: none !important;
+}
+.removehome {
+	display: none !important;
+}
+.sample-ezad {
+	display: none !important;
+}
+.secondary-nav {
+	display: none !important;
+}
+.sIFR-flash embed {
+	display: none !important;
+}
+.sIFR-flash object {
+	display: none !important;
+}
+.sIFR-flash {
+	display: none !important;
+}
+.skiplink {
+	display: none !important;
+}
+.toolbar {
+	display: none !important;
+}
+.toolbox {
+	display: none !important;
+}
+.tooltip {
+	display: none !important;
+}
+.wiki-nav {
+	display: none !important;
+}
+.zestimate h2 span.help {
+	display: none !important;
+}
+.zillow h3 {
+	display: none !important;
+}
+button {
+	display: none !important;
+}
+caption {
+	display: none !important;
+}
+dl.aboutus a {
+	display: none !important;
+}
+h1 span {
+	display: none !important;
+}
+legend {
+	display: none !important;
+}
+p.error {
+	display: none !important;
+}
+span.bottom {
+	display: none !important;
+}
+table tbody tr td a span.collapse {
+	display: none !important;
+}
+table tbody tr td a span.expand {
+	display: none !important;
+}
+td.price a {
+	display: none !important;
+}
+.a-b-c-layout#container {
+	background: 0px;
+}
+.a-b-layout #inner-container {
+	background: 0px;
+}
+.a-b-c-layout #inner-container {
+	background: 0px;
+}
+#wrapper {
+	width: 100% !important; margin-left: 0px;
+}
+span.sIFR-alternate {
+	left: auto !important; top: auto !important; display: block !important; visibility: visible !important; position: static !important;
+}
+table {
+	border: 1pt solid rgb(85, 85, 85); width: 99% !important; margin-bottom: 10pt; margin-left: 1pt !important; border-collapse: collapse;
+}
+th {
+	padding: 2pt; border: 1pt solid rgb(85, 85, 85) !important; text-align: left; font-size: 8pt !important; vertical-align: top; border-collapse: collapse !important;
+}
+td {
+	padding: 2pt; border: 1pt solid rgb(85, 85, 85) !important; text-align: left; font-size: 8pt !important; vertical-align: top; border-collapse: collapse !important;
+}
+caption {
+	padding: 2pt; border: 1pt solid rgb(85, 85, 85) !important; text-align: left; font-size: 8pt !important; vertical-align: top; border-collapse: collapse !important;
+}
+caption {
+	margin: 10pt 0px 0px -2pt; font-weight: bold;
+}
+h1 {
+	color: rgb(221, 102, 17); text-decoration: none;
+}
+h1 a {
+	color: rgb(221, 102, 17); text-decoration: none;
+}
+h2 a {
+	color: rgb(221, 102, 17); text-decoration: none;
+}
+h2 {
+	color: rgb(102, 153, 34); font-size: 1.2em;
+}
+h3 {
+	color: rgb(102, 153, 34); font-size: 1.2em;
+}
+#compsmap {
+	border: 1pt solid rgb(85, 85, 85); width: 300px; height: 200px;
+}
+#myzestimator #compsmap {
+	width: 100%;
+}
+.colw #hdgraph p {
+	display: block !important;
+}
+#compsmap {
+	margin: 10pt 0px;
+}
+#hdgraph {
+	margin: 10pt 0px;
+}
+dl {
+	margin: 10pt 0px;
+}
+dt {
+	font-weight: bold;
+}
+dd {
+	text-indent: 16pt;
+}
+h3 {
+	margin-top: 10pt;
+}
+.module-body {
+	clear: both; margin-bottom: 20pt;
+}
+.form-data {
+	clear: both; margin-bottom: 20pt;
+}
+#ranking dd {
+	padding: 5pt; border: 1pt solid rgb(187, 221, 136); text-indent: 0px; margin-top: 3pt;
+}
+#standard ol {
+	margin: 10pt 0px 10pt 20pt;
+}
+#standard ul {
+	margin: 10pt 0px 10pt 20pt;
+}
+label {
+	font-weight: bold; margin-top: 5pt; display: block;
+}
+.note {
+	margin-top: 10pt;
+}
+#improvedesc li a {
+	font-weight: bold;
+}
+#improvedesc li dl {
+	margin-top: 0px;
+}
+#improvedesc li dl ul {
+	margin-left: 20pt;
+}
+#refinesummary table {
+	width: auto;
+}
+#refinesummary table {
+	border: 0px currentColor;
+}
+#refinesummary table tr td {
+	border: 0px currentColor;
+}
+#refinesummary table tr th {
+	border: 0px currentColor;
+}
+#compdata {
+	border-width: 1pt 0px 0px !important; border-style: solid none none !important; border-color: rgb(221, 221, 221) currentColor currentColor !important;
+}
+#compdata th {
+	border-bottom-color: rgb(221, 221, 221) !important; border-bottom-width: 1pt !important; border-bottom-style: solid !important;
+}
+#compdata td {
+	border-bottom-color: rgb(221, 221, 221) !important; border-bottom-width: 1pt !important; border-bottom-style: solid !important;
+}
+#refinesummary #compdata tr.pagination th {
+	border: 0px currentColor !important;
+}
+#refinesummary #compdata tr.pagination td {
+	border: 0px currentColor !important;
+}
+.up {
+	color: green;
+}
+.down {
+	color: red;
+}
+#graphdetail fieldset label {
+	display: inline;
+}
+#corpright h3 {
+	color: rgb(68, 68, 68) !important; font-size: 9pt !important;
+}
+#howto h3 {
+	color: rgb(68, 68, 68) !important; font-size: 9pt !important;
+}
+.howcont h3 {
+	color: rgb(68, 68, 68) !important; font-size: 9pt !important;
+}
+.corpcontent h3 {
+	color: rgb(68, 68, 68) !important; font-size: 9pt !important;
+}
+.corpaboutbottom dl dd h3 {
+	color: rgb(68, 68, 68) !important; font-size: 9pt !important;
+}
+#jobopeningsbottom h3 {
+	color: rgb(68, 68, 68) !important; font-size: 9pt !important;
+}
+#ft {
+	margin-top: 10pt;
+}
+.corpaboutbottom dl dd {
+	text-indent: 0px; padding-bottom: 10pt; margin-left: 0px; border-bottom-color: rgb(68, 68, 68); border-bottom-width: 1pt; border-bottom-style: solid;
+}
+.r-subtotal {
+	color: rgb(97, 146, 16);
+}
+.r-subtotal span {
+	color: rgb(221, 102, 17);
+}
+#myzestimator table caption {
+	color: rgb(221, 102, 17);
+}
+#myzestimator table {
+	width: 500pt;
+}
+#zestimatortop h2 {
+	color: rgb(68, 68, 68); font-size: 1em;
+}
+#zestimatortop h2 span {
+	font-size: 1.6em;
+}
+.mapmodule {
+	width: 400px; height: 215px; overflow: hidden; position: relative;
+}
+.zestimate .specs {
+	display: block;
+}
+* html #myzestimator #compsmap {
+	border: 0px currentColor; width: auto !important; height: auto !important; overflow: visible !important; display: block !important; visibility: visible !important;
+}
+* + html #myzestimator #compsmap {
+	border: 0px currentColor; width: auto !important; height: auto !important; overflow: visible !important; display: block !important; visibility: visible !important;
+}
+textarea {
+	width: 100%; overflow: visible;
+}
+#wiki h2 {
+	color: rgb(85, 85, 85); font-size: 13pt; margin-top: 10pt;
+}
+.link-list {
+	margin: 10pt 0px 0px 10pt; list-style-type: disc;
+}
+h1 {
+	color: rgb(102, 153, 34) !important; font-family: "Trebuchet MS",verdana,sans-serif; font-size: 14pt;
+}
+#wikiViewRegion {
+	margin-top: 10pt;
+}
+#wikiViewRegion h2 {
+	color: rgb(221, 102, 17); font-size: 10pt;
+}
+#wikiViewRegion ul {
+	margin-left: 10pt; list-style-type: disc;
+}
+#wikiViewRegion ol {
+	margin-left: 10pt; list-style-type: disc;
+}
+#wikiViewRegion ol {
+	list-style-type: decimal;
+}
+#standard h3 {
+	color: rgb(221, 102, 17) !important; font-size: 12pt !important; margin-bottom: 5pt;
+}
+#standard p {
+	line-height: 15pt; margin-bottom: 10pt;
+}
+dl.aboutus dd {
+	text-indent: 0px;
+}
+dl.aboutus dt {
+	text-indent: 0px;
+}
+dl.aboutus dd {
+	margin-top: 5pt;
+}
+#standard h4 {
+	color: rgb(102, 153, 34); margin-bottom: 5pt;
+}
+#myzillow #favlist {
+	padding-top: 10pt; margin-top: 10pt; border-top-color: rgb(85, 85, 85); border-top-width: 1pt; border-top-style: solid;
+}
+#myzillow .claimedFavorite {
+	padding-bottom: 10pt; margin-bottom: 10pt; border-bottom-color: rgb(85, 85, 85); border-bottom-width: 1pt; border-bottom-style: solid;
+}
+#myzillow .savedFavorite {
+	padding-bottom: 10pt; margin-bottom: 10pt; border-bottom-color: rgb(85, 85, 85); border-bottom-width: 1pt; border-bottom-style: solid;
+}
+#myzillow table {
+	padding: 0px !important; border: 0px currentColor !important; width: auto !important; font-weight: normal;
+}
+#myzillow table tr td {
+	padding: 0px !important; border: 0px currentColor !important; width: auto !important; font-weight: normal;
+}
+#myzillow table tr th {
+	padding: 0px !important; border: 0px currentColor !important; width: auto !important; font-weight: normal;
+}
+#myzillow .claimedFavorite .col2 h2 span {
+	color: rgb(102, 153, 34) !important; font-size: 10pt !important; margin-top: 5pt !important; margin-bottom: 0px !important;
+}
+#myzillow .savedFavorite .col2 h2 span {
+	color: rgb(102, 153, 34) !important; font-size: 10pt !important; margin-top: 5pt !important; margin-bottom: 0px !important;
+}
+#myzillow .claimedFavorite .col2 h3 {
+	color: rgb(85, 85, 85) !important; font-size: 10pt !important; margin-top: 0px !important;
+}
+#myzillow .savedFavorite .col2 h3 {
+	color: rgb(85, 85, 85) !important; font-size: 10pt !important; margin-top: 0px !important;
+}
+#myzillow .claimedFavorite .col2 img {
+	border: 1pt solid rgb(85, 85, 85);
+}
+#myzillow .savedFavorite .col2 img {
+	border: 1pt solid rgb(85, 85, 85);
+}
+#myzillow ul.characteristics li {
+	display: inline;
+}
+#myzillow .claimed {
+	font-weight: bold; margin-bottom: 5pt;
+}
+#myestimator #map {
+	height: 360px !important;
+}
+.trendsort {
+	padding-left: 10pt !important; font-size: 8pt !important;
+}
+.h2-headline {
+	font-size: 14pt; font-weight: bold; margin-bottom: 5pt; display: block;
+}
+#gbc {
+	margin-bottom: 5px;
+}
+#gbc li {
+	font-size: 1em; display: inline-block;
+}
+#gbc li.first {
+	padding-left: 0px;
+}
+.search-result {
+	border-width: 1px; border-style: solid; border-color: rgb(255, 255, 255) rgb(255, 255, 255) rgb(238, 238, 238); width: 100%; height: 80px; clear: both; page-break-before: auto; page-break-after: auto;
+}
+.search-result {
+	orphans: 50; widows: 50; page-break-inside: avoid;
+}
+.search-result * {
+	orphans: 50; widows: 50; page-break-inside: avoid;
+}
+.search-result .photo {
+	padding: 5px; line-height: 1.5em; float: left; page-break-inside: avoid;
+}
+.search-result .property-info {
+	padding: 5px; line-height: 1.5em; float: left; page-break-inside: avoid;
+}
+.search-result .photo {
+	width: 101px; height: 76px; margin-right: 5px;
+}
+.search-result .adr .street-address {
+	font-weight: bold;
+}
+.search-result .listing {
+	font-weight: bold;
+}
+.search-result .listing li.type {
+	padding-right: 1em;
+}
+.search-result .listing .price {
+	width: 12em; color: rgb(221, 102, 17); font-weight: bold;
+}
+.search-result .listing .zest {
+	font-weight: normal;
+}
+.search-result ul {
+	clear: both; list-style-type: none;
+}
+.search-result ul li {
+	padding-right: 2em; font-size: 1em; float: left !important; display: block;
+}
+.search-result .attributes li.sqft {
+	width: auto;
+}
+.search-result .attributes li.pop {
+	width: auto;
+}
+.search-result .photo img {
+	padding: 0px; border: 1px solid rgb(170, 204, 255);
+}
+.search-result .actions {
+	display: none !important;
+}
+.building-units .search-result .lotsize {
+	display: none;
+}
+#zsearch_RESULTS table.comps-results {
+	width: 100%; margin-top: 10px;
+}
+#zsearch_RESULTS table.comps-results td {
+	margin: 3px; padding: 0.3em; border-collapse: separate;
+}
+.savedEstimate .myestimator-actions {
+	display: none;
+}
+dl.form-data {
+	clear: both;
+}
+dl.form-data dt {
+	float: left;
+}
+dl.form-data dd {
+	float: left;
+}
+.loan-request-summary dt {
+	float: left;
+}
+.loan-request-summary dd {
+	float: left;
+}
+dl.form-data dt {
+	width: 40%; clear: left; font-weight: normal;
+}
+.loan-request-summary dt {
+	width: 40%; clear: left; font-weight: normal;
+}
+dl.form-data dd {
+	width: 55%; text-indent: 0px;
+}
+.loan-request-summary dd {
+	width: 55%; text-indent: 0px;
+}
+.requestDetailsQuotes {
+	clear: both;
+}
+.requestDetailsQuotes #loan-quotes li.summary {
+	padding-top: 20pt; border-bottom-color: rgb(85, 85, 85); border-bottom-width: 1px; border-bottom-style: solid;
+}
+#hvp #geo-metric-chart {
+	display: none;
+}
+#hvp #metric-headers li {
+	display: none;
+}
+#hvp #metric-headers li.current {
+	display: block;
+}
+#hvp #metric-area {
+	clear: both;
+}

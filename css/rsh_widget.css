@@ -1,0 +1,54 @@
+.rsh-outer-wrapper {
+	font: 8pt/13px verdana, arial, sans-serif; border: 1px solid rgb(173, 207, 255); text-align: center; overflow: hidden; display: block; position: relative; font-size-adjust: none; font-stretch: normal; background-color: rgb(255, 255, 255);
+}
+.rsh-outer-wrapper-wide {
+	width: 284px; height: 201px;
+}
+.rsh-outer-wrapper-narrow {
+	width: 146px; height: 259px;
+}
+.rsh-inner-wrapper-wide {
+	margin: 5px 9px 0px; width: 266px; height: 196px;
+}
+.rsh-inner-wrapper-narrow {
+	margin: 4px 5px 0px; width: 136px; height: 255px;
+}
+.rsh-outer-wrapper .brown-out-message-container {
+	text-align: center; color: rgb(102, 102, 102);
+}
+.rsh-outer-wrapper .brown-out-message-container a {
+	color: rgb(51, 102, 187); text-decoration: none; border-bottom-color: rgb(51, 102, 187); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.rsh-outer-wrapper .list-element-rsh-300 {
+	margin: 0px 0px 2px; width: 265px; border-bottom-color: rgb(221, 221, 221); border-bottom-width: 1px; border-bottom-style: solid; float: left;
+}
+.rsh-outer-wrapper .list-element-rsh-160 {
+	margin: 0px 0px 2px; width: 138px; border-bottom-color: rgb(221, 221, 221); border-bottom-width: 1px; border-bottom-style: solid; float: left;
+}
+.rsh-outer-wrapper .rsh-bed-bath {
+	padding: 1px 0px 5px 1px; color: rgb(88, 88, 88); float: left;
+}
+.rsh-outer-wrapper .rsh-area {
+	margin: 2px 0px 0px 30px; color: rgb(88, 88, 88); float: left;
+}
+.rsh-outer-wrapper a.address {
+	float: left;
+}
+.rsh-outer-wrapper a.see-all {
+	padding: 0px 15px;
+}
+.rsh-outer-wrapper .address-rsh-300 {
+	width: 260px; height: 14px; text-align: left; float: left;
+}
+.rsh-outer-wrapper .address-rsh-160 {
+	width: 135px; height: 28px; text-align: left; float: left;
+}
+.rsh-outer-wrapper .rsh-price {
+	color: rgb(221, 102, 17); font-size: 8pt; font-weight: bold; float: left;
+}
+.rsh-outer-wrapper .rsh-sold-date {
+	color: rgb(221, 102, 17); font-size: 8pt; font-weight: bold; float: right;
+}
+.rsh-outer-wrapper a.address-link-rsh {
+	color: rgb(51, 102, 187); text-decoration: underline;
+}

@@ -1,0 +1,12 @@
+cache/
+galeria/
+config/
+preload/
+<<<<<<< HEAD
+.buildpath
+.settings/
+.project
+=======
+.settings/
+.buildpath
+>>>>>>> gratis

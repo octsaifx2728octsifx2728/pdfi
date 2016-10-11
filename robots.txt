@@ -1,0 +1,8 @@
+User-agent: *
+
+Disallow: /apps/
+Disallow: /chunks/
+Disallow: /core/
+Disallow: /handlers/
+Disallow: /hooks/
+Disallow: /html/

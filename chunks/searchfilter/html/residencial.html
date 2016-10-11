@@ -1,0 +1,108 @@
+<div class="filters" id="_nuevosFiltros">
+    <div class="section section_subtipo filter filter_subtipo filterType_multicheckbox">
+        #SUBTIPOS#
+    </div>
+    <div class="section section_adicional2 filter filterType_checkbox">
+        #ADICIONAL2#
+    </div>
+    <div class="section section_general">
+        #GENERAL#
+    </div>
+    <div class="section section_adicional">
+        #ADICIONAL#
+    </div>
+    <div class="section morefilters">
+        <div class="control">
+		<input type="button" value="$$more_filters$$" class="button gray-dark" onclick="javascript:$(this.parentNode.parentNode).find('.container').css('display',($(this.parentNode.parentNode).find('.container').css('display')=='block'?'none':'block'));">
+	</div>
+        <div class="container  filter filterType_checkbox" style="display:none">
+		#CARACT#
+	</div>
+    </div>
+</div>
+
+<script>
+var nuevosfiltros_q=function($q){
+    $.fn.nuevosfiltros=function(opts){
+        nuevosfiltros_c.ddbb.push(this);
+        this.ddbb={};
+        this.payID=nuevosfiltros_c.ddbb.length-1;
+        this.init=nuevosfiltros_c.init;
+        this.init();
+    }
+}
+
+var nuevosfiltros_c={
+    ddbb:[],
+    init:function(){
+        var payID=this.payID;
+        $(this).find(".filter").each(function(){
+            this.params=nuevosfiltros_c.parseClassString(this.className);
+            switch(this.params.filterType){
+                case "multicheckbox":
+                    this.valores={};
+                    var padre=this;
+                    this.update=function(){
+                        var valores=[];
+                        for(i in this.valores){
+                            valores.push(i);
+                        }
+                        searcher.applyFilter({name:this.params.filter,value:valores.join("_")},mapa);
+                    }
+                    $(this).find("input").click(function(){
+                        if(this.checked){
+                            padre.valores[this.value]=this.value;
+                        }
+                        else {
+                            delete padre.valores[this.value];
+
+                        }
+                        padre.update();
+                        });
+                    break;
+                case "range":
+                    var padre=this;
+                    nuevosfiltros_c.ddbb[payID].ddbb[padre.params.filter]=($(this).find(".container").slider({
+                        range:true,
+                        min: this.params.filterMin*1,
+                        max: this.params.filterMax*1,
+                        values: [ this.params.filterStart*1, this.params.filterEnd*1 ],
+                        slide:function(e,ui){
+
+                            $(padre).find(".val0").text(padre.params.filter=="anio1"?ui.values[0]:ui.values[0].toString().split( /(?=(?:\d{3})+(?:\.|$))/g ).join( "," ));
+                            $(padre).find(".val1").text(padre.params.filter=="anio1"?ui.values[1]:Math.round(ui.values[1]).toString().split( /(?=(?:\d{3})+(?:\.|$))/g ).join( "," ));
+                        },
+                        stop:function(e,ui){
+                            var valores=ui.values;
+                            if(valores[1]>=$(ui.handle.parentNode).slider("option","max")){
+                                valores[1]="n";
+                            }
+                            searcher.applyFilter({name:padre.params.filter,value:ui.values.join("-")},mapa);
+                        }
+                    }));
+                    break;
+               case "checkbox":
+                   $(this).find("input").change(function(){
+                       searcher.applyFilter({name:this.name,value:this.checked?1:0},mapa);
+                   });
+                   break;
+            }
+        });
+    },
+    parseClassString:function(cs){
+      cs=cs.split(" ");
+      var cs2={};
+      for(var i=0; i<cs.length;i++){
+        cs[i]=cs[i].split("_");
+        cs2[cs[i][0]]=cs[i].length>2?cs[i][1]+"_"+cs[i][2]:cs[i][1];
+
+        }
+      return cs2;
+      }
+}
+
+nuevosfiltros_q(jQuery);
+    $(document).ready(function(){
+        $("#_nuevosFiltros").nuevosfiltros({});
+    });
+</script>

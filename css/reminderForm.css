@@ -1,0 +1,86 @@
+/* 
+    Document   : loginForm
+    Created on : 1/02/2013, 08:44:44 PM
+    Author     : carlos
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+.loginForm {
+  width:490px;
+  height:90px;
+  overflow:hidden;
+  margin:0 auto;
+}
+.loginForm .field label{
+  
+display: block;
+float: left;
+text-align: right;
+width: 140px;
+}
+
+.loginForm .field {
+  margin:13px 0;
+}
+
+.loginForm .field input {
+  margin: -3px 5px;
+  padding: 3px 2px;
+  font-size:10px;
+  width:225px;
+  border-radius: 0px;
+  vertical-allign:middle;
+  height:13px;
+  color:#ccc;
+  background:white;
+}
+
+.loginForm .field input.changed ,
+.loginForm .field input:focus {
+  color:black;
+}
+.loginForm .verified_error input{
+  background:#fccaca;
+}
+.loginForm .verified_ok input{
+  background:#dfffd8;
+}
+
+.loginForm .controles{
+  float:right;
+}
+
+.loginForm .controles .submit{
+  width:100px;
+  height:20px;
+  border:1px solid #ccc;
+  cursor:pointer;
+}
+
+.loginForm .controles .submit:hover{
+  border:1px solid #000000;
+}
+
+.loginForm .hint{
+  font-size:10px;
+  color:red;
+  font-style: italic;
+  display:none;
+}
+
+.loginForm .passwordMatch_false .hint{
+  display:block;
+}
+
+
+.loginForm .errorMessage{
+  color:red;
+  font-size:12px;
+  font-weight: bold;
+  text-align:center;
+  display:none;
+}
+.loginForm .errorSubmit .errorMessage{
+  display:block;
+}

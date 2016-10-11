@@ -1,0 +1,13 @@
+.forma_1 .icon{
+	width: 348px;
+	height: 29px;
+	background: url('https://www.paypal.com/es_XC/MX/Marketing/i/banner/bnr_int3_353x31.gif') center left no-repeat;
+}
+.forma_2 .icon{
+	width: 50px;
+	height: 16px;
+	background: url('visa-mastercard.jpg') center left no-repeat;
+}
+.formasdepago .option{
+	margin:15px 0;
+}

@@ -1,0 +1,53 @@
+<div class="searchbox">
+            <div class="filters">
+                [[filtersTypeTransaction?static=`1`]]
+            </div>
+    <input id="searchTextField" name="searchTextField" class="searchTextField" type="text" onkeydown="$(window).scrollTop($(document).height());"/>
+</div>
+
+<script type="text/javascript">
+var autocomplete;
+function sp_action(){
+	
+  	var ajax="#AJAX#"*1;
+        
+    var place = autocomplete.getPlace();
+    if(place){
+    	if(ajax){
+    		if(place.geometry.viewport)
+    		{
+    			var bound=place.geometry.viewport;
+    		}
+    		else{
+	    		var sw=new google.maps.LatLng(place.geometry.location.lat()+0.0045,place.geometry.location.lng()-0.0045);
+	    		var ne=new google.maps.LatLng(place.geometry.location.lat()-0.0045,place.geometry.location.lng()+0.0045);
+	    		var bound=new google.maps.LatLngBounds(sw,ne);
+    		}
+	      mapa.mapa.fitBounds(bound);
+	     }
+	     else {
+	     	if(place.geometry.viewport){
+		     	var ne=place.geometry.viewport.getNorthEast();
+	    		var sw=place.geometry.viewport.getSouthWest();
+	    		}
+	    	else{
+	    		var sw=new google.maps.LatLng(place.geometry.location.lat()+0.0045,place.geometry.location.lng()-0.0045);
+	    		var ne=new google.maps.LatLng(place.geometry.location.lat()-0.0045,place.geometry.location.lng()+0.0045);
+	    	}
+    		var url="app/searchbounds/"+ne.lat()+":"+ne.lng()+":"+sw.lat()+":"+sw.lng()+":"+encodeURI(place.formatted_address);
+                var tipoobjeto=$(".searchbox>.filters").find(".filter_tipoobjeto").find(".selected>input").val();
+                var tipovr=$(".searchbox>.filters").find(".filter_tipovr").find(".selected>input").val();
+                url=url+"?tipovr="+tipovr+"&tipoobjeto="+tipoobjeto;
+    		wait(true);
+    		location.href=url;
+	     }
+      
+      }
+}
+$(document).ready(function(){
+  var input = document.getElementById('searchTextField');
+  var options = {};
+  autocomplete = new google.maps.places.Autocomplete(input, options);
+  google.maps.event.addListener(autocomplete, 'place_changed',sp_action);
+  });
+</script>

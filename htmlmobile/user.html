@@ -1,0 +1,103 @@
+#DOCTYPE#
+
+<html#NAMESPACES#>
+
+<head>
+<base href="#BASE#">
+[[metas]]
+
+
+#ESTILOS#
+[[enviroment]]
+#SCRIPTS#
+
+[[analitics]]
+
+<script type="text/javascript">
+	var user=new user_class([[userData?name=`id_cliente`]]);
+</script>
+
+</head>
+<body style="background:#ffffff">
+<div class="alertas">
+  #ALERTAS#
+</div>
+
+<div id="_page" class="user_profile">
+<div class="mainwrap">
+<!--top_top-->
+
+<article class="user user_#ID#   perfil_#OWNER#">
+	
+	<div class="module2 crear_anuncio #OWNER#">
+		<div class="wrap">
+			<img src="img/casa_blanca.png" class="casa">
+			<div class="fremblock">
+			<h2>
+			[[freemiumform?model=`1`]]
+			</h2>
+			</div>
+		</div>
+	</div>
+	
+	<div class="module3 perfil perfil_#OWNER#">
+		<div class="top">
+			
+		</div>
+		<div class="wrap">
+			<div class="datos">
+				<div class="avatar">
+					[[userAvatar]]
+				</div>
+				<div class="data">
+					[[userDataManager?plantilla=`1`]]
+				</div>
+				<div class="contact">
+					[[contact]]
+				</div>
+			</div>
+			<div class="enlaces">
+				<div class="stats">
+					[[userStats]]
+				</div>
+			</div>
+		</div>
+		
+	</div>
+	
+	
+	<div class="module2 corporativos">
+		<div class="wrap">
+			[[corporativosform]]
+		</div>
+	</div>
+	
+	<div class="pestanas_inmuebles #OWNER#">
+		[[pestanasInmuebles]]
+	</div>
+	<div class="module inmuebles">
+		<div class="inmuebles_propios">
+			<h2>$$inmuebles$$</h2>
+				[[inmueblesUsuario]]
+		</div>
+		<div class="inmuebles_favoritos">
+			[[favoritos_lista]]
+		</div>
+		<div class="buzon_mensajes">
+			[[buzonMensajes]]
+		</div>
+	</div>
+</article>
+
+</div><!--Main Wrap -->
+
+
+</div>
+
+[[socialblock]]
+
+<footer>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<div class="sendMessagForm sendMessagForm_#KEY#">
+                <div class="alertContainer">
+                    <div class="alert">
+                        <div class="icon">
+                        </div>
+                        <div class="message">
+                        </div>
+                    </div>
+                </div>
+    <form id="formulario_#KEY#">
+        <input type="hidden" name="email">
+        <input type="hidden" name="id">
+        <input type="hidden" name="ulid">
+        <div class="field field_message fieldType_textarea">
+            <label>$$message$$</label>
+            <div class="counter">0/500</div>
+            <textarea class="untouched" name="mensaje">$$writteYourMessage$$</textarea>
+        </div>
+        <div class="field submit_button">
+            <input type="submit" class="button submit gray-dark" value="$$enviar$$"/>
+        </div>
+    </form>
+</div>
+
+<script>
+    $(".sendMessagForm_#KEY#").messageWritter({key:"#KEY#"});
+</script>

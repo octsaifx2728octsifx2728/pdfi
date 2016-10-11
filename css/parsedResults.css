@@ -1,0 +1,290 @@
+
+
+.result {
+  background:#ffffff;
+  border:1px solid #666;
+  height:225px;
+  margin:10px 10px;
+}
+.result .bottom {
+	background:#D8D8D9;
+}
+.result .description{
+overflow: hidden;
+height:50px;
+font-size:13px;
+text-align: left;
+}
+.result td{
+	vertical-align:top;
+}
+.result .imagen{
+  width:250px;
+  height:190px;
+  float:left;
+  margin:3px;
+  overflow:hidden;
+}
+.result .info {
+	width:100%;
+	height:30px;
+	overflow:hidden;
+}
+.result .items {
+	width:100%;
+	height:50px;
+	overflow:hidden;
+}
+.result .imagen img{
+  heigth:100%;
+  border:0 none;
+}
+.result .imagen .img{
+    width:250px;
+    float:left;
+}
+.result .top_top{
+  height:50px;
+  width:100%;
+  margin:0;
+}
+.result .top_top .precio{
+	float: right;
+	font-size: 16px;
+	color: #06f;
+	margin:10px 10px 0 0;
+	font-weight:bold;
+}
+
+.result .top_top .precio .icon{
+	width:25px;
+	height:25px;
+	float:left;
+	margin:-5px 2px 0;
+}
+.result .top_top .caracteristicas{
+  margin: 0 5px 0 0;
+  padding:0 3px;
+  text-align: left;
+  font-size:14px;
+  height:23px;
+  overflow:hidden;
+	color: #06f;
+}
+.result .title{
+  margin:0;
+  font-size: 16px;
+  text-align:left;
+  height:20px;
+  overflow:hidden;
+  color: #06f;
+  padding:3px 0;
+}
+
+.result .info .data{
+  float:left;
+  padding:8px 5px 0;
+}
+.result .info .dataS{
+  float:left;
+  padding:8px 5px 0;
+}
+
+.result .info .dataS .icon,
+.result .info .data .icon{
+  width:25px;
+  height:25px;
+  float:left;
+  margin:-8px 2px 0;
+}
+
+.precio .icon{
+  background:url('icons.png') -50px -25px no-repeat;
+}
+.construccion .icon{
+  background:url('icons.png') 0px -75px no-repeat;
+}
+.preciom2 .icon{
+  width:25px;
+  height:25px;
+  background:url('icons.png') -75px -25px no-repeat;
+  float:left;
+}
+.preciom2 .icon{
+  width:25px;
+  height:25px;
+  background:url('icons.png') -75px -25px no-repeat;
+  float:left;
+}
+.metrica_pies .preciom2 .icon{
+  width:25px;
+  height:25px;
+  background:url('icons.png') 0px -225px no-repeat;
+  float:left;
+}
+.m2 .icon{
+  width:25px;
+  height:25px;
+  background:url('icons.png') -25px -75px no-repeat;
+  float:left;
+}
+.metrica_pies .m2 .icon{
+  width:25px;
+  height:25px;
+  background:url('icons.png') -25px -225px no-repeat;
+  float:left;
+}
+.habitaciones .icon{
+  width:25px;
+  height:25px;
+  background:url('icons.png') -25px -50px no-repeat;
+  float:left;
+}
+.banos .icon{
+  width:25px;
+  height:25px;
+  background:url('icons.png') -50px -50px no-repeat;
+  float:left;
+}
+.estacionamientos .icon{
+  width:25px;
+  height:25px;
+  background:url('icons.png') -51px -200px no-repeat;
+  float:left;
+}
+.estacionamientos2 .icon{
+  width:25px;
+  height:25px;
+  background:url('icons.png') -75px -50px no-repeat;
+  float:left;
+}
+.anio .icon{
+  width:25px;
+  height:25px;
+  background:url('icons.png') -0px -75px no-repeat;
+  float:left;
+}
+.superficie .icon{
+  width:25px;
+  height:25px;
+  background:url('icons.png') 0px -50px no-repeat;
+  float:left;
+}
+.resultipo_5 .superficie .icon{
+  background:url('icons.png') -25px -75px no-repeat;
+}
+.resultipo_5 .metrica_pies .superficie .icon{
+  background:url('icons.png') -25px -225px no-repeat;
+}
+
+.result .items .item{
+  width:25px;
+  height:25px;
+  float:left;
+  margin:0 10px;
+}
+
+
+.result .share{
+  width:100px;
+  margin:0 auto;
+}
+.result .share img{
+  width:25px;
+  height:25px;
+}
+.result .link{
+  font-size:13px;
+}
+.result a{
+  text-decoration:none;
+}
+.result .contact .contact{
+  background:#D8D8D9;
+  margin: 0;
+  float:right;
+}
+.result .contact{
+  width:260px;
+  float:right;
+  margin: 0;
+}
+.result .contact img{
+  width:25px;
+  height:25px;
+  vertical-align:middle;
+}
+
+.favs {
+	width:25px;
+	height:25px;
+	position:absolute;
+}
+.favs .estrella{
+	width:25px;
+	height:25px;
+	cursor:pointer;
+	background: url('icons.png') -75px 0px no-repeat;
+}
+.favs .fav{
+	background: url('icons.png') -50px 0px no-repeat;
+}
+.premium_Banner{
+  display:none;
+  }
+.destacado_1{
+  background:#E4F5E2;
+  }
+.destacado_1 .premium_Banner{
+  background:url("premium.png") center center no-repeat;
+  display:block;
+  position: absolute;
+  width: 140px;
+  height: 40px;
+  }
+
+.vendido_1{
+  background:#F5E2E2;
+  }
+.vendido_1 .premium_Banner{
+  display:none;
+  }
+  .precio_orig .icon{
+      display:none;
+  }
+
+  .precio_orig{
+        position: absolute;
+        font-size: 10px;
+        background: white;
+        padding: 2px 12px;
+        color: #666;
+        box-shadow: 5px 5px 10px #666;
+        margin: 1px 0 0 110px;
+        border-radius: 10px;
+        display: none;
+  }
+  .precio:hover .precio_orig{
+        display: block;
+  }
+  .result .viewthis{
+    font-size: 12px;
+    color: #949494;
+    padding: 0px 0;
+    font-weight: bold;
+  }
+  .result .viewthis:hover{
+    color: #000000;
+  }
+  .vendido_1 .overlayvendido{
+      width:250px;
+      height:190px;
+      position:absolute;
+      cursor:pointer;
+  }
+  .result .iconmoneda{
+      width:45px;
+      height:15px;
+      float:right;
+    margin: 0 5px;
+  }

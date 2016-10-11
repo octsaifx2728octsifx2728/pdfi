@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html#NAMESPACES#>
+    <head>
+        <base href="#BASE#">
+        [[metas]]
+
+        #ESTILOS#
+
+        [[enviroment]]
+
+        #SCRIPTS#
+
+        [[analitics]]
+
+        <script type="text/javascript">
+            var resultados=[];
+            var searcher=new searcher_class(1);
+            var mapa=null;
+
+            function addMapMarkers(){
+              mapa.clear();
+              
+              
+              
+              for(var x=0; x<resultados.length;x++){
+                  var zoom=mapa.map.getZoom();
+                  var z="25";
+                  if(zoom>=19){
+                      z="65";
+                  }
+                  else if(zoom>=17){
+                      z="45";
+                  }
+                  else if(zoom>=15){
+                      z="25";
+                  }
+                  else if(zoom>=13){
+                      z="25";
+                  }
+                  else if(zoom>=11){
+                      z="25";
+                  }
+                  else if(zoom>=9){
+                      z="15";
+                  }
+                  else if(zoom>=7){
+                      z="15";
+                  }
+                  else if(zoom>=5){
+                      z="15";
+                  }
+                  else if(zoom>=3){
+                      z="15";
+                  }
+                  else{
+                      z="15";
+                  }
+                  var tipo=resultados[x].destacado?"V":"";
+                  var tipo=resultados[x].vendido?"R":tipo;
+                  var tipo=resultados[x].oferta?"O":tipo;
+                  var icono="img/casa"+tipo+".gif";
+                mapa.addMarker({
+                  position:new google.maps.LatLng(resultados[x].coordenaday, resultados[x].coordenadax),
+                  animation:google.maps.Animation.DROP,
+                  clickable:true,
+                  draggable:false,
+                  title:resultados[x].title,
+                  visible:true,
+                  icon:icono,
+                  optimized:false,
+                  infowindow:true,
+                  infodata:'<div class="infowindowdata"><div class="title">'+resultados[x].title+'</div><div class="foto"><a href="'+resultados[x].url+'"><img src="cache/50/38/'+resultados[x].imagen+'"></a></div><div class="descripcion"><a href="'+resultados[x].url+'">'+resultados[x].descripcion+'</a></div></div>'
+                  });
+              }
+
+            }
+
+
+            var ajaxsearchTimeout=false;
+            function search(e,box){
+              if(e.keyCode==13){
+                var query=box.value;
+                location.href="#BASE#/app/search/"+encodeURI(query);
+              }
+              else {
+                if(ajaxsearchTimeout){
+                  clearTimeout(ajaxsearchTimeout);
+                }
+                searcher.search(box.value);
+                //ajaxsearchTimeout=setTimeout(function(){searcher.search(box.value)},3000);
+              }
+            }
+
+            function searchplaces(e,box){
+              if(e.keyCode==13){
+                var query=box.value;
+                location.href="#BASE#/app/searchplaces/"+encodeURI(query);
+              }
+              else {
+                if(ajaxsearchTimeout){
+                  clearTimeout(ajaxsearchTimeout);
+                }
+                searcher.searchplaces(box.value,mapa,dfg);
+                /*
+                ajaxsearchTimeout=setTimeout(function(){
+                  searcher.searchplaces(box.value,mapa,dfg)
+                  },1000);
+                */
+              }
+            }
+
+            function searchBounds(bounds){
+                if(ajaxsearchTimeout){
+                  clearTimeout(ajaxsearchTimeout);
+                }
+                
+                 searcher.searchBounds(bounds);
+                 
+                //ajaxsearchTimeout=setTimeout(function(){searcher.searchBounds(bounds)},1000);
+            }
+
+            $(document).ready(function(){
+                
+              
+              
+
+              searcher.resultbox=document.getElementById("resultsContainer");
+              searcher.resultTemplate=document.getElementById("_resultTemplate");
+              searcher.resultContainer=resultados;
+              searcher.lastSearch="#QUERY#";
+              searcher.lastSearchType="#SEARCHTYPE#";
+              var center = [#CENTER#];
+                if(searcher.lastSearchType=="bounds"){
+                    var coords=searcher.lastSearch.split(":");
+                    var ne=new google.maps.LatLng(coords[0],coords[1]);
+                    var sw=new google.maps.LatLng(coords[2],coords[3]);
+                    var bound=new google.maps.LatLngBounds(sw,ne);
+                    var centers=bound.getCenter();
+                    center=[centers.lat(),centers.lng()];
+
+                }
+              mapa=new paymapa({
+                id:1,
+                contenedor:"searchmap",
+                init:true,
+                geoloc:false,
+                center:[0,0]
+                });
+                 
+                 
+              
+                 
+                 
+                  mapa.boundsChangeCallback.push(searchBounds);
+                if(searcher.lastSearchType=="bounds"&&bound&&resultados.length<1){
+                        
+                        mapa.mapa.setCenter(bound.getCenter());
+                        mapa.mapa.setZoom(20);
+                        mapa.mapa.fitBounds(bound);
+                        }
+                else{
+                    if(searcher.lastSearchType=="bounds"){
+                      mapa.mapa.setCenter(bound.getCenter());
+                      
+                      addMapMarkers();
+                      mapa.mapa.fitBounds(bound);
+                      }
+                     else {
+                         
+                      addMapMarkers();
+                      mapa.centerOnMarkers();
+                     }
+                }
+              });
+        </script>
+    </head>
+    <body>
+        
+        
+
+        <div style="display:none">
+            <div id="_resultTemplate" >
+                <article>
+                    <div class="result">
+                        <div class="premium_Banner"></div>
+                        <div class="favs"></div>
+                        <table style="width:100%" cellpadding="0" cellspacing="0" border="0">
+                            <tr>
+                                <td class="imagen">
+                                    <a href="" class="link">
+                                        <img src="">
+                                    </a>
+                                </td>
+                                <td>
+                                    
+                                    <div class="top_top">
+                                        <div style = "height: 10%;width: 70%;">
+                                            <h1 class="title1">
+                                                <a href="#URL#" class="link"></a>
+                                            </h1>
+                                        </div>
+                                        <div class="precio data" title="$$precio$$">
+                                            
+                                            
+                                            <span class="precio_data converPrice"></span>
+                                            
+                                            <div class="precio_orig">
+                                                <div class="icon"></div>
+                                                <span class="precio_simbolo"></span>
+                                                <span class="precio_data"></span>
+                                            </div>
+                                        </div>
+                                        <div class="ranking"></div>
+                                        
+                                        <div class="caracteristicas">
+                                            <span class="caract casa"></span> / <span class="caract amueblado"></span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="info">
+                                        <div class="preciom2 data" title="$$precio_m2$$">
+                                            <div class="icon"></div>
+                                        </div>
+                                        <div class="m2 dataS" title="$$m2$$">
+                                            <div class="icon"></div>
+                                        </div>
+                                        <div class="superficie dataS" title="$$superficie$$">
+                                            <div class="icon"></div>
+                                        </div>
+                                        <div class="habitaciones dataS" title="$$habitaciones$$">
+                                            <div class="icon"></div>
+                                        </div>
+                                        <div class="banos dataS" title="$$banos$$">
+                                            <div class="icon"></div>
+                                        </div>
+                                        <div class="estacionamientos dataS" title="$$estacionamientos$$">
+                                            <div class="icon"></div>
+                                        </div>
+                                        <div class="construccion dataS" title="$$construccion$$">
+                                            <div class="icon"></div>
+                                        </div>
+                                    </div>
+                                    <div class="items" >
+                                        <div class="jardin item" title="$$jardin$$"></div>
+                                        <div class="lavado item" title="$$lavado$$"></div>
+                                        <div class="servicio item" title="$$servicio$$"></div>
+                                        <div class="vestidor item" title="$$vestidor$$"></div>
+                                        <div class="estudio item" title="$$estudio$$"></div>
+                                        <div class="tv item" title="$$tv$$"></div>
+                                        <div class="cocina item" title="$$cocina$$"></div>
+                                        <div class="chimenea item" title="$$chimenea$$"></div>
+                                        <div class="terraza item" title="$$terraza$$"></div>
+                                        <div class="jacuzzi item" title="$$jacuzzi$$"></div>
+                                        <div class="alberca item" title="$$alberca$$"></div>
+                                        <div class="vista item" title="$$vista$$"></div>
+
+
+                                        <div class="aire item" title="$$aire$$"></div>
+                                        <div class="calefaccion item" title="$$calefaccion$$"></div>
+                                        <div class="bodega item" title="$$bodega$$"></div>
+                                        <div class="elevador item" title="$$elevador$$"></div>
+                                        <div class="elevadors item" title="$$elevadors$$"></div>
+                                        <div class="portero item" title="$$portero$$"></div>
+                                        <div class="seguridad item" title="$$seguridad$$"></div>
+                                        <div class="circuito item" title="$$circuito$$"></div>
+                                        <div class="red item" title="$$red$$"></div>
+                                        <div class="gimnasio item" title="$$gimnasio$$"></div>
+                                        <div class="spa item" title="$$spa$$"></div>
+                                        <div class="golf item" title="$$golf$$"></div>
+                                    </div>
+                                    <div class="description" >  </div>
+                                </td>
+                            </tr>
+                            <tr class="bottom">
+                                
+                                
+                                <td>
+                                    <div class="share"></div>
+                                </td>
+                                <td >
+                                    <div style = "border-bottom:  solid 1px #ccc;margin-left: 15px;margin-bottom: 5px;"></div>
+                                    <div class="contact"></div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </article>
+            </div>
+        </div>
+        <div id="fb-root"></div>
+        <script type="text/javascript">
+            (function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = "//connect.facebook.net/es_LA/all.js#xfbml=1&appId=344869598922016";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+        </script>
+
+        <div class="alertas">
+          #ALERTAS#
+        </div>
+
+        <div id="_page" class="searchpage">
+            <div class="mainwrap">
+                <!--top_top-->
+                <header>
+                    [[header]]
+                </header>
+
+                <div id="searchpageboxcontainer" style="width:60%;margin: 0 auto;">
+                    <div class="seleccionar-busqueda searchpagebox" >
+                        <div class="filters">
+                            [[filtersTypeTransaction]]
+                        </div>
+                        <div class="caja-de-busqueda">
+                            [[searchbox?ajax=`0`]]
+                        </div>
+                    </div>
+                </div>
+                <canvas class="loader" style ="  position: absolute;top: 450px;z-index: 1;left: 780px;"></canvas>
+                <article>
+                    <div class="main sjd1">
+                        <table colspan="0" border="0" style="width:100%">
+                            <tr>
+                                <td class="left">
+                                    <div class="step">
+                                        <div class="title">
+                                            <span class="title_step1">$$step2$$</span>
+                                        </div>
+                                        <div class="description">
+                                            <div class="description_step1">$$step2_description$$</div>
+                                        </div>
+                                        <div class="searchfilter_">
+                                            <div class="searchfilter">[[searchfilter]]</div>
+                                        </div>
+                                    </div>
+                                    <div class="publicidad publicidad2">
+                                        [[publicidad?pos=`2`]]
+                                    </div>
+                                    <div class="publicidad publicidad4">
+                                        [[publicidad?pos=`4`]]
+                                    </div>
+                                    <div class="publicidad publicidad6">
+                                        [[publicidad?pos=`6`]]
+                                    </div>
+                                    <div class="publicidad publicidad8">
+                                        [[publicidad?pos=`8`]]
+                                    </div>
+                                </td>
+                                <td class="center">
+                                    <div class="mapa">
+                                        <div class="step">
+                                            <div class="title">
+                                                $$step3$$
+                                            </div>
+                                            <div class="description">
+                                                $$step3_description$$
+                                            </div>
+                                        </div>
+                                        <div class="searchmap">
+                                            [[searchmap]]
+                                        </div>
+                                    </div>
+                                    [[parsedResults]]
+                                </td>
+                                <td class="right">
+                                    [[premium]]
+
+                                    <div class="publicidad publicidad1">
+                                        [[publicidad?pos=`1`]]
+                                    </div>
+                                    <div class="publicidad publicidad3">
+                                        [[publicidad?pos=`3`]]
+                                    </div>
+                                    <div class="publicidad publicidad5">
+                                        [[publicidad?pos=`5`]]
+                                    </div>
+                                    <div class="publicidad publicidad7">
+                                        [[publicidad?pos=`7`]]
+                                    </div>
+                                    <div class="publicidad publicidad9">
+                                        [[publicidad?pos=`8`]]
+                                    </div>
+                                </td>
+                               
+                            </tr>
+                        </table>
+                    </div>
+                </article>
+            </div>
+            <div class="footer">
+                <footer></footer>
+            </div>
+        </div>
+        
+    </body>
+</html>
+<script src="js/jquery.classyloader.min.js?v=3ab2687f8f000e95e3191a290cc10c4a" type="text/javascript"></script>
+<script>
+    $(document).ready(function(){
+    
+    });
+</script>

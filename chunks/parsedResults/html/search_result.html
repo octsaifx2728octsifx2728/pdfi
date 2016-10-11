@@ -1,0 +1,145 @@
+<script>
+  $(this.resultbox).find(".imagen").find("img").css("width","251px");   
+
+</script>
+<div class="premium-title #DESTACADO#" style="display:none;">
+    <h1>PREMIUM</h1>
+</div>
+<div class="oferta-title #OFERTA#" style="display:none;">
+    <h1>OFERTA</h1>
+</div>
+<article>
+    <div class="result result_#ID# #DESTACADO# vendido_#VENDIDO# #OFERTA# metrica_#METRICA# tipo_#CASA# user_#USERID#" id="search_inmueble_result_#ID#">
+        <div class="premium-desc">
+            <div class="premium_offer_Banner"></div>
+            <table width="100%">
+                <tr>
+                    <td rowspan="5">
+                        <div class="favs">
+                            #FAVORITO#
+                        </div>
+                        <div class="imagen" onmouseover="parsedResults.overIMG(this)" onmouseout="parsedResults.outIMG(this)">
+                            <div onclick="location.href='#URL#'" class="overlayvendido" style="background: url('/img/lang/$$_languajeKey$$/stamps/vendido250.png') center center no-repeat; background-size: 200px 200px;"></div>
+                            <div class="imgwrap" style="width:#IMGWRAPWIDTH#px">
+                                #IMAGENES#
+                            </div>
+                        </div>
+                        <div class="share">
+                            #SHARE#
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="top_top">
+                            <div class="precio data moneda45convert moneda45_#MONEDA#" title="$$precio$$">
+                                <!--div class="icon"></div-->
+                                <span class="precio_data converPrice">
+                                    $#PRECIO#
+                                </span>
+                                <div class="iconmoneda"></div>
+                                <div class="precio_orig">
+                                    <div class="icon"></div>
+                                    <span class="precio_simbolo"></span>
+                                    <span class="precio_data">
+                                        #PRECIOORIG#
+                                    </span>
+                                    <span class="precio_divisa">
+                                        #MONEDAORIG#
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="ranking">
+                                #RANKING#
+                           </div>
+
+                            <h1 class="title">
+                                <a href="#URL#" target="_blank">
+                                    #TITLE#
+                                </a>
+                            </h1>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="icons-numbers-td">
+                        <div class="caracteristicas">
+                            <span class="caract casa_#CASA#" title="#CASA_TITLE#">
+                                #SUBTIPONOMBRE#
+                            </span>
+                            <span class="caract amueblado_#AMUEBLADO#" title="#AMUEBLADO_TITLE#">
+                                #AMUEBLADO_TITLE#
+                            </span>
+                            <span class="caract amueblado_#NOAMUEBLADO#" title="#NOAMUEBLADO_TITLE#">
+                                #NOAMUEBLADO_TITLE#
+                            </span>
+                        </div>
+                        <div class="info">
+                            <div class="preciom2 data grey" title="$$precio_#METRICA#2$$">
+                                <div class="icon"></div>
+                                <span>#PRECIOM2#</span>
+                            </div>
+                            <div class="m2 dataS grey" title="$$#METRICA#2$$">
+                                <div class="icon"></div>
+                                <span>#M2#</span>
+                            </div>
+                            <div class="superficie dataS grey" title="$$superficie$$">
+                                <div class="icon"></div>
+                                <span>#SUPERFICIE#</span>
+                            </div>
+                            <div class="construccion dataS grey" title="$$construccion$$">
+                                <div class="icon"></div>
+                                <span>#CONSTRUCCION#</span>
+                            </div>
+                            <div class="habitaciones dataS grey" title="$$habitaciones$$">
+                                <div class="icon"></div>
+                                <span>#HABITACIONES#</span>
+                            </div>
+                            <div class="banos dataS grey" title="$$banos$$">
+                                <div class="icon"></div>
+                                <span>#BANOS#</span>
+                            </div>
+                            <div class="estacionamientos dataS grey" title="$$estacionamientos$$">
+                                <div class="icon"></div>
+                                <span>#ESTACIONAMIENTOS#</span>
+                            </div>
+                            <div class="estacionamientos2 dataS grey" title="$$estacionamientos2$$">
+                                <div class="icon"></div>
+                                <span>#ESTACIONAMIENTOS2#</span>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="icons-td">
+                        <div class="items">
+                            #ITEMS#
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="description">
+                            [[inmuebleData?id=`#ID#`&tipo=`#CASA#`&name=`descripcion`]]
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <div class="bottom">
+                            <span>
+                                <a href="#URL#" class="viewthis">
+                                    #VIEWTEXT#
+                                </a>
+                            </span>
+                            <div class="contact">
+                                #CONTACT#
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</article>

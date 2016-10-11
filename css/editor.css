@@ -1,0 +1,786 @@
+.yui-busy {
+	cursor: wait !important;
+}
+.yui-toolbar-container fieldset {
+	margin: 0px; padding: 0px; border: 0px currentColor;
+}
+.yui-editor-container fieldset {
+	margin: 0px; padding: 0px; border: 0px currentColor;
+}
+.yui-toolbar-container legend {
+	display: none;
+}
+.yui-skin-sam .yui-toolbar-container .yui-button button {
+	font-size: 0px;
+}
+.yui-skin-sam .yui-toolbar-container .yui-button a {
+	font-size: 0px;
+}
+.yui-skin-sam .yui-toolbar-container .yui-button a:visited {
+	font-size: 0px;
+}
+.yui-skin-sam .yui-toolbar-container .yui-toolbar-select button {
+	font-size: 12px;
+}
+.yui-skin-sam .yui-toolbar-container .yui-toolbar-select a {
+	font-size: 12px;
+}
+.yui-skin-sam .yui-toolbar-container .yui-toolbar-select a:visited {
+	font-size: 12px;
+}
+.yui-skin-sam .yui-toolbar-container .yui-toolbar-spinbutton button {
+	font-size: 12px;
+}
+.yui-skin-sam .yui-toolbar-container .yui-toolbar-spinbutton a {
+	font-size: 12px;
+}
+.yui-skin-sam .yui-toolbar-container .yui-toolbar-spinbutton a:visited {
+	font-size: 12px;
+}
+.yui-skin-sam .yui-toolbar-container .yui-toolbar-spinbutton a.up {
+	padding: 0px; line-height: 0; font-size: 0px;
+}
+.yui-skin-sam .yui-toolbar-container .yui-toolbar-spinbutton a.down {
+	padding: 0px; line-height: 0; font-size: 0px;
+}
+.yui-toolbar-container .yui-toolbar-subcont {
+	padding: 0.25em 0px; zoom: 1;
+}
+.yui-toolbar-container-collapsed .yui-toolbar-subcont {
+	display: none;
+}
+.yui-toolbar-container .yui-toolbar-subcont::after {
+	height: 0px; clear: both; display: block; visibility: hidden; content: ".";
+}
+.yui-toolbar-container span.yui-toolbar-draghandle {
+	margin: 0px 0px 0px 0.2em; width: 2px; height: 20px; text-indent: 77777px; overflow: hidden; clear: none; border-right-color: rgb(153, 153, 153); border-left-color: rgb(153, 153, 153); border-right-width: 1px; border-left-width: 1px; border-right-style: solid; border-left-style: solid; float: left; display: block; cursor: move;
+}
+.yui-toolbar-container .draggable.yui-toolbar-titlebar {
+	cursor: move;
+}
+.yui-toolbar-container .yui-toolbar-titlebar {
+	position: relative;
+}
+.yui-toolbar-container .yui-toolbar-titlebar h2 {
+	margin: 0px; padding: 0.2em; border: currentColor; color: rgb(0, 0, 0); letter-spacing: 0px; font-weight: bold;
+}
+.yui-toolbar-container .yui-toolbar-titlebar h2 a {
+	color: rgb(0, 0, 0); text-decoration: none; cursor: default;
+}
+.yui-toolbar-grouped.yui-toolbar-container span.yui-toolbar-draghandle {
+	height: 40px;
+}
+.yui-toolbar-container .yui-toolbar-group {
+	margin-right: 0.5em; float: left; zoom: 1;
+}
+.yui-toolbar-container .yui-toolbar-group::after {
+	height: 0px; clear: both; display: block; visibility: hidden; content: ".";
+}
+.yui-toolbar-container .yui-toolbar-group h3 {
+	margin: 0px; padding: 0px 0px 0px 0.25em; font-size: 75%;
+}
+.yui-toolbar-container span.yui-toolbar-separator {
+	margin: 0.2em 0px 0.2em 0.1em; padding: 0px; width: 2px; height: 18px; float: left; display: none;
+}
+.yui-toolbar-grouped.yui-toolbar-container span.yui-toolbar-separator {
+	height: 45px;
+}
+.yui-toolbar-grouped.yui-toolbar-container .yui-toolbar-group span.yui-toolbar-separator {
+	height: 18px; display: block;
+}
+.yui-toolbar-container ul li {
+	margin: 0px; padding: 0px; list-style-type: none;
+}
+.yui-toolbar-container .yui-toolbar-nogrouplabels h3 {
+	display: none;
+}
+.yui-toolbar-container .yui-push-button {
+	position: relative; cursor: pointer;
+}
+.yui-toolbar-container .yui-color-button {
+	position: relative; cursor: pointer;
+}
+.yui-toolbar-container .yui-menu-button {
+	position: relative; cursor: pointer;
+}
+.yui-toolbar-container .yui-button .first-child {
+	width: 100%; height: 100%; overflow: hidden; font-size: 0px;
+}
+.yui-toolbar-container .yui-button .first-child a {
+	width: 100%; height: 100%; overflow: hidden; font-size: 0px;
+}
+.yui-toolbar-container .yui-button-disabled {
+	cursor: default;
+}
+.yui-toolbar-container .yui-button-disabled .yui-toolbar-icon {
+	filter: alpha(opacity=50); opacity: 0.5;
+}
+.yui-toolbar-container .yui-button-disabled .up {
+	filter: alpha(opacity=50); opacity: 0.5;
+}
+.yui-toolbar-container .yui-button-disabled .down {
+	filter: alpha(opacity=50); opacity: 0.5;
+}
+.yui-toolbar-container .yui-button a {
+	overflow: hidden;
+}
+.yui-toolbar-container .yui-toolbar-select .first-child a {
+	cursor: pointer;
+}
+.yui-toolbar-fontname-arial {
+	font-family: Arial;
+}
+.yui-toolbar-fontname-arial-black {
+	font-family: Arial Black;
+}
+.yui-toolbar-fontname-comic-sans-ms {
+	font-family: Comic Sans MS;
+}
+.yui-toolbar-fontname-courier-new {
+	font-family: Courier New;
+}
+.yui-toolbar-fontname-times-new-roman {
+	font-family: Times New Roman;
+}
+.yui-toolbar-fontname-verdana {
+	font-family: Verdana;
+}
+.yui-toolbar-fontname-impact {
+	font-family: Impact;
+}
+.yui-toolbar-fontname-lucida-console {
+	font-family: Lucida Console;
+}
+.yui-toolbar-fontname-tahoma {
+	font-family: Tahoma;
+}
+.yui-toolbar-fontname-trebuchet-ms {
+	font-family: Trebuchet MS;
+}
+.yui-toolbar-container .yui-toolbar-spinbutton {
+	position: relative;
+}
+.yui-toolbar-container .yui-toolbar-spinbutton .first-child a {
+	z-index: 0; opacity: 1;
+}
+.yui-toolbar-container .yui-toolbar-spinbutton a.up {
+	margin: 0px; padding: 0px; right: 0px; display: block; position: absolute; z-index: 1; cursor: pointer;
+}
+.yui-toolbar-container .yui-toolbar-spinbutton a.down {
+	margin: 0px; padding: 0px; right: 0px; display: block; position: absolute; z-index: 1; cursor: pointer;
+}
+.yui-toolbar-container .yui-overlay {
+	position: absolute;
+}
+.yui-toolbar-container .yui-overlay ul li {
+	margin: 0px; list-style-type: none;
+}
+.yui-toolbar-container {
+	z-index: 1;
+}
+.yui-editor-container .yui-editor-editable-container {
+	width: 100%; position: relative; z-index: 0;
+}
+.yui-editor-container .yui-editor-masked {
+	left: 0px; top: 0px; width: 100%; height: 100%; filter: alpha(opacity=50); position: absolute; opacity: 0.5; background-color: rgb(204, 204, 204);
+}
+.yui-editor-container iframe {
+	margin: 0px; padding: 0px; border: 0px currentColor; display: block; zoom: 1;
+}
+.yui-editor-container .yui-editor-editable {
+	margin: 0px; padding: 0px;
+}
+.yui-editor-container .dompath {
+	font-size: 85%;
+}
+.yui-editor-panel .hd {
+	text-align: left; position: relative;
+}
+.yui-editor-panel .hd h3 {
+	margin: 0px; padding: 0.25em 0px 0.25em 0.25em; font-weight: bold;
+}
+.yui-editor-panel .bd {
+	width: 100%; position: relative; zoom: 1;
+}
+.yui-editor-panel .bd div.yui-editor-body-cont {
+	padding: 0.25em 0.1em; zoom: 1;
+}
+.yui-editor-panel .bd .gecko form {
+	overflow: auto;
+}
+.yui-editor-panel .bd div.yui-editor-body-cont::after {
+	height: 0px; clear: both; display: block; visibility: hidden; content: ".";
+}
+.yui-editor-panel .ft {
+	width: 99%; text-align: right; clear: both; float: left;
+}
+.yui-editor-panel .ft span.tip {
+	padding: 0.5em 0.5em 0.5em 23px; text-align: left; display: block; position: relative; zoom: 1;
+}
+.yui-editor-panel label {
+	padding: 0px; width: 100%; text-align: left; clear: both; float: left; zoom: 1;
+}
+.yui-editor-panel .gecko label {
+	overflow: auto;
+}
+.yui-editor-panel label strong {
+	width: 6em; float: left;
+}
+.yui-editor-panel .removeLink {
+	width: 80%; text-align: right;
+}
+.yui-editor-panel label input {
+	margin-left: 0.25em; float: left;
+}
+.yui-editor-panel .yui-toolbar-group {
+	margin-bottom: 0.75em;
+}
+.yui-editor-panel .height-width {
+	float: left;
+}
+.yui-editor-panel .height-width span {
+	overflow: visible; font-style: italic; float: left; display: block;
+}
+.yui-editor-panel .height-width span.info {
+	font-size: 70%; margin-top: 3px; float: none;
+}
+.yui-editor-panel .yui-toolbar-bordersize {
+	font-size: 75%;
+}
+.yui-editor-panel .yui-toolbar-bordertype {
+	font-size: 75%;
+}
+.yui-editor-panel .yui-toolbar-container span.yui-toolbar-separator {
+	border: currentColor;
+}
+.yui-editor-panel .yui-toolbar-bordersize span a span {
+	left: 4px; top: 3px; width: 24px; height: 8px; text-indent: 52px; font-size: 0px; display: block; position: absolute; _top: -5px;
+}
+.yui-editor-panel .yui-toolbar-bordertype span a span {
+	left: 4px; top: 3px; width: 24px; height: 8px; text-indent: 52px; font-size: 0px; display: block; position: absolute; _top: -5px;
+}
+.yui-editor-panel .yui-toolbar-bordertype span a span.yui-toolbar-bordertype-solid {
+	border-bottom-color: black; border-bottom-width: 1px; border-bottom-style: solid;
+}
+.yui-editor-panel .yui-toolbar-bordertype span a span.yui-toolbar-bordertype-dotted {
+	border-bottom-color: black; border-bottom-width: 1px; border-bottom-style: dotted;
+}
+.yui-editor-panel .yui-toolbar-bordertype span a span.yui-toolbar-bordertype-dashed {
+	border-bottom-color: black; border-bottom-width: 1px; border-bottom-style: dashed;
+}
+.yui-editor-panel .yui-toolbar-bordersize span a span.yui-toolbar-bordersize-0 {
+	text-indent: 0px; font-size: 75%;
+}
+.yui-editor-panel .yui-toolbar-bordersize span a span.yui-toolbar-bordersize-1 {
+	border-bottom-color: black; border-bottom-width: 1px; border-bottom-style: solid;
+}
+.yui-editor-panel .yui-toolbar-bordersize span a span.yui-toolbar-bordersize-2 {
+	border-bottom-color: black; border-bottom-width: 2px; border-bottom-style: solid;
+}
+.yui-editor-panel .yui-toolbar-bordersize span a span.yui-toolbar-bordersize-3 {
+	top: 2px; border-bottom-color: black; border-bottom-width: 3px; border-bottom-style: solid;
+}
+.yui-editor-panel .yui-toolbar-bordersize span a span.yui-toolbar-bordersize-4 {
+	top: 1px; border-bottom-color: black; border-bottom-width: 4px; border-bottom-style: solid;
+}
+.yui-editor-panel .yui-toolbar-bordersize span a span.yui-toolbar-bordersize-5 {
+	top: 1px; border-bottom-color: black; border-bottom-width: 5px; border-bottom-style: solid;
+}
+.yui-toolbar-container .yui-toolbar-bordersize-menu {
+	width: 95px !important;
+}
+.yui-toolbar-container .yui-toolbar-bordertype-menu {
+	width: 95px !important;
+}
+.yui-toolbar-bordersize-menu .yuimenuitemlabel {
+	margin: 0px 3px 7px 17px;
+}
+.yui-toolbar-bordertype-menu .yuimenuitemlabel {
+	margin: 0px 3px 7px 17px;
+}
+.yui-toolbar-bordersize-menu .yuimenuitemlabel {
+	margin: 0px 3px 7px 17px;
+}
+.yui-toolbar-bordertype-menu .yuimenuitemlabel:hover {
+	margin: 0px 3px 7px 17px;
+}
+.yui-toolbar-bordersize-menu .yuimenuitemlabel .checkedindicator {
+	left: -12px; position: absolute;
+}
+.yui-toolbar-bordertype-menu .yuimenuitemlabel .checkedindicator {
+	left: -12px; position: absolute;
+}
+.yui-toolbar-bordersize-menu li.yui-toolbar-bordersize-1 a {
+	height: 14px; border-bottom-color: black; border-bottom-width: 1px; border-bottom-style: solid;
+}
+.yui-toolbar-bordersize-menu li.yui-toolbar-bordersize-2 a {
+	height: 14px; border-bottom-color: black; border-bottom-width: 2px; border-bottom-style: solid;
+}
+.yui-toolbar-bordersize-menu li.yui-toolbar-bordersize-3 a {
+	height: 14px; border-bottom-color: black; border-bottom-width: 3px; border-bottom-style: solid;
+}
+.yui-toolbar-bordersize-menu li.yui-toolbar-bordersize-4 a {
+	height: 14px; border-bottom-color: black; border-bottom-width: 4px; border-bottom-style: solid;
+}
+.yui-toolbar-bordersize-menu li.yui-toolbar-bordersize-5 a {
+	height: 14px; border-bottom-color: black; border-bottom-width: 5px; border-bottom-style: solid;
+}
+.yui-toolbar-bordertype-menu li.yui-toolbar-bordertype-solid a {
+	height: 14px; border-bottom-color: black; border-bottom-width: 1px; border-bottom-style: solid;
+}
+.yui-toolbar-bordertype-menu li.yui-toolbar-bordertype-dashed a {
+	height: 14px; border-bottom-color: black; border-bottom-width: 1px; border-bottom-style: dashed;
+}
+.yui-toolbar-bordertype-menu li.yui-toolbar-bordertype-dotted a {
+	height: 14px; border-bottom-color: black; border-bottom-width: 1px; border-bottom-style: dotted;
+}
+h2.yui-editor-skipheader {
+	margin: 0px; padding: 0px; border: currentColor; width: 0px; height: 0px; overflow: hidden; position: absolute;
+}
+h3.yui-editor-skipheader {
+	margin: 0px; padding: 0px; border: currentColor; width: 0px; height: 0px; overflow: hidden; position: absolute;
+}
+.yui-toolbar-colors {
+	width: 133px; overflow: hidden; display: none; z-index: 100; zoom: 1;
+}
+.yui-toolbar-colors::after {
+	height: 0px; clear: both; display: block; visibility: hidden; content: ".";
+}
+.yui-toolbar-colors a {
+	margin: 0px; border: 1px solid rgb(246, 247, 238); width: 9px; height: 9px; text-indent: 999px; overflow: hidden; float: left; display: block; cursor: pointer;
+}
+.yui-toolbar-colors a:hover {
+	border: 1px solid black;
+}
+.yui-color-button-menu {
+	overflow: visible; background-color: transparent;
+}
+.yui-toolbar-colors span {
+	padding: 3px; width: 100%; overflow: hidden; float: left; display: block; position: relative; zoom: 1;
+}
+.yui-toolbar-colors span::after {
+	height: 0px; clear: both; display: block; visibility: hidden; content: ".";
+}
+.yui-toolbar-colors span em {
+	margin: 0.75px; border: 1px solid black; width: 30px; height: 35px; text-indent: 999px; overflow: hidden; float: left; display: block;
+}
+.yui-toolbar-colors span strong {
+	width: 65%; padding-left: 3px; font-size: 85%; font-weight: normal; float: left; display: block;
+}
+.yui-toolbar-group-undoredo h3 {
+	width: 68px;
+}
+.yui-toolbar-group-insertitem h3 {
+	width: 68px;
+}
+.yui-toolbar-group-indentlist h3 {
+	width: 68px;
+}
+.yui-toolbar-group-indentlist2 h3 {
+	width: 122px;
+}
+.yui-toolbar-group-alignment h3 {
+	width: 130px;
+}
+.yui-skin-sam .yui-editor-container {
+	border: 1px solid rgb(128, 128, 128);
+}
+.yui-skin-sam .yui-toolbar-container {
+	zoom: 1;
+}
+.yui-skin-sam .yui-toolbar-container .yui-toolbar-titlebar {
+	background: url("../../../../assets/skins/sam/sprite.png") repeat-x 0px -200px; position: relative;
+}
+.yui-skin-sam .yui-editor-container .draggable .yui-toolbar-titlebar {
+	cursor: move;
+}
+.yui-skin-sam .yui-toolbar-container .yui-toolbar-titlebar h2 {
+	margin: 0px; padding: 0.3em 1em; text-align: left; color: rgb(0, 0, 0); font-size: 100%; font-weight: bold;
+}
+.yui-skin-sam .yui-toolbar-container .yui-toolbar-group h3 {
+	margin: 1em 0px 0px; text-align: left; color: rgb(128, 128, 128); padding-bottom: 0px; padding-left: 0.25em; font-size: 75%;
+}
+.yui-toolbar-container span.yui-toolbar-separator {
+	margin: 0px 0.25em; border: currentColor; text-indent: 33px; overflow: hidden;
+}
+.yui-skin-sam .yui-toolbar-container {
+	background-color: rgb(242, 242, 242);
+}
+.yui-skin-sam .yui-toolbar-container .yui-toolbar-subcont {
+	padding: 0px 1em 0.35em; border-bottom-color: rgb(128, 128, 128); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.yui-skin-sam .yui-toolbar-container-collapsed .yui-toolbar-titlebar {
+	border-bottom-color: rgb(128, 128, 128); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.yui-skin-sam .yui-editor-container .visible .yui-menu-shadow {
+	display: none;
+}
+.yui-skin-sam .yui-editor-panel .visible .yui-menu-shadow {
+	display: none;
+}
+.yui-skin-sam .yui-editor-container ul {
+	margin: 0px; padding: 0px; list-style-type: none;
+}
+.yui-skin-sam .yui-editor-container ul li {
+	margin: 0px; padding: 0px; list-style-type: none;
+}
+.yui-skin-sam .yui-toolbar-group ul li.yui-toolbar-groupitem {
+	float: left;
+}
+.yui-skin-sam .yui-editor-container .dompath {
+	padding: 0.25em; text-align: left; color: rgb(153, 153, 153); border-top-color: rgb(128, 128, 128); border-top-width: 1px; border-top-style: solid; background-color: rgb(242, 242, 242);
+}
+.yui-skin-sam .yui-toolbar-container .collapse {
+	background: url("../../../../assets/skins/sam/sprite.png") no-repeat 0px -400px;
+}
+.yui-skin-sam .yui-toolbar-container .collapsed {
+	background: url("../../../../assets/skins/sam/sprite.png") no-repeat 0px -350px;
+}
+.yui-skin-sam .yui-toolbar-container .yui-toolbar-titlebar span.collapse {
+	top: 4px; width: 15px; height: 15px; right: 2px; text-indent: 9999px; overflow: hidden; display: block; position: absolute; cursor: pointer;
+}
+.yui-skin-sam .yui-toolbar-container .yui-push-button {
+	background: url("../../../../assets/skins/sam/sprite.png") repeat-x 0px 0px; border-width: 1px 0px; border-style: solid; border-color: rgb(128, 128, 128); margin: 0px; width: 30px; height: 22px; color: rgb(242, 242, 242); display: block; position: relative; zoom: 1; _font-size: 0;
+}
+.yui-skin-sam .yui-toolbar-container .yui-color-button {
+	background: url("../../../../assets/skins/sam/sprite.png") repeat-x 0px 0px; border-width: 1px 0px; border-style: solid; border-color: rgb(128, 128, 128); margin: 0px; width: 30px; height: 22px; color: rgb(242, 242, 242); display: block; position: relative; zoom: 1; _font-size: 0;
+}
+.yui-skin-sam .yui-toolbar-container .yui-menu-button {
+	background: url("../../../../assets/skins/sam/sprite.png") repeat-x 0px 0px; border-width: 1px 0px; border-style: solid; border-color: rgb(128, 128, 128); margin: 0px; width: 30px; height: 22px; color: rgb(242, 242, 242); display: block; position: relative; zoom: 1; _font-size: 0;
+}
+.yui-skin-sam .yui-toolbar-container .yui-push-button a {
+	height: 20px; color: rgb(0, 0, 0); line-height: 2; overflow: hidden; padding-left: 35px; font-size: 0px; text-decoration: none; display: block; white-space: nowrap;
+}
+.yui-skin-sam .yui-toolbar-container .yui-color-button a {
+	height: 20px; color: rgb(0, 0, 0); line-height: 2; overflow: hidden; padding-left: 35px; font-size: 0px; text-decoration: none; display: block; white-space: nowrap;
+}
+.yui-skin-sam .yui-toolbar-container .yui-menu-button a {
+	height: 20px; color: rgb(0, 0, 0); line-height: 2; overflow: hidden; padding-left: 35px; font-size: 0px; text-decoration: none; display: block; white-space: nowrap;
+}
+.yui-skin-sam .yui-toolbar-container .yui-toolbar-spinbutton a {
+	font-size: 12px;
+}
+.yui-skin-sam .yui-toolbar-container .yui-toolbar-select a {
+	font-size: 12px;
+}
+.yui-skin-sam .yui-toolbar-container .yui-push-button .first-child {
+	border-width: 0px 1px; border-style: solid; border-color: rgb(128, 128, 128); margin: 0px -1px; display: block; position: relative;
+}
+.yui-skin-sam .yui-toolbar-container .yui-color-button .first-child {
+	border-width: 0px 1px; border-style: solid; border-color: rgb(128, 128, 128); margin: 0px -1px; display: block; position: relative;
+}
+.yui-skin-sam .yui-toolbar-container .yui-menu-button .first-child {
+	border-width: 0px 1px; border-style: solid; border-color: rgb(128, 128, 128); margin: 0px -1px; display: block; position: relative;
+}
+.yui-skin-sam .yui-toolbar-container .yui-push-button-disabled .first-child {
+	border-color: rgb(204, 204, 204);
+}
+.yui-skin-sam .yui-toolbar-container .yui-color-button-disabled .first-child {
+	border-color: rgb(204, 204, 204);
+}
+.yui-skin-sam .yui-toolbar-container .yui-menu-button-disabled .first-child {
+	border-color: rgb(204, 204, 204);
+}
+.yui-skin-sam .yui-toolbar-container .yui-push-button-disabled a {
+	color: rgb(166, 166, 166); cursor: default;
+}
+.yui-skin-sam .yui-toolbar-container .yui-color-button-disabled a {
+	color: rgb(166, 166, 166); cursor: default;
+}
+.yui-skin-sam .yui-toolbar-container .yui-menu-button-disabled a {
+	color: rgb(166, 166, 166); cursor: default;
+}
+.yui-skin-sam .yui-toolbar-container .yui-push-button-disabled {
+	border-color: rgb(204, 204, 204);
+}
+.yui-skin-sam .yui-toolbar-container .yui-color-button-disabled {
+	border-color: rgb(204, 204, 204);
+}
+.yui-skin-sam .yui-toolbar-container .yui-menu-button-disabled {
+	border-color: rgb(204, 204, 204);
+}
+.yui-skin-sam .yui-toolbar-container .yui-button .first-child {
+	
+}
+.yui-skin-sam .yui-toolbar-container .yui-toolbar-fontname {
+	width: 135px;
+}
+.yui-skin-sam .yui-toolbar-container .yui-toolbar-heading {
+	width: 92px;
+}
+.yui-skin-sam .yui-toolbar-container .yui-button-hover {
+	background: url("../../../../assets/skins/sam/sprite.png") repeat-x 0px -1300px; border-color: rgb(128, 128, 128);
+}
+.yui-skin-sam .yui-toolbar-container .yui-button-selected {
+	background: url("../../../../assets/skins/sam/sprite.png") repeat-x 0px -1700px; border-color: rgb(128, 128, 128);
+}
+.yui-skin-sam .yui-toolbar-container .yui-toolbar-nogrouplabels h3 {
+	display: none;
+}
+.yui-skin-sam .yui-toolbar-container .yui-toolbar-nogrouplabels .yui-toolbar-group {
+	margin-top: 0.75em;
+}
+.yui-skin-sam .yui-toolbar-container .yui-push-button span.yui-toolbar-icon {
+	background: url("editor-sprite.gif") no-repeat 30px 30px; top: 2px; width: 18px; height: 18px; overflow: hidden; display: block; position: absolute;
+}
+.yui-skin-sam .yui-toolbar-container .yui-color-button span.yui-toolbar-icon {
+	background: url("editor-sprite.gif") no-repeat 30px 30px; top: 2px; width: 18px; height: 18px; overflow: hidden; display: block; position: absolute;
+}
+.yui-skin-sam .yui-toolbar-container .yui-menu-button span.yui-toolbar-icon {
+	background: url("editor-sprite.gif") no-repeat 30px 30px; top: 2px; width: 18px; height: 18px; overflow: hidden; display: block; position: absolute;
+}
+.yui-skin-sam .yui-toolbar-container .yui-button-selected span.yui-toolbar-icon {
+	background-image: url("editor-sprite-active.gif");
+}
+.yui-skin-sam .yui-toolbar-container .yui-button-hover span.yui-toolbar-icon {
+	background-image: url("editor-sprite-active.gif");
+}
+.yui-skin-sam .yui-toolbar-container .visible .yuimenuitemlabel {
+	color: rgb(0, 0, 0); cursor: pointer;
+}
+.yui-skin-sam .yui-toolbar-container .yui-button-menu {
+	background-color: rgb(255, 255, 255);
+}
+.yui-skin-sam .yui-toolbar-container .yui-button-menu .yui-menu-body-scrolled {
+	position: relative;
+}
+.yui-skin-sam div.yuimenu li.selected {
+	background-color: rgb(179, 212, 255);
+}
+.yui-skin-sam div.yuimenu li.selected a.selected {
+	color: rgb(0, 0, 0);
+}
+.yui-skin-sam .yui-toolbar-container .yui-toolbar-bold span.yui-toolbar-icon {
+	left: 5px;
+}
+.yui-skin-sam .yui-toolbar-container .yui-toolbar-strikethrough span.yui-toolbar-icon {
+	background-position: 0px -108px; left: 5px;
+}
+.yui-skin-sam .yui-toolbar-container .yui-toolbar-italic span.yui-toolbar-icon {
+	background-position: 0px -36px; left: 5px;
+}
+.yui-skin-sam .yui-toolbar-container .yui-toolbar-undo span.yui-toolbar-icon {
+	background-position: 0px -1326px; left: 5px;
+}
+.yui-skin-sam .yui-toolbar-container .yui-toolbar-redo span.yui-toolbar-icon {
+	background-position: 0px -1355px; left: 5px;
+}
+.yui-skin-sam .yui-toolbar-container .yui-toolbar-underline span.yui-toolbar-icon {
+	background-position: 0px -72px; left: 5px;
+}
+.yui-skin-sam .yui-toolbar-container .yui-toolbar-subscript span.yui-toolbar-icon {
+	background-position: 0px -180px; left: 5px;
+}
+.yui-skin-sam .yui-toolbar-container .yui-toolbar-superscript span.yui-toolbar-icon {
+	background-position: 0px -144px; left: 5px;
+}
+.yui-skin-sam .yui-toolbar-container .yui-toolbar-forecolor span.yui-toolbar-icon {
+	background-position: 0px -216px; left: 5px;
+}
+.yui-skin-sam .yui-toolbar-container .yui-toolbar-backcolor span.yui-toolbar-icon {
+	background-position: 0px -288px; left: 5px;
+}
+.yui-skin-sam .yui-toolbar-container .yui-toolbar-justifyleft span.yui-toolbar-icon {
+	background-position: 0px -324px; left: 5px;
+}
+.yui-skin-sam .yui-toolbar-container .yui-toolbar-justifycenter span.yui-toolbar-icon {
+	background-position: 0px -360px; left: 5px;
+}
+.yui-skin-sam .yui-toolbar-container .yui-toolbar-justifyright span.yui-toolbar-icon {
+	background-position: 0px -396px; left: 5px;
+}
+.yui-skin-sam .yui-toolbar-container .yui-toolbar-justifyfull span.yui-toolbar-icon {
+	background-position: 0px -432px; left: 5px;
+}
+.yui-skin-sam .yui-toolbar-container .yui-toolbar-indent span.yui-toolbar-icon {
+	background-position: 0px -720px; left: 5px;
+}
+.yui-skin-sam .yui-toolbar-container .yui-toolbar-outdent span.yui-toolbar-icon {
+	background-position: 0px -684px; left: 5px;
+}
+.yui-skin-sam .yui-toolbar-container .yui-toolbar-createlink span.yui-toolbar-icon {
+	background-position: 0px -792px; left: 5px;
+}
+.yui-skin-sam .yui-toolbar-container .yui-toolbar-insertimage span.yui-toolbar-icon {
+	background-position: 1px -756px; left: 5px;
+}
+.yui-skin-sam .yui-toolbar-container .yui-toolbar-left span.yui-toolbar-icon {
+	background-position: 0px -972px; left: 5px;
+}
+.yui-skin-sam .yui-toolbar-container .yui-toolbar-right span.yui-toolbar-icon {
+	background-position: 0px -936px; left: 5px;
+}
+.yui-skin-sam .yui-toolbar-container .yui-toolbar-inline span.yui-toolbar-icon {
+	background-position: 0px -900px; left: 5px;
+}
+.yui-skin-sam .yui-toolbar-container .yui-toolbar-block span.yui-toolbar-icon {
+	background-position: 0px -864px; left: 5px;
+}
+.yui-skin-sam .yui-toolbar-container .yui-toolbar-bordercolor span.yui-toolbar-icon {
+	background-position: 0px -252px; left: 5px;
+}
+.yui-skin-sam .yui-toolbar-container .yui-toolbar-removeformat span.yui-toolbar-icon {
+	background-position: 0px -1080px; left: 5px;
+}
+.yui-skin-sam .yui-toolbar-container .yui-toolbar-hiddenelements span.yui-toolbar-icon {
+	background-position: 0px -1044px; left: 5px;
+}
+.yui-skin-sam .yui-toolbar-container .yui-toolbar-insertunorderedlist span.yui-toolbar-icon {
+	background-position: 0px -468px; left: 5px;
+}
+.yui-skin-sam .yui-toolbar-container .yui-toolbar-insertorderedlist span.yui-toolbar-icon {
+	background-position: 0px -504px; left: 5px;
+}
+.yui-skin-sam .yui-toolbar-container .yui-toolbar-spinbutton {
+	width: 35px;
+}
+.yui-skin-sam .yui-toolbar-container .yui-toolbar-spinbutton .first-child {
+	width: 35px;
+}
+.yui-skin-sam .yui-toolbar-container .yui-toolbar-spinbutton .first-child a {
+	text-align: left; padding-left: 2px;
+}
+.yui-skin-sam .yui-toolbar-container .yui-toolbar-spinbutton span.yui-toolbar-icon {
+	display: none;
+}
+.yui-skin-sam .yui-toolbar-container .yui-toolbar-spinbutton a.up {
+	background: url("editor-sprite.gif") no-repeat 0px -1222px; padding: 0px; width: 7px; height: 6px; right: 2px; overflow: hidden; min-height: 0px;
+}
+.yui-skin-sam .yui-toolbar-container .yui-toolbar-spinbutton a.down {
+	background: url("editor-sprite.gif") no-repeat 0px -1222px; padding: 0px; width: 7px; height: 6px; right: 2px; overflow: hidden; min-height: 0px;
+}
+.yui-skin-sam .yui-toolbar-container .yui-toolbar-spinbutton a.up {
+	background-position: 0px -1222px; top: 2px;
+}
+.yui-skin-sam .yui-toolbar-container .yui-toolbar-spinbutton a.down {
+	background-position: 0px -1187px; bottom: 2px;
+}
+.yui-skin-sam .yui-toolbar-container select {
+	border: 1px solid rgb(128, 128, 128); height: 22px;
+}
+.yui-skin-sam .yui-toolbar-container .yui-toolbar-select .first-child a {
+	text-align: left; padding-left: 5px;
+}
+.yui-skin-sam .yui-toolbar-container .yui-toolbar-select span.yui-toolbar-icon {
+	background: url("editor-sprite.gif") no-repeat 0px -1144px; top: 0px; height: 20px; right: -2px; overflow: hidden;
+}
+.yui-skin-sam .yui-editor-panel .yui-color-button-menu .bd {
+	border: currentColor; width: 135px; background-color: transparent;
+}
+.yui-skin-sam .yui-color-button-menu .yui-toolbar-colors {
+	border: 1px solid rgb(128, 128, 128);
+}
+.yui-skin-sam .yui-editor-panel {
+	margin: 0px; padding: 0px; border: currentColor; overflow: visible; position: absolute; background-color: transparent;
+}
+.yui-skin-sam .yui-editor-panel .hd {
+	margin: 10px 0px 0px; padding: 0px; border: currentColor;
+}
+.yui-skin-sam .yui-editor-panel .hd h3 {
+	background: url("../../../../assets/skins/sam/sprite.png") repeat-x 0px -200px; margin: 0px; padding: 3px 0px 0px; border: 1px solid rgb(128, 128, 128); width: 99%; height: 20px; color: rgb(0, 0, 0); text-indent: 5px; font-size: 93%; position: relative;
+}
+.yui-skin-sam .yui-editor-panel .bd {
+	margin: 0px; padding: 0px; width: 99%; overflow: visible; border-right-color: rgb(128, 128, 128); border-left-color: rgb(128, 128, 128); border-right-width: 1px; border-left-width: 1px; border-right-style: solid; border-left-style: solid; background-color: rgb(242, 242, 242);
+}
+.yui-skin-sam .yui-editor-panel ul {
+	margin: 0px; padding: 0px; list-style-type: none;
+}
+.yui-skin-sam .yui-editor-panel ul li {
+	margin: 0px; padding: 0px;
+}
+.yui-skin-sam .yui-editor-panel .yui-toolbar-container .yui-toolbar-subcont {
+	padding: 0px; border: currentColor; margin-top: 0.35em;
+}
+.yui-skin-sam .yui-editor-panel .yui-toolbar-bordersize {
+	width: 50px;
+}
+.yui-skin-sam .yui-editor-panel .yui-toolbar-bordertype {
+	width: 50px;
+}
+.yui-skin-sam .yui-editor-panel label {
+	padding: 4px 0px; margin-bottom: 7px; float: none; display: block;
+}
+.yui-skin-sam .yui-editor-panel label strong {
+	text-align: right; padding-top: 2px; font-size: 93%; font-weight: normal;
+}
+.yui-skin-sam .yui-editor-panel label input {
+	width: 75%;
+}
+.yui-skin-sam .yui-editor-panel .createlink_target {
+	width: auto; margin-right: 5px;
+}
+.yui-skin-sam .yui-editor-panel .insertimage_target {
+	width: auto; margin-right: 5px;
+}
+.yui-skin-sam .yui-editor-panel .removeLink {
+	width: 98%;
+}
+.yui-skin-sam .yui-editor-panel label input.warning {
+	background-color: rgb(255, 238, 105);
+}
+.yui-skin-sam .yui-editor-panel .yui-toolbar-group h3 {
+	margin: 5px 0px 0px; padding: 0px 3px 0px 0px; text-align: right; color: rgb(0, 0, 0); font-size: 93%; font-weight: normal; float: left;
+}
+.yui-skin-sam .yui-editor-panel .height-width h3 {
+	margin: 3px 0px 0px 10px;
+}
+.yui-skin-sam .yui-editor-panel .height-width {
+	margin: 3px 0px 0px 35px; width: 42%;
+}
+.yui-skin-sam .yui-editor-panel .yui-toolbar-group-border {
+	width: 190px;
+}
+.yui-skin-sam .yui-editor-panel .no-button .yui-toolbar-group-border {
+	width: 210px;
+}
+.yui-skin-sam .yui-editor-panel .yui-toolbar-group-padding {
+	width: 203px; _width: 198px;
+}
+.yui-skin-sam .yui-editor-panel .no-button .yui-toolbar-group-padding {
+	width: 172px;
+}
+.yui-skin-sam .yui-editor-panel .yui-toolbar-group-padding h3 {
+	margin-left: 25px;
+}
+.yui-skin-sam .yui-editor-panel .yui-toolbar-group-textflow {
+	width: 182px;
+}
+.yui-skin-sam .yui-editor-panel .hd {
+	
+}
+.yui-skin-sam .yui-editor-panel .ft {
+	border-width: medium 1px 1px; border-style: none solid solid; border-color: currentColor rgb(128, 128, 128) rgb(128, 128, 128); margin: 0px 0px 2px; padding: 0px; background-color: rgb(242, 242, 242);
+}
+.yui-skin-sam .yui-editor-panel .hd span.close {
+	background: url("../../../../assets/skins/sam/sprite.png") no-repeat 0px -300px; top: 2px; width: 26px; height: 16px; right: 5px; text-indent: 500px; overflow: hidden; display: block; position: absolute; cursor: pointer;
+}
+.yui-skin-sam .yui-editor-panel .ft span.tip {
+	font-size: 85%; border-top-color: rgb(128, 128, 128); border-top-width: 1px; border-top-style: solid; background-color: rgb(237, 245, 255);
+}
+.yui-skin-sam .yui-editor-panel .ft span.tip strong {
+	margin: 0px 2px 8px 0px; float: left; display: block;
+}
+.yui-skin-sam .yui-editor-panel .ft span.tip span.icon {
+	background: url("editor-sprite.gif") no-repeat 0px -1260px; left: 2px; top: 8px; width: 20px; height: 20px; display: block; position: absolute;
+}
+.yui-skin-sam .yui-editor-panel .ft span.tip span.icon-info {
+	background-position: 2px -1260px;
+}
+.yui-skin-sam .yui-editor-panel .ft span.tip span.icon-warn {
+	background-position: 2px -1296px;
+}
+.yui-skin-sam .yui-editor-panel .hd span.knob {
+	background: url("editor-knob.gif") no-repeat 0px 0px; left: 25px; top: -10px; width: 28px; height: 10px; text-indent: 9999px; overflow: hidden; position: absolute;
+}
+.yui-skin-sam .yui-editor-panel .yui-toolbar-container {
+	border: currentColor; width: 100%; float: left; background-image: none;
+}
+.yui-skin-sam .yui-editor-panel .yui-toolbar-container .bd {
+	background-color: rgb(255, 255, 255);
+}
+.yui-editor-blankimage {
+	background-image: url("blankimage.png");
+}
+.yui-skin-sam .yui-editor-container .yui-resize-handle-br {
+	background-position: -20px -60px; width: 11px; height: 11px; background-color: transparent;
+}
