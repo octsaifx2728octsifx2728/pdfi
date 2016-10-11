@@ -140,8 +140,7 @@ class search_app{
                      break;
                 case "anio1":
                     $anyo=explode("-",$v);
-                    if(intval($anyo[0]))$query[]="`i`.`anio`>='".intval($anyo[0])."' ";
-                    if(intval($anyo[1]))$query[]="`i`.`anio`<='".intval($anyo[1])."' ";
+                    
                     break;
                 case "m2s1":
                     $rango=$fields[3]["fields"][2]["ranges"][$core->getFilter("tipovr")];
@@ -316,6 +315,8 @@ order by  ".
     //"`a`.`vendido`,".
         "`i`.`fecvenpremium` DESC,`i`.`fecha_alta` DESC limit ".(intval($index)?intval($index):"0").",".(intval($max)?intval($max):"50");
     // echo $q;
+   
+    
     $r=$db->query($q);
     
     $myfile = fopen("/var/www/vhosts/e-spacios.com/httpdocs1/test.log", "w");               
