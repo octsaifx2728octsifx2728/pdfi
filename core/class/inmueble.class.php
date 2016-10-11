@@ -748,9 +748,7 @@ class inmueble extends objeto{
               order by `num_imagen`,`id` 
               limit ".intval($id).",".intval($max);
     
-     $myfile = fopen("/var/www/vhosts/e-spacios.com/httpdocs1/test.log", "w");               
-                fwrite($myfile, $q);
-                fclose($myfile);
+   
     
     $i=array();
     if($r=$db->query($q)){
