@@ -71,9 +71,7 @@ $respuesta = json_encode($result);
 
 echo $respuesta;
 */
- $myfile = fopen("/var/www/vhosts/e-spacios.com/httpdocs1/test.log", "w");               
-                fwrite($myfile, json_encode( $result));
-                fclose($myfile);
+ 
 
 
 $respuesta = json_encode( $result);
