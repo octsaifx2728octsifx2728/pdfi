@@ -33,17 +33,13 @@ class MensajesController {
         
        global $config,$root_path, $core,$user,$document,$result, $vr;
         
-         $myfile = fopen("/var/www/vhosts/e-spacios.com/httpdocs1/test.log", "w");               
-                fwrite($myfile, $task);
-                fclose($myfile);
+       
            
         
         switch ($task) {
             case 'ConsultarUsuarios'://consulta
                 
-                $myfile = fopen("/var/www/vhosts/e-spacios.com/httpdocs1/test.log", "w");               
-                fwrite($myfile, "consulta");
-                fclose($myfile);
+               
                 
                 $app=$core->getApp("usuarios");
                 
