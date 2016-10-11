@@ -279,7 +279,7 @@
                                 </td>
                                 <td >
                                     <div style = "border-bottom:  solid 1px #ccc;margin-left: 15px;margin-bottom: 5px;"></div>
-                                    <div class="contact"></div>
+                                    <div class="contact" ></div>
                                 </td>
                             </tr>
                         </table>
@@ -395,11 +395,64 @@
             </div>
         </div>
         
+        
+           
+      <div id="prodpreview" style="display:none">
+          <p>Envia un mensaje al publicador</p>
+         <div class="field field_type_text">
+            <label for="Nombre">Nombre</label>
+            <input class="emptyOnFocus verifyOnFly minSize_3 required" value="">
+          </div>
+          <div class="field field_type_text">
+            <label for="Asunto">Asunto</label>
+            <input class="emptyOnFocus verifyOnFly minSize_3 required" value="">
+          </div>
+          <div class="field field_type_text">
+            <label for="Correo">Correo</label>
+            <input class="emptyOnFocus verifyOnFly minSize_3 required" value="">
+          </div>
+          <div class="field field_type_text">
+            <label for="Telefono">Telefono</label>
+            <input class="emptyOnFocus verifyOnFly minSize_3 required" value="">
+          </div>
+          <label for="Telefono">Mensaje</label>
+          <textarea rows="4" cols="50" id="Mensaje" style="position:relative; width: 100%;height: 80%; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;">
+                    
+                </textarea>
+          <input type="button" id ="EnviarMensaje" name="Enviar" value="Enviar" class="button gray-dark">
+          
+          
+          
+     </div>
+
+        
     </body>
+    
 </html>
-<script src="js/jquery.classyloader.min.js?v=3ab2687f8f000e95e3191a290cc10c4a" type="text/javascript"></script>
+
+
+  
 <script>
+    
+    
+    function dialogoMensaje(){
+        
+        
+        
+         $.colorbox({inline:true,href:"#prodpreview",onClosed: function () {
+
+                     $("#prodpreview").hide();
+
+                }});
+         $("#prodpreview").show();
+        
+    }
     $(document).ready(function(){
+        $("#EnviarMensaje").click(function (ev){
+            
+            $.colorbox.close();
+            
+        });
     
     });
 </script>
