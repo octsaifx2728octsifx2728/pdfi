@@ -89,12 +89,14 @@
 <script type="text/javascript">
    
         
+        
+        var aux = null;
       
         
       
        
         $.ajax({
-            url:'http://e-spacios.com/sfx/Mensajes/ConsultarUsuarios',
+            url:'/sfx/Mensajes/ConsultarUsuarios',
             type: "POST",
             contentType: "application/json; charset=utf-8",
             dataType: "json",
@@ -122,7 +124,17 @@
          
           $(template).find(".titleMensajes").append(data[x].usuario);
           
+          
+          $(template).click(function () {
+              $(aux).css("background", "#ffffff");
+              aux = $(this);
+              $(this).css("background", "#ccc");
+            });
+          
            resultbox.appendChild(template);
+           
+           aux = template;
+           
         }
 
 
