@@ -18,12 +18,15 @@
     ultraLogin_h={
         ddbb:[],
         init:function($){
+             
             var payID=this.payID;
             var Key=this.options.key;
             var initform=this.options.initform;
             var avaliableForms=this.options.avaliableForms;
             
             $(this).click(function(){
+                
+               
                 
                 var options2=ultraLogin_h.parseClassString(this.className);
                 $.colorbox({inline:true,href:".loginform_0_"+Key});
@@ -64,6 +67,8 @@
                 this.appendForm(id,options2);
       },
       appendForm:function(id,options2){
+          
+            
                 var contenedor=$(".loginform_0_"+this.options.key);
                 var formulario=$(".loginform_"+id+"_"+this.options.key);
                 
