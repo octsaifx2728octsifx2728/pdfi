@@ -29,32 +29,7 @@ class mensajes_app {
 		return $mensaje;
 	}
         
-        function store2($email,$subject,$text,inmueble $inmueble=null){
-		global $config, $user,$core;
-	    $db=&$core->getDB();
-	    $con=&$db->getConexion();
-		
-                
-                
-		$q="insert into `mensajes`(`id_cliente`,`id_expediente`,`usuario`,`nombre`,`asunto`,`mensaje`,`fecha`)
-			values(
-				'".mysql_real_escape_string($user->id)."',
-				'".mysql_real_escape_string($inmueble->id)."',
-				'".mysql_real_escape_string($email)."',
-				'".mysql_real_escape_string($user->get("nombre_pant"))."',
-				'".mysql_real_escape_string($subject)."',
-				'".mysql_real_escape_string($text)."',
-				now()
-				)";
-		mysql_query($q);
-		$id=mysql_insert_id();
-		if(!$id){
-			return MESSAGE_ERROR_CANNOT_SAVE_MESSAGE;
-		}
-		include_once $config->paths["core/class"]."mensaje.class.php";
-		$mensaje=new mensaje($id);
-		return $mensaje;
-	}
+       
         
 	function send(){
 		
