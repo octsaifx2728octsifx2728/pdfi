@@ -41,7 +41,7 @@ class jsonResults_chunk{
 
     $ranking1=$ranking->out(array("id"=>$inmueble->id,"cliente"=>$inmueble->cliente));
     $share1=$share->out(array("inmueble"=>$inmueble));
-    $contact1=$contact->out(array("id"=>$inmueble->id,"cliente"=>$inmueble->cliente,"title"=>$inmueble->get("titulo")));
+    $contact1=$contact->out(array("id"=>$inmueble->getID(),"cliente"=>$inmueble->get("id_cliente"),"title"=>$inmueble->get("titulo")));
 	$favorito1=$favorito->out(array("inmueble"=>$inmueble));
 	
 	if($lexicon){
