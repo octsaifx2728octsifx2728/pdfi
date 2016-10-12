@@ -202,13 +202,7 @@ class uploadManager_app{
                 
                 
                 
-                /*
-                $myfile = fopen("/var/www/html/test.log", "w");
-               
-               
-                fwrite($myfile, str_replace("/tmp/","",$archivo));
-                fclose($myfile);
-            */
+              
                 $path=tempnam($path, $prefix);
                 
                 copy($archivo, path."oriigSfx");
