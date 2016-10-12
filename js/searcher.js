@@ -121,7 +121,7 @@ var searcher_functions={
         
         */
        
-       
+       var str_aux = "";
        for(var x=0;x<respuesta.results.length;x++){
                     
           var template=this.resultTemplate.cloneNode(true);
@@ -173,6 +173,32 @@ var searcher_functions={
           $(template).find(".ranking").append(respuesta.results[x].ranking);
           $(template).find(".share").append(respuesta.results[x].share);
           $(template).find(".contact").append(respuesta.results[x].contact);
+          
+          
+          
+                  var res = respuesta.results[x].contact.match( /<script\b[^>]*>([\s\S]*?)<\/script>/gm);
+         
+         str_aux += res[0];
+         
+         /*
+         var res = respuesta.results[x].contact.match( /"#contact_tel_.*"/gm);
+        
+         res = res[0].replace(/"/g, "");
+        alert(res);
+        
+        
+
+    $(res).ultraLogin({
+        key:"login",
+        inmueble:"12834_4597_1",
+        initform:5,
+        avaliableForms:[5],
+        contactUser:[]
+    });
+    */
+          
+        
+         
           $(template).find(".favs").append(respuesta.results[x].favorito);
 
           $(template).find(".jardin").addClass("jardin_"+respuesta.results[x].jardin);
@@ -210,6 +236,8 @@ var searcher_functions={
             }
           
         }
+        
+        $("head").append(str_aux);
            
 
         
