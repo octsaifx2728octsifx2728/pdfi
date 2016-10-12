@@ -50,6 +50,18 @@ class MensajesController {
                 $result= $usuarios;
                 
                 break;     
+            
+            case 'EnviarMensaje'://consulta
+
+                $app=$core->getApp("usuarios");
+                
+                $usuarios = $app->get(0,"desc");
+                
+                 
+                
+                $result= $usuarios;
+                
+                break;     
 
             default://metodo NO soportado
                 $result= 'METODO NO SOPORTADO';
