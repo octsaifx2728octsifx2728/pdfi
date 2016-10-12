@@ -103,6 +103,8 @@ class user extends objeto{
         where `user`='".intval($this->id)."'
         limit ".($index?intval($index):"0").",1";
     
+      
+    
     if($r=$db->query($q)){
         if($i=$r->fetch_array()){
             $this->telefonos[$index]=$i["telefono"];
@@ -110,6 +112,9 @@ class user extends objeto{
             $this->telefonosTags[$index]=$tag;
         }
     }
+    
+
+    
     return $this->telefonos[$index];
   }
   public function getTelefonoTag($index=0){
