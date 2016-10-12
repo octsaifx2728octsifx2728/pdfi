@@ -17,12 +17,14 @@
     ultraLogin_h={
         ddbb:[],
         init:function($){
+            alert("hello world");
             var payID=this.payID;
             var Key=this.options.key;
             var initform=this.options.initform;
             var avaliableForms=this.options.avaliableForms;
             
             $(this).click(function(){
+                
                 var options2=ultraLogin_h.parseClassString(this.className);
                 $.colorbox({inline:true,href:".loginform_0_"+Key});
                 ultraLogin_h.ddbb[payID].createMenu();
