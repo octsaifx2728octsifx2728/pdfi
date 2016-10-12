@@ -401,22 +401,22 @@
           <p>Envia un mensaje al publicador</p>
          <div class="field field_type_text">
             <label for="Nombre">Nombre</label>
-            <input class="emptyOnFocus verifyOnFly minSize_3 required" value="">
+            <input id = "nombre" class="emptyOnFocus verifyOnFly minSize_3 required" value="">
           </div>
           <div class="field field_type_text">
             <label for="Asunto">Asunto</label>
-            <input class="emptyOnFocus verifyOnFly minSize_3 required" value="">
+            <input id = "asunto" class="emptyOnFocus verifyOnFly minSize_3 required" value="">
           </div>
           <div class="field field_type_text">
             <label for="Correo">Correo</label>
-            <input class="emptyOnFocus verifyOnFly minSize_3 required" value="">
+            <input id = "correo" class="emptyOnFocus verifyOnFly minSize_3 required" value="">
           </div>
           <div class="field field_type_text">
             <label for="Telefono">Telefono</label>
-            <input class="emptyOnFocus verifyOnFly minSize_3 required" value="">
+            <input id = "telefono" class="emptyOnFocus verifyOnFly minSize_3 required" value="">
           </div>
-          <label for="Telefono">Mensaje</label>
-          <textarea rows="4" cols="50" id="Mensaje" style="position:relative; width: 100%;height: 80%; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;">
+          <label for="Mensaje">Mensaje</label>
+          <textarea id = "mensaje" rows="4" cols="50" id="Mensaje" style="position:relative; width: 100%;height: 80%; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;">
                     
                 </textarea>
           <input type="button" id ="EnviarMensaje" name="Enviar" value="Enviar" class="button gray-dark">
@@ -435,24 +435,42 @@
 <script>
     
     
-    function dialogoMensaje(){
+    
+    function enviarMensaje(ID_USU){
+        alert(ID_USU);
+        
+        function Mensaje(){
+            
+        }
+        
+    }
+    function dialogoMensaje(ID,IDI,INITFORM,CONTACTUSER){
+        
+       
         
         
         
+        /*
          $.colorbox({inline:true,href:"#prodpreview",onClosed: function () {
 
                      $("#prodpreview").hide();
 
                 }});
-         $("#prodpreview").show();
-        
-    }
-    $(document).ready(function(){
-        $("#EnviarMensaje").click(function (ev){
+            
+            $( "#EnviarMensaje").unbind( "click" );
+            
+              $("#EnviarMensaje").click(function (ev){
+                  
+                  enviarMensaje(ID_USU);
             
             $.colorbox.close();
             
-        });
+            });
+         $("#prodpreview").show();
+        */
+    }
+    $(document).ready(function(){
+      
     
     });
 </script>
