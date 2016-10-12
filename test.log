@@ -1,23 +1,1335 @@
-select distinct `i`.`id_expediente` as 'id_expediente',
-    	 `i`.`id_cliente` as 'id_cliente',
-    	 `i`.`tipoobjeto` as 'tipoobjeto',
-    	 `a`.`tipotransaccion` as 'tipovr'
-         from `inms` as `i`
-  left join `anuncios` as `a` on (`a`.`idinmueble`= `i`.`id_expediente` and `a`.`tipoinmueble`= `i`.`tipoobjeto` and `a`.`user`=`i`.`id_cliente` )
-  
-where DATE_ADD(`a`.`fecvennormal`, INTERVAL 3 YEAR)>=now()
-    and ((
-            `a`.`vendido`=1
-            and now()< date_add(`a`.`vendido_date`, interval +1 DAY )
-            )
-          or
-            (
-            `a`.`vendido`=0
-            )
-        )
-    and `a`.`idinmueble`= `i`.`id_expediente` and `a`.`tipoinmueble`= `i`.`tipoobjeto` and `a`.`user`=`i`.`id_cliente`
- and  (`i`.`coordenaday`<='19.312899698975052'
-				and `i`.`coordenaday`>='19.299817563237287'
-				and `i`.`coordenadax`<='-98.86001455856933'
-				and `i`.`coordenadax`>='-98.90275824143066') and (`a`.`tipotransaccion`='tipovrventa' and `i`.`precio`<='928217247.39032'  and `i`.`habitaciones`<='10'  and `i`.`banos`<='10'  and `i`.`estacionamientos`<='10'  and `i`.`estacionamientos2`<='10'  and `i`.`tipoobjeto`='1')
-order by  `i`.`fecvenpremium` DESC,`i`.`fecha_alta` DESC limit 0,50
+
+---[]
+---[]
+---[]
+---[]
+---[]
+{"telefono":"25924383","tag":"$$oficina$$"}////
+{"telefono":"0445524375375","tag":"$$movil$$"}////
+{"telefono":"0445534405780","tag":"$$movil$$"}////
+---[{"telefono":"25924383","tag":"$$oficina$$"},{"telefono":"0445524375375","tag":"$$movil$$"},{"telefono":"0445534405780","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+---[]
+{"telefono":"5538290072","tag":"$$telefono$$"}////
+{"telefono":"0445538290072","tag":"$$telefono$$"}////
+---[{"telefono":"5538290072","tag":"$$telefono$$"},{"telefono":"0445538290072","tag":"$$telefono$$"}]
+---[]
+{"telefono":"5570118792","tag":"$$telefono$$"}////
+---[{"telefono":"5570118792","tag":"$$telefono$$"}]
+---[]
+---[]
+{"telefono":"5570118792","tag":"$$telefono$$"}////
+---[{"telefono":"5570118792","tag":"$$telefono$$"}]
+{"telefono":"5570118792","tag":"$$telefono$$"}////
+---[{"telefono":"5570118792","tag":"$$telefono$$"}]
+{"telefono":"251 95 64","tag":"$$oficina$$"}////
+{"telefono":"2223 32 84 89","tag":"$$movil$$"}////
+---[{"telefono":"251 95 64","tag":"$$oficina$$"},{"telefono":"2223 32 84 89","tag":"$$movil$$"}]
+{"telefono":"251 95 64","tag":"$$oficina$$"}////
+{"telefono":"2223 32 84 89","tag":"$$movil$$"}////
+---[{"telefono":"251 95 64","tag":"$$oficina$$"},{"telefono":"2223 32 84 89","tag":"$$movil$$"}]
+{"telefono":"251 95 64","tag":"$$oficina$$"}////
+{"telefono":"2223 32 84 89","tag":"$$movil$$"}////
+---[{"telefono":"251 95 64","tag":"$$oficina$$"},{"telefono":"2223 32 84 89","tag":"$$movil$$"}]
+---[]
+---[]
+---[]
+{"telefono":"5526796048","tag":"$$telefono$$"}////
+{"telefono":"68295077","tag":"$$telefono$$"}////
+---[{"telefono":"5526796048","tag":"$$telefono$$"},{"telefono":"68295077","tag":"$$telefono$$"}]
+{"telefono":"0445532009491","tag":"$$telefono$$"}////
+---[{"telefono":"0445532009491","tag":"$$telefono$$"}]
+---[]
+{"telefono":"0445534475215","tag":"$$movil$$"}////
+---[{"telefono":"0445534475215","tag":"$$movil$$"}]
+{"telefono":"2228021800","tag":"$$movil$$"}////
+---[{"telefono":"2228021800","tag":"$$movil$$"}]
+---[]
+---[]
+{"telefono":"5518254964","tag":"$$telefono$$"}////
+---[{"telefono":"5518254964","tag":"$$telefono$$"}]
+---[]
+{"telefono":"55 66168604","tag":"$$movil$$"}////
+{"telefono":"55 2248 3464","tag":"$$telefono$$"}////
+---[{"telefono":"55 66168604","tag":"$$movil$$"},{"telefono":"55 2248 3464","tag":"$$telefono$$"}]
+---[]
+---[]
+{"telefono":"55 66168604","tag":"$$movil$$"}////
+{"telefono":"55 2248 3464","tag":"$$telefono$$"}////
+---[{"telefono":"55 66168604","tag":"$$movil$$"},{"telefono":"55 2248 3464","tag":"$$telefono$$"}]
+---[]
+{"telefono":"33300310","tag":"$$oficina$$"}////
+{"telefono":"55592732","tag":"$$oficina$$"}////
+---[{"telefono":"33300310","tag":"$$oficina$$"},{"telefono":"55592732","tag":"$$oficina$$"}]
+{"telefono":"33300310","tag":"$$oficina$$"}////
+{"telefono":"55592732","tag":"$$oficina$$"}////
+---[{"telefono":"33300310","tag":"$$oficina$$"},{"telefono":"55592732","tag":"$$oficina$$"}]
+{"telefono":"5548101652","tag":"$$telefono$$"}////
+{"telefono":"5529083040","tag":"$$telefono$$"}////
+---[{"telefono":"5548101652","tag":"$$telefono$$"},{"telefono":"5529083040","tag":"$$telefono$$"}]
+---[]
+---[]
+{"telefono":"5548463133","tag":"$$telefono$$"}////
+---[{"telefono":"5548463133","tag":"$$telefono$$"}]
+---[]
+{"telefono":"5565666597","tag":"$$telefono$$"}////
+{"telefono":"59168130","tag":"$$telefono$$"}////
+{"telefono":"0445527170731","tag":"$$telefono$$"}////
+---[{"telefono":"5565666597","tag":"$$telefono$$"},{"telefono":"59168130","tag":"$$telefono$$"},{"telefono":"0445527170731","tag":"$$telefono$$"}]
+---[]
+---[]
+---[]
+{"telefono":"5516836695","tag":"$$movil$$"}////
+{"telefono":"59263336","tag":"$$oficina$$"}////
+{"telefono":"5525643437","tag":"$$oficina$$"}////
+---[{"telefono":"5516836695","tag":"$$movil$$"},{"telefono":"59263336","tag":"$$oficina$$"},{"telefono":"5525643437","tag":"$$oficina$$"}]
+{"telefono":"5516836695","tag":"$$movil$$"}////
+{"telefono":"59263336","tag":"$$oficina$$"}////
+{"telefono":"5525643437","tag":"$$oficina$$"}////
+---[{"telefono":"5516836695","tag":"$$movil$$"},{"telefono":"59263336","tag":"$$oficina$$"},{"telefono":"5525643437","tag":"$$oficina$$"}]
+{"telefono":"55342465","tag":"$$telefono$$"}////
+{"telefono":"55240155","tag":"$$telefono$$"}////
+---[{"telefono":"55342465","tag":"$$telefono$$"},{"telefono":"55240155","tag":"$$telefono$$"}]
+---[]
+---[]
+---[]
+---[]
+{"telefono":"5565841037","tag":"$$oficina$$"}////
+{"telefono":"5585494945","tag":"$$movil$$"}////
+---[{"telefono":"5565841037","tag":"$$oficina$$"},{"telefono":"5585494945","tag":"$$movil$$"}]
+{"telefono":"65961590","tag":"$$telefono$$"}////
+---[{"telefono":"65961590","tag":"$$telefono$$"}]
+---[]
+---[]
+---[]
+---[]
+---[]
+---[]
+---[]
+{"telefono":"70912448","tag":"$$oficina$$"}////
+---[{"telefono":"70912448","tag":"$$oficina$$"}]
+{"telefono":"25924383","tag":"$$oficina$$"}////
+{"telefono":"0445524375375","tag":"$$movil$$"}////
+{"telefono":"0445534405780","tag":"$$movil$$"}////
+---[{"telefono":"25924383","tag":"$$oficina$$"},{"telefono":"0445524375375","tag":"$$movil$$"},{"telefono":"0445534405780","tag":"$$movil$$"}]
+---[]
+---[]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+---[]
+---[]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+---[]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+---[]
+---[]
+---[]
+---[]
+---[]
+{"telefono":"25924383","tag":"$$oficina$$"}////
+{"telefono":"0445524375375","tag":"$$movil$$"}////
+{"telefono":"0445534405780","tag":"$$movil$$"}////
+---[{"telefono":"25924383","tag":"$$oficina$$"},{"telefono":"0445524375375","tag":"$$movil$$"},{"telefono":"0445534405780","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+---[]
+---[]
+---[]
+---[]
+---[]
+{"telefono":"25924383","tag":"$$oficina$$"}////
+{"telefono":"0445524375375","tag":"$$movil$$"}////
+{"telefono":"0445534405780","tag":"$$movil$$"}////
+---[{"telefono":"25924383","tag":"$$oficina$$"},{"telefono":"0445524375375","tag":"$$movil$$"},{"telefono":"0445534405780","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+---[]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+---[]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+---[]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+---[]
+{"telefono":"4422474108","tag":"$$movil$$"}////
+---[{"telefono":"4422474108","tag":"$$movil$$"}]
+{"telefono":"5538290072","tag":"$$telefono$$"}////
+{"telefono":"0445538290072","tag":"$$telefono$$"}////
+---[{"telefono":"5538290072","tag":"$$telefono$$"},{"telefono":"0445538290072","tag":"$$telefono$$"}]
+---[]
+{"telefono":"5570118792","tag":"$$telefono$$"}////
+---[{"telefono":"5570118792","tag":"$$telefono$$"}]
+{"telefono":"5570118792","tag":"$$telefono$$"}////
+---[{"telefono":"5570118792","tag":"$$telefono$$"}]
+---[]
+---[]
+{"telefono":"5570118792","tag":"$$telefono$$"}////
+---[{"telefono":"5570118792","tag":"$$telefono$$"}]
+{"telefono":"5570118792","tag":"$$telefono$$"}////
+---[{"telefono":"5570118792","tag":"$$telefono$$"}]
+{"telefono":"251 95 64","tag":"$$oficina$$"}////
+{"telefono":"2223 32 84 89","tag":"$$movil$$"}////
+---[{"telefono":"251 95 64","tag":"$$oficina$$"},{"telefono":"2223 32 84 89","tag":"$$movil$$"}]
+{"telefono":"251 95 64","tag":"$$oficina$$"}////
+{"telefono":"2223 32 84 89","tag":"$$movil$$"}////
+---[{"telefono":"251 95 64","tag":"$$oficina$$"},{"telefono":"2223 32 84 89","tag":"$$movil$$"}]
+{"telefono":"251 95 64","tag":"$$oficina$$"}////
+{"telefono":"2223 32 84 89","tag":"$$movil$$"}////
+---[{"telefono":"251 95 64","tag":"$$oficina$$"},{"telefono":"2223 32 84 89","tag":"$$movil$$"}]
+{"telefono":"251 95 64","tag":"$$oficina$$"}////
+{"telefono":"2223 32 84 89","tag":"$$movil$$"}////
+---[{"telefono":"251 95 64","tag":"$$oficina$$"},{"telefono":"2223 32 84 89","tag":"$$movil$$"}]
+{"telefono":"251 95 64","tag":"$$oficina$$"}////
+{"telefono":"2223 32 84 89","tag":"$$movil$$"}////
+---[{"telefono":"251 95 64","tag":"$$oficina$$"},{"telefono":"2223 32 84 89","tag":"$$movil$$"}]
+{"telefono":"251 95 64","tag":"$$oficina$$"}////
+{"telefono":"2223 32 84 89","tag":"$$movil$$"}////
+---[{"telefono":"251 95 64","tag":"$$oficina$$"},{"telefono":"2223 32 84 89","tag":"$$movil$$"}]
+{"telefono":"251 95 64","tag":"$$oficina$$"}////
+{"telefono":"2223 32 84 89","tag":"$$movil$$"}////
+---[{"telefono":"251 95 64","tag":"$$oficina$$"},{"telefono":"2223 32 84 89","tag":"$$movil$$"}]
+{"telefono":"251 95 64","tag":"$$oficina$$"}////
+{"telefono":"2223 32 84 89","tag":"$$movil$$"}////
+---[{"telefono":"251 95 64","tag":"$$oficina$$"},{"telefono":"2223 32 84 89","tag":"$$movil$$"}]
+{"telefono":"251 95 64","tag":"$$oficina$$"}////
+{"telefono":"2223 32 84 89","tag":"$$movil$$"}////
+---[{"telefono":"251 95 64","tag":"$$oficina$$"},{"telefono":"2223 32 84 89","tag":"$$movil$$"}]
+{"telefono":"251 95 64","tag":"$$oficina$$"}////
+{"telefono":"2223 32 84 89","tag":"$$movil$$"}////
+---[{"telefono":"251 95 64","tag":"$$oficina$$"},{"telefono":"2223 32 84 89","tag":"$$movil$$"}]
+---[]
+---[]
+{"telefono":"55.3208.7253","tag":"$$movil$$"}////
+{"telefono":"4151.2200","tag":"$$oficina$$"}////
+---[{"telefono":"55.3208.7253","tag":"$$movil$$"},{"telefono":"4151.2200","tag":"$$oficina$$"}]
+---[]
+{"telefono":"2281827977","tag":"$$telefono$$"}////
+{"telefono":"2227255909","tag":"$$telefono$$"}////
+---[{"telefono":"2281827977","tag":"$$telefono$$"},{"telefono":"2227255909","tag":"$$telefono$$"}]
+{"telefono":"5570118792","tag":"$$telefono$$"}////
+---[{"telefono":"5570118792","tag":"$$telefono$$"}]
+---[]
+{"telefono":"0445534475215","tag":"$$movil$$"}////
+---[{"telefono":"0445534475215","tag":"$$movil$$"}]
+---[]
+---[]
+---[]
+---[]
+{"telefono":"5526796048","tag":"$$telefono$$"}////
+{"telefono":"68295077","tag":"$$telefono$$"}////
+---[{"telefono":"5526796048","tag":"$$telefono$$"},{"telefono":"68295077","tag":"$$telefono$$"}]
+{"telefono":"0445532009491","tag":"$$telefono$$"}////
+---[{"telefono":"0445532009491","tag":"$$telefono$$"}]
+{"telefono":"5571816221","tag":"$$telefono$$"}////
+---[{"telefono":"5571816221","tag":"$$telefono$$"}]
+{"telefono":"7226185662","tag":"$$telefono$$"}////
+---[{"telefono":"7226185662","tag":"$$telefono$$"}]
+---[]
+{"telefono":"0445534475215","tag":"$$movil$$"}////
+---[{"telefono":"0445534475215","tag":"$$movil$$"}]
+---[]
+---[]
+{"telefono":"2228021800","tag":"$$movil$$"}////
+---[{"telefono":"2228021800","tag":"$$movil$$"}]
+{"telefono":"7221501274","tag":"$$telefono$$"}////
+---[{"telefono":"7221501274","tag":"$$telefono$$"}]
+{"telefono":"0445574043195","tag":"$$telefono$$"}////
+---[{"telefono":"0445574043195","tag":"$$telefono$$"}]
+---[]
+---[]
+---[]
+{"telefono":"5518254964","tag":"$$telefono$$"}////
+---[{"telefono":"5518254964","tag":"$$telefono$$"}]
+---[]
+---[]
+{"telefono":"55 66168604","tag":"$$movil$$"}////
+{"telefono":"55 2248 3464","tag":"$$telefono$$"}////
+---[{"telefono":"55 66168604","tag":"$$movil$$"},{"telefono":"55 2248 3464","tag":"$$telefono$$"}]
+---[]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+---[]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+---[]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+---[]
+---[]
+---[]
+---[]
+{"telefono":"25924383","tag":"$$oficina$$"}////
+{"telefono":"0445524375375","tag":"$$movil$$"}////
+{"telefono":"0445534405780","tag":"$$movil$$"}////
+---[{"telefono":"25924383","tag":"$$oficina$$"},{"telefono":"0445524375375","tag":"$$movil$$"},{"telefono":"0445534405780","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+---[]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+---[]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+---[]
+---[]
+---[]
+---[]
+---[]
+{"telefono":"25924383","tag":"$$oficina$$"}////
+{"telefono":"0445524375375","tag":"$$movil$$"}////
+{"telefono":"0445534405780","tag":"$$movil$$"}////
+---[{"telefono":"25924383","tag":"$$oficina$$"},{"telefono":"0445524375375","tag":"$$movil$$"},{"telefono":"0445534405780","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+---[]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+---[]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+---[]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+---[]
+---[]
+---[]
+---[]
+---[]
+{"telefono":"25924383","tag":"$$oficina$$"}////
+{"telefono":"0445524375375","tag":"$$movil$$"}////
+{"telefono":"0445534405780","tag":"$$movil$$"}////
+---[{"telefono":"25924383","tag":"$$oficina$$"},{"telefono":"0445524375375","tag":"$$movil$$"},{"telefono":"0445534405780","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+---[]
+---[]
+---[]
+---[]
+{"telefono":"25924383","tag":"$$oficina$$"}////
+{"telefono":"0445524375375","tag":"$$movil$$"}////
+{"telefono":"0445534405780","tag":"$$movil$$"}////
+---[{"telefono":"25924383","tag":"$$oficina$$"},{"telefono":"0445524375375","tag":"$$movil$$"},{"telefono":"0445534405780","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+---[]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+---[]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+---[]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+---[]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+---[]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+---[]
+---[]
+---[]
+---[]
+{"telefono":"25924383","tag":"$$oficina$$"}////
+{"telefono":"0445524375375","tag":"$$movil$$"}////
+{"telefono":"0445534405780","tag":"$$movil$$"}////
+---[{"telefono":"25924383","tag":"$$oficina$$"},{"telefono":"0445524375375","tag":"$$movil$$"},{"telefono":"0445534405780","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+---[]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+---[]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+---[]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+---[]
+---[]
+---[]
+---[]
+{"telefono":"25924383","tag":"$$oficina$$"}////
+{"telefono":"0445524375375","tag":"$$movil$$"}////
+{"telefono":"0445534405780","tag":"$$movil$$"}////
+---[{"telefono":"25924383","tag":"$$oficina$$"},{"telefono":"0445524375375","tag":"$$movil$$"},{"telefono":"0445534405780","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+---[]
+---[]
+---[]
+---[]
+{"telefono":"25924383","tag":"$$oficina$$"}////
+{"telefono":"0445524375375","tag":"$$movil$$"}////
+{"telefono":"0445534405780","tag":"$$movil$$"}////
+---[{"telefono":"25924383","tag":"$$oficina$$"},{"telefono":"0445524375375","tag":"$$movil$$"},{"telefono":"0445534405780","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+---[]
+---[]
+---[]
+---[]
+{"telefono":"25924383","tag":"$$oficina$$"}////
+{"telefono":"0445524375375","tag":"$$movil$$"}////
+{"telefono":"0445534405780","tag":"$$movil$$"}////
+---[{"telefono":"25924383","tag":"$$oficina$$"},{"telefono":"0445524375375","tag":"$$movil$$"},{"telefono":"0445534405780","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+---[]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+---[]
+---[]
+---[]
+---[]
+---[]
+{"telefono":"25924383","tag":"$$oficina$$"}////
+{"telefono":"0445524375375","tag":"$$movil$$"}////
+{"telefono":"0445534405780","tag":"$$movil$$"}////
+---[{"telefono":"25924383","tag":"$$oficina$$"},{"telefono":"0445524375375","tag":"$$movil$$"},{"telefono":"0445534405780","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+---[]
+---[]
+---[]
+---[]
+---[]
+{"telefono":"70912448","tag":"$$oficina$$"}////
+---[{"telefono":"70912448","tag":"$$oficina$$"}]
+{"telefono":"25924383","tag":"$$oficina$$"}////
+{"telefono":"0445524375375","tag":"$$movil$$"}////
+{"telefono":"0445534405780","tag":"$$movil$$"}////
+---[{"telefono":"25924383","tag":"$$oficina$$"},{"telefono":"0445524375375","tag":"$$movil$$"},{"telefono":"0445534405780","tag":"$$movil$$"}]
+---[]
+---[]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+---[]
+---[]
+---[]
+---[]
+---[]
+---[]
+---[]
+{"telefono":"70912448","tag":"$$oficina$$"}////
+---[{"telefono":"70912448","tag":"$$oficina$$"}]
+{"telefono":"30922667","tag":"$$oficina$$"}////
+{"telefono":"55116602","tag":"$$oficina$$"}////
+---[{"telefono":"30922667","tag":"$$oficina$$"},{"telefono":"55116602","tag":"$$oficina$$"}]
+---[]
+{"telefono":"25924383","tag":"$$oficina$$"}////
+{"telefono":"0445524375375","tag":"$$movil$$"}////
+{"telefono":"0445534405780","tag":"$$movil$$"}////
+---[{"telefono":"25924383","tag":"$$oficina$$"},{"telefono":"0445524375375","tag":"$$movil$$"},{"telefono":"0445534405780","tag":"$$movil$$"}]
+---[]
+---[]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+---[]
+---[]
+---[]
+---[]
+---[]
+---[]
+{"telefono":"25924383","tag":"$$oficina$$"}////
+{"telefono":"0445524375375","tag":"$$movil$$"}////
+{"telefono":"0445534405780","tag":"$$movil$$"}////
+---[{"telefono":"25924383","tag":"$$oficina$$"},{"telefono":"0445524375375","tag":"$$movil$$"},{"telefono":"0445534405780","tag":"$$movil$$"}]
+---[]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+---[]
+---[]
+---[]
+---[]
+---[]
+---[]
+---[]
+{"telefono":"70912448","tag":"$$oficina$$"}////
+---[{"telefono":"70912448","tag":"$$oficina$$"}]
+{"telefono":"30922667","tag":"$$oficina$$"}////
+{"telefono":"55116602","tag":"$$oficina$$"}////
+---[{"telefono":"30922667","tag":"$$oficina$$"},{"telefono":"55116602","tag":"$$oficina$$"}]
+{"telefono":"25924383","tag":"$$oficina$$"}////
+{"telefono":"0445524375375","tag":"$$movil$$"}////
+{"telefono":"0445534405780","tag":"$$movil$$"}////
+---[{"telefono":"25924383","tag":"$$oficina$$"},{"telefono":"0445524375375","tag":"$$movil$$"},{"telefono":"0445534405780","tag":"$$movil$$"}]
+{"telefono":"5533053559","tag":"$$movil$$"}////
+{"telefono":"5543064101","tag":"$$otro$$"}////
+---[{"telefono":"5533053559","tag":"$$movil$$"},{"telefono":"5543064101","tag":"$$otro$$"}]
+---[]
+---[]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+---[]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+---[]
+---[]
+{"telefono":"5570118792","tag":"$$telefono$$"}////
+---[{"telefono":"5570118792","tag":"$$telefono$$"}]
+---[]
+---[]
+{"telefono":"5516836695","tag":"$$movil$$"}////
+{"telefono":"59263336","tag":"$$oficina$$"}////
+{"telefono":"5525643437","tag":"$$oficina$$"}////
+---[{"telefono":"5516836695","tag":"$$movil$$"},{"telefono":"59263336","tag":"$$oficina$$"},{"telefono":"5525643437","tag":"$$oficina$$"}]
+---[]
+---[]
+---[]
+{"telefono":"68484165","tag":"$$oficina$$"}////
+{"telefono":"5543915744","tag":"$$movil$$"}////
+---[{"telefono":"68484165","tag":"$$oficina$$"},{"telefono":"5543915744","tag":"$$movil$$"}]
+{"telefono":"70912448","tag":"$$oficina$$"}////
+---[{"telefono":"70912448","tag":"$$oficina$$"}]
+---[]
+{"telefono":"30922667","tag":"$$oficina$$"}////
+{"telefono":"55116602","tag":"$$oficina$$"}////
+---[{"telefono":"30922667","tag":"$$oficina$$"},{"telefono":"55116602","tag":"$$oficina$$"}]
+---[]
+{"telefono":"04455 1467 8083","tag":"$$movil$$"}////
+{"telefono":"57416932","tag":"$$otro$$"}////
+---[{"telefono":"04455 1467 8083","tag":"$$movil$$"},{"telefono":"57416932","tag":"$$otro$$"}]
+---[]
+{"telefono":"7032 8693","tag":"$$oficina$$"}////
+{"telefono":"55 6447 8457","tag":"$$movil$$"}////
+---[{"telefono":"7032 8693","tag":"$$oficina$$"},{"telefono":"55 6447 8457","tag":"$$movil$$"}]
+---[]
+---[]
+{"telefono":"25924383","tag":"$$oficina$$"}////
+{"telefono":"0445524375375","tag":"$$movil$$"}////
+{"telefono":"0445534405780","tag":"$$movil$$"}////
+---[{"telefono":"25924383","tag":"$$oficina$$"},{"telefono":"0445524375375","tag":"$$movil$$"},{"telefono":"0445534405780","tag":"$$movil$$"}]
+{"telefono":"56616043","tag":"$$oficina$$"}////
+---[{"telefono":"56616043","tag":"$$oficina$$"}]
+{"telefono":"56616043","tag":"$$oficina$$"}////
+---[{"telefono":"56616043","tag":"$$oficina$$"}]
+{"telefono":"55 2079 24 50","tag":"$$movil$$"}////
+---[{"telefono":"55 2079 24 50","tag":"$$movil$$"}]
+{"telefono":"5533053559","tag":"$$movil$$"}////
+{"telefono":"5543064101","tag":"$$otro$$"}////
+---[{"telefono":"5533053559","tag":"$$movil$$"},{"telefono":"5543064101","tag":"$$otro$$"}]
+{"telefono":"56616043","tag":"$$oficina$$"}////
+---[{"telefono":"56616043","tag":"$$oficina$$"}]
+{"telefono":"04455 1657 3460","tag":"$$telefono$$"}////
+---[{"telefono":"04455 1657 3460","tag":"$$telefono$$"}]
+{"telefono":"58422002","tag":"$$oficina$$"}////
+{"telefono":"5542939278","tag":"$$movil$$"}////
+---[{"telefono":"58422002","tag":"$$oficina$$"},{"telefono":"5542939278","tag":"$$movil$$"}]
+---[]
+---[]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+---[]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"25920244","tag":"$$oficina$$"}////
+{"telefono":"5513674863","tag":"$$movil$$"}////
+---[{"telefono":"25920244","tag":"$$oficina$$"},{"telefono":"5513674863","tag":"$$movil$$"}]
+{"telefono":"58834558","tag":"$$telefono$$"}////
+{"telefono":"62740774","tag":"$$telefono$$"}////
+{"telefono":"5521308625","tag":"$$telefono$$"}////
+---[{"telefono":"58834558","tag":"$$telefono$$"},{"telefono":"62740774","tag":"$$telefono$$"},{"telefono":"5521308625","tag":"$$telefono$$"}]
+---[]
+---[]
+---[]
+---[]
+---[]
+---[]
+{"telefono":"5538290072","tag":"$$telefono$$"}////
+{"telefono":"0445538290072","tag":"$$telefono$$"}////
+---[{"telefono":"5538290072","tag":"$$telefono$$"},{"telefono":"0445538290072","tag":"$$telefono$$"}]
+---[]
+{"telefono":"5570118792","tag":"$$telefono$$"}////
+---[{"telefono":"5570118792","tag":"$$telefono$$"}]
+---[]
+{"telefono":"5570118792","tag":"$$telefono$$"}////
+---[{"telefono":"5570118792","tag":"$$telefono$$"}]
+{"telefono":"5570118792","tag":"$$telefono$$"}////
+---[{"telefono":"5570118792","tag":"$$telefono$$"}]
+---[]
+---[]
+---[]
+{"telefono":"5526796048","tag":"$$telefono$$"}////
+{"telefono":"68295077","tag":"$$telefono$$"}////
+---[{"telefono":"5526796048","tag":"$$telefono$$"},{"telefono":"68295077","tag":"$$telefono$$"}]
+{"telefono":"0445532009491","tag":"$$telefono$$"}////
+---[{"telefono":"0445532009491","tag":"$$telefono$$"}]
+---[]
+{"telefono":"0445534475215","tag":"$$movil$$"}////
+---[{"telefono":"0445534475215","tag":"$$movil$$"}]
+---[]
+---[]
+{"telefono":"5518254964","tag":"$$telefono$$"}////
+---[{"telefono":"5518254964","tag":"$$telefono$$"}]
+---[]
+{"telefono":"55 66168604","tag":"$$movil$$"}////
+{"telefono":"55 2248 3464","tag":"$$telefono$$"}////
+---[{"telefono":"55 66168604","tag":"$$movil$$"},{"telefono":"55 2248 3464","tag":"$$telefono$$"}]
+---[]
+---[]
+{"telefono":"55 66168604","tag":"$$movil$$"}////
+{"telefono":"55 2248 3464","tag":"$$telefono$$"}////
+---[{"telefono":"55 66168604","tag":"$$movil$$"},{"telefono":"55 2248 3464","tag":"$$telefono$$"}]
+---[]
+{"telefono":"33300310","tag":"$$oficina$$"}////
+{"telefono":"55592732","tag":"$$oficina$$"}////
+---[{"telefono":"33300310","tag":"$$oficina$$"},{"telefono":"55592732","tag":"$$oficina$$"}]
+{"telefono":"33300310","tag":"$$oficina$$"}////
+{"telefono":"55592732","tag":"$$oficina$$"}////
+---[{"telefono":"33300310","tag":"$$oficina$$"},{"telefono":"55592732","tag":"$$oficina$$"}]
+{"telefono":"5548101652","tag":"$$telefono$$"}////
+{"telefono":"5529083040","tag":"$$telefono$$"}////
+---[{"telefono":"5548101652","tag":"$$telefono$$"},{"telefono":"5529083040","tag":"$$telefono$$"}]
+---[]
+{"telefono":"5548463133","tag":"$$telefono$$"}////
+---[{"telefono":"5548463133","tag":"$$telefono$$"}]
+---[]
+{"telefono":"5565666597","tag":"$$telefono$$"}////
+{"telefono":"59168130","tag":"$$telefono$$"}////
+{"telefono":"0445527170731","tag":"$$telefono$$"}////
+---[{"telefono":"5565666597","tag":"$$telefono$$"},{"telefono":"59168130","tag":"$$telefono$$"},{"telefono":"0445527170731","tag":"$$telefono$$"}]
+---[]
+---[]
+---[]
+{"telefono":"5516836695","tag":"$$movil$$"}////
+{"telefono":"59263336","tag":"$$oficina$$"}////
+{"telefono":"5525643437","tag":"$$oficina$$"}////
+---[{"telefono":"5516836695","tag":"$$movil$$"},{"telefono":"59263336","tag":"$$oficina$$"},{"telefono":"5525643437","tag":"$$oficina$$"}]
+{"telefono":"5516836695","tag":"$$movil$$"}////
+{"telefono":"59263336","tag":"$$oficina$$"}////
+{"telefono":"5525643437","tag":"$$oficina$$"}////
+---[{"telefono":"5516836695","tag":"$$movil$$"},{"telefono":"59263336","tag":"$$oficina$$"},{"telefono":"5525643437","tag":"$$oficina$$"}]
+{"telefono":"55342465","tag":"$$telefono$$"}////
+{"telefono":"55240155","tag":"$$telefono$$"}////
+---[{"telefono":"55342465","tag":"$$telefono$$"},{"telefono":"55240155","tag":"$$telefono$$"}]
+---[]
+---[]
+---[]
+---[]
+{"telefono":"5565841037","tag":"$$oficina$$"}////
+{"telefono":"5585494945","tag":"$$movil$$"}////
+---[{"telefono":"5565841037","tag":"$$oficina$$"},{"telefono":"5585494945","tag":"$$movil$$"}]
+{"telefono":"65961590","tag":"$$telefono$$"}////
+---[{"telefono":"65961590","tag":"$$telefono$$"}]
+---[]
+{"telefono":"68484165","tag":"$$oficina$$"}////
+{"telefono":"5543915744","tag":"$$movil$$"}////
+---[{"telefono":"68484165","tag":"$$oficina$$"},{"telefono":"5543915744","tag":"$$movil$$"}]
+{"telefono":"5565841037","tag":"$$oficina$$"}////
+{"telefono":"5585494945","tag":"$$movil$$"}////
+---[{"telefono":"5565841037","tag":"$$oficina$$"},{"telefono":"5585494945","tag":"$$movil$$"}]
+---[]
+{"telefono":"5565841037","tag":"$$oficina$$"}////
+{"telefono":"5585494945","tag":"$$movil$$"}////
+---[{"telefono":"5565841037","tag":"$$oficina$$"},{"telefono":"5585494945","tag":"$$movil$$"}]
+{"telefono":"68484165","tag":"$$oficina$$"}////
+{"telefono":"5543915744","tag":"$$movil$$"}////
+---[{"telefono":"68484165","tag":"$$oficina$$"},{"telefono":"5543915744","tag":"$$movil$$"}]
+{"telefono":"70912448","tag":"$$oficina$$"}////
+---[{"telefono":"70912448","tag":"$$oficina$$"}]
+---[]
+---[]
+{"telefono":"7773262091","tag":"$$casa$$"}////
+{"telefono":"7773016668","tag":"$$movil$$"}////
+---[{"telefono":"7773262091","tag":"$$casa$$"},{"telefono":"7773016668","tag":"$$movil$$"}]
+{"telefono":"4422474108","tag":"$$movil$$"}////
+---[{"telefono":"4422474108","tag":"$$movil$$"}]
+{"telefono":"5538290072","tag":"$$telefono$$"}////
+{"telefono":"0445538290072","tag":"$$telefono$$"}////
+---[{"telefono":"5538290072","tag":"$$telefono$$"},{"telefono":"0445538290072","tag":"$$telefono$$"}]
+---[]
+{"telefono":"5570118792","tag":"$$telefono$$"}////
+---[{"telefono":"5570118792","tag":"$$telefono$$"}]
+---[]
+---[]
+{"telefono":"5570118792","tag":"$$telefono$$"}////
+---[{"telefono":"5570118792","tag":"$$telefono$$"}]
+{"telefono":"5570118792","tag":"$$telefono$$"}////
+---[{"telefono":"5570118792","tag":"$$telefono$$"}]
+{"telefono":"251 95 64","tag":"$$oficina$$"}////
+{"telefono":"2223 32 84 89","tag":"$$movil$$"}////
+---[{"telefono":"251 95 64","tag":"$$oficina$$"},{"telefono":"2223 32 84 89","tag":"$$movil$$"}]
+{"telefono":"251 95 64","tag":"$$oficina$$"}////
+{"telefono":"2223 32 84 89","tag":"$$movil$$"}////
+---[{"telefono":"251 95 64","tag":"$$oficina$$"},{"telefono":"2223 32 84 89","tag":"$$movil$$"}]
+{"telefono":"251 95 64","tag":"$$oficina$$"}////
+{"telefono":"2223 32 84 89","tag":"$$movil$$"}////
+---[{"telefono":"251 95 64","tag":"$$oficina$$"},{"telefono":"2223 32 84 89","tag":"$$movil$$"}]
+{"telefono":"251 95 64","tag":"$$oficina$$"}////
+{"telefono":"2223 32 84 89","tag":"$$movil$$"}////
+---[{"telefono":"251 95 64","tag":"$$oficina$$"},{"telefono":"2223 32 84 89","tag":"$$movil$$"}]
+{"telefono":"251 95 64","tag":"$$oficina$$"}////
+{"telefono":"2223 32 84 89","tag":"$$movil$$"}////
+---[{"telefono":"251 95 64","tag":"$$oficina$$"},{"telefono":"2223 32 84 89","tag":"$$movil$$"}]
+{"telefono":"251 95 64","tag":"$$oficina$$"}////
+{"telefono":"2223 32 84 89","tag":"$$movil$$"}////
+---[{"telefono":"251 95 64","tag":"$$oficina$$"},{"telefono":"2223 32 84 89","tag":"$$movil$$"}]
+{"telefono":"251 95 64","tag":"$$oficina$$"}////
+{"telefono":"2223 32 84 89","tag":"$$movil$$"}////
+---[{"telefono":"251 95 64","tag":"$$oficina$$"},{"telefono":"2223 32 84 89","tag":"$$movil$$"}]
+{"telefono":"251 95 64","tag":"$$oficina$$"}////
+{"telefono":"2223 32 84 89","tag":"$$movil$$"}////
+---[{"telefono":"251 95 64","tag":"$$oficina$$"},{"telefono":"2223 32 84 89","tag":"$$movil$$"}]
+{"telefono":"251 95 64","tag":"$$oficina$$"}////
+{"telefono":"2223 32 84 89","tag":"$$movil$$"}////
+---[{"telefono":"251 95 64","tag":"$$oficina$$"},{"telefono":"2223 32 84 89","tag":"$$movil$$"}]
+{"telefono":"251 95 64","tag":"$$oficina$$"}////
+{"telefono":"2223 32 84 89","tag":"$$movil$$"}////
+---[{"telefono":"251 95 64","tag":"$$oficina$$"},{"telefono":"2223 32 84 89","tag":"$$movil$$"}]
+---[]
+---[]
+{"telefono":"55.3208.7253","tag":"$$movil$$"}////
+{"telefono":"4151.2200","tag":"$$oficina$$"}////
+---[{"telefono":"55.3208.7253","tag":"$$movil$$"},{"telefono":"4151.2200","tag":"$$oficina$$"}]
+---[]
+{"telefono":"2281827977","tag":"$$telefono$$"}////
+{"telefono":"2227255909","tag":"$$telefono$$"}////
+---[{"telefono":"2281827977","tag":"$$telefono$$"},{"telefono":"2227255909","tag":"$$telefono$$"}]
+{"telefono":"5570118792","tag":"$$telefono$$"}////
+---[{"telefono":"5570118792","tag":"$$telefono$$"}]
+---[]
+{"telefono":"0445534475215","tag":"$$movil$$"}////
+---[{"telefono":"0445534475215","tag":"$$movil$$"}]
+---[]
+---[]
+---[]
+---[]
+{"telefono":"5526796048","tag":"$$telefono$$"}////
+{"telefono":"68295077","tag":"$$telefono$$"}////
+---[{"telefono":"5526796048","tag":"$$telefono$$"},{"telefono":"68295077","tag":"$$telefono$$"}]
+{"telefono":"0445532009491","tag":"$$telefono$$"}////
+---[{"telefono":"0445532009491","tag":"$$telefono$$"}]
+{"telefono":"5571816221","tag":"$$telefono$$"}////
+---[{"telefono":"5571816221","tag":"$$telefono$$"}]
+{"telefono":"7226185662","tag":"$$telefono$$"}////
+---[{"telefono":"7226185662","tag":"$$telefono$$"}]
+---[]
+{"telefono":"0445534475215","tag":"$$movil$$"}////
+---[{"telefono":"0445534475215","tag":"$$movil$$"}]
+---[]
+---[]
+{"telefono":"2228021800","tag":"$$movil$$"}////
+---[{"telefono":"2228021800","tag":"$$movil$$"}]
+{"telefono":"7221501274","tag":"$$telefono$$"}////
+---[{"telefono":"7221501274","tag":"$$telefono$$"}]
+{"telefono":"0445574043195","tag":"$$telefono$$"}////
+---[{"telefono":"0445574043195","tag":"$$telefono$$"}]
+---[]
+---[]
+---[]
+{"telefono":"5518254964","tag":"$$telefono$$"}////
+---[{"telefono":"5518254964","tag":"$$telefono$$"}]
+---[]
+---[]
+{"telefono":"55 66168604","tag":"$$movil$$"}////
+{"telefono":"55 2248 3464","tag":"$$telefono$$"}////
+---[{"telefono":"55 66168604","tag":"$$movil$$"},{"telefono":"55 2248 3464","tag":"$$telefono$$"}]
+---[]
+{"telefono":"7773262091","tag":"$$casa$$"}////
+{"telefono":"7773016668","tag":"$$movil$$"}////
+---[{"telefono":"7773262091","tag":"$$casa$$"},{"telefono":"7773016668","tag":"$$movil$$"}]
+{"telefono":"4422474108","tag":"$$movil$$"}////
+---[{"telefono":"4422474108","tag":"$$movil$$"}]
+{"telefono":"5538290072","tag":"$$telefono$$"}////
+{"telefono":"0445538290072","tag":"$$telefono$$"}////
+---[{"telefono":"5538290072","tag":"$$telefono$$"},{"telefono":"0445538290072","tag":"$$telefono$$"}]
+---[]
+{"telefono":"5570118792","tag":"$$telefono$$"}////
+---[{"telefono":"5570118792","tag":"$$telefono$$"}]
+{"telefono":"5570118792","tag":"$$telefono$$"}////
+---[{"telefono":"5570118792","tag":"$$telefono$$"}]
+---[]
+---[]
+{"telefono":"5570118792","tag":"$$telefono$$"}////
+---[{"telefono":"5570118792","tag":"$$telefono$$"}]
+{"telefono":"5570118792","tag":"$$telefono$$"}////
+---[{"telefono":"5570118792","tag":"$$telefono$$"}]
+{"telefono":"251 95 64","tag":"$$oficina$$"}////
+{"telefono":"2223 32 84 89","tag":"$$movil$$"}////
+---[{"telefono":"251 95 64","tag":"$$oficina$$"},{"telefono":"2223 32 84 89","tag":"$$movil$$"}]
+{"telefono":"251 95 64","tag":"$$oficina$$"}////
+{"telefono":"2223 32 84 89","tag":"$$movil$$"}////
+---[{"telefono":"251 95 64","tag":"$$oficina$$"},{"telefono":"2223 32 84 89","tag":"$$movil$$"}]
+{"telefono":"251 95 64","tag":"$$oficina$$"}////
+{"telefono":"2223 32 84 89","tag":"$$movil$$"}////
+---[{"telefono":"251 95 64","tag":"$$oficina$$"},{"telefono":"2223 32 84 89","tag":"$$movil$$"}]
+{"telefono":"251 95 64","tag":"$$oficina$$"}////
+{"telefono":"2223 32 84 89","tag":"$$movil$$"}////
+---[{"telefono":"251 95 64","tag":"$$oficina$$"},{"telefono":"2223 32 84 89","tag":"$$movil$$"}]
+{"telefono":"251 95 64","tag":"$$oficina$$"}////
+{"telefono":"2223 32 84 89","tag":"$$movil$$"}////
+---[{"telefono":"251 95 64","tag":"$$oficina$$"},{"telefono":"2223 32 84 89","tag":"$$movil$$"}]
+{"telefono":"251 95 64","tag":"$$oficina$$"}////
+{"telefono":"2223 32 84 89","tag":"$$movil$$"}////
+---[{"telefono":"251 95 64","tag":"$$oficina$$"},{"telefono":"2223 32 84 89","tag":"$$movil$$"}]
+{"telefono":"251 95 64","tag":"$$oficina$$"}////
+{"telefono":"2223 32 84 89","tag":"$$movil$$"}////
+---[{"telefono":"251 95 64","tag":"$$oficina$$"},{"telefono":"2223 32 84 89","tag":"$$movil$$"}]
+{"telefono":"251 95 64","tag":"$$oficina$$"}////
+{"telefono":"2223 32 84 89","tag":"$$movil$$"}////
+---[{"telefono":"251 95 64","tag":"$$oficina$$"},{"telefono":"2223 32 84 89","tag":"$$movil$$"}]
+{"telefono":"251 95 64","tag":"$$oficina$$"}////
+{"telefono":"2223 32 84 89","tag":"$$movil$$"}////
+---[{"telefono":"251 95 64","tag":"$$oficina$$"},{"telefono":"2223 32 84 89","tag":"$$movil$$"}]
+{"telefono":"251 95 64","tag":"$$oficina$$"}////
+{"telefono":"2223 32 84 89","tag":"$$movil$$"}////
+---[{"telefono":"251 95 64","tag":"$$oficina$$"},{"telefono":"2223 32 84 89","tag":"$$movil$$"}]
+{"telefono":"5570118792","tag":"$$telefono$$"}////
+---[{"telefono":"5570118792","tag":"$$telefono$$"}]
+---[]
+---[]
+{"telefono":"55.3208.7253","tag":"$$movil$$"}////
+{"telefono":"4151.2200","tag":"$$oficina$$"}////
+---[{"telefono":"55.3208.7253","tag":"$$movil$$"},{"telefono":"4151.2200","tag":"$$oficina$$"}]
+---[]
+---[]
+{"telefono":"2281827977","tag":"$$telefono$$"}////
+{"telefono":"2227255909","tag":"$$telefono$$"}////
+---[{"telefono":"2281827977","tag":"$$telefono$$"},{"telefono":"2227255909","tag":"$$telefono$$"}]
+{"telefono":"5570118792","tag":"$$telefono$$"}////
+---[{"telefono":"5570118792","tag":"$$telefono$$"}]
+---[]
+{"telefono":"0445534475215","tag":"$$movil$$"}////
+---[{"telefono":"0445534475215","tag":"$$movil$$"}]
+---[]
+---[]
+---[]
+---[]
+{"telefono":"5526796048","tag":"$$telefono$$"}////
+{"telefono":"68295077","tag":"$$telefono$$"}////
+---[{"telefono":"5526796048","tag":"$$telefono$$"},{"telefono":"68295077","tag":"$$telefono$$"}]
+{"telefono":"0445532009491","tag":"$$telefono$$"}////
+---[{"telefono":"0445532009491","tag":"$$telefono$$"}]
+{"telefono":"5571816221","tag":"$$telefono$$"}////
+---[{"telefono":"5571816221","tag":"$$telefono$$"}]
+{"telefono":"7226185662","tag":"$$telefono$$"}////
+---[{"telefono":"7226185662","tag":"$$telefono$$"}]
+---[]
+{"telefono":"0445534475215","tag":"$$movil$$"}////
+---[{"telefono":"0445534475215","tag":"$$movil$$"}]
+---[]
+---[]
+{"telefono":"2228021800","tag":"$$movil$$"}////
+---[{"telefono":"2228021800","tag":"$$movil$$"}]
+{"telefono":"7221501274","tag":"$$telefono$$"}////
+---[{"telefono":"7221501274","tag":"$$telefono$$"}]
+{"telefono":"0445574043195","tag":"$$telefono$$"}////
+---[{"telefono":"0445574043195","tag":"$$telefono$$"}]
+{"telefono":"5544842831","tag":"$$telefono$$"}////
+---[{"telefono":"5544842831","tag":"$$telefono$$"}]
+---[]
+---[]
+---[]
