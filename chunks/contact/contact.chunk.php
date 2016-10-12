@@ -38,7 +38,12 @@ class contact_chunk extends chunk_base implements chunk{
     $telButton="";
     $messageButton="";
     $client=$usuario?$usuario->id:"";
-	
+    
+    
+        
+       
+              
+
 	if(($usuario->id!=$user->id)&&$user->id){
    		$plantilla= $this->loadPlantilla(0);
                 $telParams=array(
