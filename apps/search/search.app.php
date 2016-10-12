@@ -319,9 +319,7 @@ order by  ".
     
     $r=$db->query($q);
     
-    $myfile = fopen("/var/www/vhosts/e-spacios.com/httpdocs1/test.log", "w");               
-                fwrite($myfile, $q);
-                fclose($myfile);
+    
     
     
     $results=array();
