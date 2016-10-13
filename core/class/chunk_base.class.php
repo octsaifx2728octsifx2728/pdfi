@@ -48,8 +48,7 @@ class  chunk_base{
           $this->loadScripts($document);
           $this->loadStyles($document);
           
-          
-    
+         
           return $this->parse($plantilla,$valores);
         }
   public function parsechunks($doc){
