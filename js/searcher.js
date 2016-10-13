@@ -121,6 +121,8 @@ var searcher_functions={
         
         */
        
+       
+       
        var str_aux = "";
        var str_aux1 = "";
        for(var x=0;x<respuesta.results.length;x++){
@@ -174,6 +176,9 @@ var searcher_functions={
           $(template).find(".ranking").append(respuesta.results[x].ranking);
           $(template).find(".share").append(respuesta.results[x].share);
           $(template).find(".contact").append(respuesta.results[x].contact);
+          
+          
+          
           
           
           
