@@ -1,6 +1,7 @@
 <?php
 class linkedin_app {
-    private $_oauthLink="https://www.linkedin.com/uas/oauth2/authorization?response_type=code&client_id=YOUR_API_KEY&scope=SCOPE&state=STATE&redirect_uri=YOUR_REDIRECT_URI";
+    private $_oauthLink="https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=YOUR_API_KEY&scope=SCOPE&state=STATE&redirect_uri=YOUR_REDIRECT_URI";
+                         
     private $_getToken="https://www.linkedin.com/uas/oauth2/accessToken";
     private $_getURL="https://api.linkedin.com/v1/PATH";
     function getLoginLink($state,$return,$apiKey=false,$scope=false){
@@ -15,6 +16,10 @@ class linkedin_app {
             "YOUR_REDIRECT_URI"=>urlencode($return)
         );
         $url=str_replace(array_keys($p),$p,$this->_oauthLink);
+        
+       
+        
+        
         //print_r($url);
        // exit;
         return $url;

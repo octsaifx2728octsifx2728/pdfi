@@ -7,7 +7,6 @@ class facebook_app{
     exit;
   }
   public function renewToken($oldToken){
-      /*
       global $config;
       $url="https://graph.facebook.com/oauth/access_token?"            
             ."client_id=APP_ID&"
@@ -44,11 +43,8 @@ class facebook_app{
 	$code[$r[0]]=$r[1];
     }
      return $code;   
-       * 
-       */
   }
   public function getLoginUrl($app_id=false,$redirect_uri=false,$arbitrary=false,$scope=false){
-      /*
       global $config;
       $app_id=$app_id?$app_id:$config->defaults["facebook"]->app_id;
       $redirect_uri=$redirect_uri?$redirect_uri:"/app/facebook/log";
@@ -63,11 +59,8 @@ class facebook_app{
          );
         $url=str_replace(array_keys($p),$p,$url);
       return $url;
-       * 
-       */
   }
   public function get($path,$token,$parsed=false){
-      /*
       $url="https://graph.facebook.com/".trim($path,"/")."?access_token=".$token;
    // $url=str_replace(array_keys($p),$p,$url);
     
@@ -97,12 +90,9 @@ class facebook_app{
         return (object)$code;
     }
     return $respuesta;
-       * 
-       */
   }
   public function getAppAccessToken(){
-   /*
-      global $config;
+    global $config;
       $url="https://graph.facebook.com/oauth/access_token?client_id=YOUR_APP_ID&client_secret=YOUR_APP_SECRET&grant_type=client_credentials";
       $p=array(
       "YOUR_APP_ID"=>$config->defaults["facebook"]->app_id,
@@ -130,11 +120,8 @@ class facebook_app{
     if($code["access_token"]){
         return $code["access_token"];
     }
-    * 
-    */
   }
   function exchangeCode($code,$app_id=false,$app_secret=false,$redirect_uri=false){
-     /*
       global $config;
       $app_id=$app_id?$app_id:$config->defaults["facebook"]->app_id;
       $redirect_uri=$redirect_uri?$redirect_uri:"/app/facebook/log";
@@ -168,11 +155,8 @@ class facebook_app{
 	$code[$r[0]]=$r[1];
     }
     return (object)$code;
-      * 
-      */
   }
   function submitCode($code){
-      /*
     global  $core, $user,$document;
     
     $code=(array)$this->exchangeCode($code);
@@ -208,11 +192,8 @@ class facebook_app{
 			}
       exit;
     }
-       * 
-       */
   }
   function publisherStoreParam($param,$val){
-      /*
       global $core;
       $db=&$core->getDB(0,2);
       $q="update `fb_publisher` set `val`='".$db->real_escape_string($val)."' where `param`='".$db->real_escape_string($param)."'";
@@ -223,11 +204,8 @@ class facebook_app{
       }
       return $db->affected_rows;
       
-       * 
-       */
   }
   function publisher_getParam($param){
-      /*
       global $core;
       $db=&$core->getDB(0,2);
       $q="select `val` from `fb_publisher` where `param`='".$db->real_escape_string($param)."' limit 1";
@@ -236,11 +214,8 @@ class facebook_app{
               return $i["val"];
           }
       }
-       * 
-       */
   }
   function publisherPostInmueble(inmueble $inmueble,$lang=false,$prefixMessage='#espacios $$new_property$$'){
-      /*
       global $user,$config,$core;
       $lang=$lang?$lang:$user->get("languaje");
       $lexicon=$core->getLexicon();
@@ -281,11 +256,10 @@ class facebook_app{
       //print_r($arguments);
        $this->post("/".$page."/feed",$token,$arguments);
        //$this->post("/".$page2."/feed",$token,$arguments);
-       * 
-       */
   }
   function post($path,$token,$arguments=array()){
-      /*
+      global $config;
+
      // print_r($arguments);
         $url="https://graph.facebook.com/".trim($path,"/");
         $arguments["access_token"]=$token;
@@ -301,8 +275,17 @@ class facebook_app{
     curl_setopt($ch, CURLOPT_POSTFIELDS, $arguments);
     $result = curl_exec($ch);
    // echo $result;
+
+      /*Facebook publisher log
+      $face_log = $config->paths["base"] . date("Ymd") . "_face.txt";
+      $myfile = fopen($face_log, "w") or die("Unable to open file!");
+      fwrite( $myfile, " *** " );
+      //fwrite( $myfile, print_r($arguments) );
+      //fwrite( $myfile, " --- " );
+      fwrite( $myfile, $result);
+      fclose($myfile);*/
+
+
     return ( $result);
-       * 
-       */
   }
 }
