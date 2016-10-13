@@ -122,6 +122,7 @@ var searcher_functions={
         */
        
        var str_aux = "";
+       var str_aux1 = "";
        for(var x=0;x<respuesta.results.length;x++){
                     
           var template=this.resultTemplate.cloneNode(true);
@@ -177,8 +178,12 @@ var searcher_functions={
           
           
                   var res = respuesta.results[x].contact.match( /<script\b[^>]*>([\s\S]*?)<\/script>/gm);
+         if(res != null && res[0] != null)
+            str_aux += res[0];
+         if(res != null && res[1] != null)
+            str_aux1 += res[1];
          
-         str_aux += res[0];
+         
          
          /*
          var res = respuesta.results[x].contact.match( /"#contact_tel_.*"/gm);
@@ -238,6 +243,8 @@ var searcher_functions={
         }
         
         $("head").append(str_aux);
+        
+        $("head").append(str_aux1);
            
 
         
