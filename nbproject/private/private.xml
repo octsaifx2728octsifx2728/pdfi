@@ -3,7 +3,22 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/var/www/vhosts/e-spacios.com/httpdocs1/apps/cache.app.php</file>
+            <file>file:/var/www/vhosts/e-spacios.com/httpdocs1/chunks/contact/contact.chunk.php</file>
+            <file>file:/var/www/vhosts/e-spacios.com/httpdocs1/chunks/contact/html/buttonModel.html</file>
+            <file>file:/var/www/vhosts/e-spacios.com/httpdocs1/config/paths.config.php</file>
+            <file>file:/var/www/vhosts/e-spacios.com/httpdocs1/js/ultraLogin.js</file>
+            <file>file:/var/www/vhosts/e-spacios.com/httpdocs1/apps/cache/cache.app.php</file>
+            <file>file:/var/www/vhosts/e-spacios.com/httpdocs1/handlers/searchbounds/searchbounds.handler.php</file>
+            <file>file:/var/www/vhosts/e-spacios.com/httpdocs1/chunks/userDataManager/userDataManager.chunk.php</file>
+            <file>file:/var/www/vhosts/e-spacios.com/httpdocs1/html/search.html</file>
+            <file>file:/var/www/vhosts/e-spacios.com/httpdocs1/index.php</file>
+            <file>file:/var/www/vhosts/e-spacios.com/httpdocs1/chunks/userDataManager/html/userDataManager2.html</file>
+            <file>file:/var/www/vhosts/e-spacios.com/httpdocs1/js/searcher.js</file>
+            <file>file:/var/www/vhosts/e-spacios.com/httpdocs1/apps/mensajes/mensajes.app.php</file>
+            <file>file:/var/www/vhosts/e-spacios.com/httpdocs1/core/class/user.class.php</file>
+            <file>file:/var/www/vhosts/e-spacios.com/httpdocs1/chunks/jsonResults.chunk.php</file>
+            <file>file:/var/www/vhosts/e-spacios.com/httpdocs1/htmlmobile/user.html</file>
+            <file>file:/var/www/vhosts/e-spacios.com/httpdocs1/chunks/parsedResults/parsedResults.chunk.php</file>
         </group>
     </open-files>
 </project-private>
