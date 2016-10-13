@@ -1,0 +1,65 @@
+<div class="contact">  
+    #CALLBUTTON#
+    #MESSAGEBUTTON#
+ </div> 
+
+<div style="display:none">
+    <div class="displayPhone" id="displayPhone_#client##KEY#">
+        <div class="tel_box">
+            <a href="tel:#TELEFONO#"> 
+                <img src="css/icons/call.png">
+            </a>
+            <a href="tel:#TELEFONO#"> 
+                #TELEFONO#
+            </a>
+        </div>
+    </div>
+	<div class="messageWritter" id="messageWritter_#client##KEY#">
+            <div class="div-wrap">
+		<h2>$$contactar$$</h2>
+                <div class="alertContainer">
+                    <div class="alert">
+                        <div class="icon">
+                        </div>
+                        <div class="message">
+                        </div>
+                    </div>
+                </div>
+		<div class="mesaageForm">
+			<div class="field" style="display:none">
+				<label>$$email$$</label>
+				<input class="inputtext" type="email" id="messageWritter_#client##KEY#_email" name="email" required="required" value="#email#">
+			</div>
+			<div class="field">
+                            <div class="tip">
+                                <div class="icon"></div>
+                                <div class="details">$$subject_help$$</div>
+                            </div>
+                            <div class="counter">
+                                0/30
+                            </div>
+				<label>$$subject$$</label>
+                                <input type="text" onkeyup="mensaje.validateSubject(this,30,5);mensaje.counter(this,30,$(this).parent().find('.counter'))" id="messageWritter_#client##KEY#_subject" name="subject" required="required">
+                                
+                                <div class="hint">$$subject_hint$$</div>
+			</div>
+			<div class="field">
+                            <div class="tip">
+                                <div class="icon"></div>
+                                <div class="details">$$message_help$$</div>
+                            </div>
+                            <div class="counter">
+                                0/500
+                            </div>
+				<label>$$message$$</label>
+				<textarea onkeyup="mensaje.validateSubject(this,500,1);mensaje.counter(this,500,$(this).parent().find('.counter'))" name="message" id="messageWritter_#client##KEY#_message"> </textarea>
+                                <div class="hint">$$message_hint$$</div>
+			</div>
+			<div class="submit">
+				<input type="button" onclick="mensaje.send({id:'#client#',key:'messageWritter_#client##KEY#'})" class="button submit" value="$$enviar$$">
+			</div>
+		</div>
+            </div>
+        </div>
+</div>
+
