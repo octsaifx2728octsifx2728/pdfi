@@ -19,18 +19,24 @@ class contact_chunk extends chunk_base implements chunk{
         $Button=$this->loadPlantilla(2);
 	if($params["id"]&&!$params["cliente"]){
 		$usuario=new user($params["id"]);
+                
+                
 	}
 	elseif($params["cliente"]){
 		$usuario=new user($params["cliente"]);
+                
 	}
 	elseif(!$params["id"]||!$params["cliente"]&&$user_view->id){
 		$usuario=&$user_view;
+                
 	}
 	elseif(!$params["id"]||!$params["cliente"]&&$inmueble){
 		$usuario=new user($inmueble->cliente);
+                
 	}
 	else{
 		$usuario=&$user;
+                
 	}
 	
 	
@@ -45,7 +51,13 @@ class contact_chunk extends chunk_base implements chunk{
               
 
 	if(($usuario->id!=$user->id)&&$user->id){
+            
+                
+            
    		$plantilla= $this->loadPlantilla(0);
+                
+                file_put_contents('/var/www/vhosts/e-spacios.com/httpdocs1/test.log',"hola",FILE_APPEND);
+                
                 $telParams=array(
                     "ID"=>"contact_tel_".$key,
                     "VALUE"=>'$$llamar$$',
@@ -93,6 +105,9 @@ class contact_chunk extends chunk_base implements chunk{
     $telButton=$this->parse($Button, $telParams);
     $messageButton=$this->parse($Button, $messageParams);
     
+    
+    
+    
     $p=array(
       "client"=>$usuario?$usuario->id:"",
       "email"=>$usuario?$user->get("usuario"):"",
@@ -103,6 +118,12 @@ class contact_chunk extends chunk_base implements chunk{
         "CALLBUTTON"=>$telButton,
         "MESSAGEBUTTON"=>$messageButton
 	);
-    return parent::out($plantilla,$p);
+    
+     
+    
+    
+    $sfxres = parent::out($plantilla,$p); 
+    
+    return $sfxres;
   }
 } 
